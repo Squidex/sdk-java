@@ -8,8 +8,8 @@ public final class SquidexApiClientBuilder {
 
     private Environment environment = Environment.DEFAULT;
 
-    public SquidexApiClientBuilder token(String token) {
-        this.clientOptionsBuilder.addHeader("Authorization", "Bearer " + token);
+    public SquidexApiClientBuilder credentials(String clientId, String clientSecret) {
+        this.clientOptionsBuilder.addHeader("Authorization", new TokenSupplier(clientId, clientSecret));
         return this;
     }
 

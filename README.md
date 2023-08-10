@@ -37,7 +37,7 @@ Add the dependency in your `pom.xml`:
 
 ```java
 SquidexApiClient squidex = SquidexApiClient.builder()
-    .token("YOUR_OAUTH_TOKEN")
+    .credentials("YOUR_CLIENT_ID", "YOUR_CLIENT_SECRET")
     .url("https://your.squidex-deployment")
     .appName("my-app")
     .build();
