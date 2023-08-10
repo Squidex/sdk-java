@@ -23,7 +23,15 @@ public final class ClientOptions {
             OkHttpClient httpClient,
             String appName) {
         this.environment = environment;
-        this.headers = headers;
+        this.headers = new HashMap<>();
+        this.headers.putAll(headers);
+        this.headers.putAll(Map.of(
+                "X-Fern-SDK-Name",
+                "com.squidex.fern:api-sdk",
+                "X-Fern-SDK-Version",
+                "0.0.7",
+                "X-Fern-Language",
+                "JAVA"));
         this.headerSuppliers = headerSuppliers;
         this.httpClient = httpClient;
         this.appName = appName;
