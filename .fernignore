@@ -1,3 +1,16 @@
-# Specify files that shouldn't be modified by Fern
-
 README.md
+
+#  Wrappers
+**/AccessToken.java
+**/AuthInterceptor.java
+**/InMemoryTokenStore.java
+**/SquidexApiClient.java
+**/SquidexApiClientBuilder.java
+**/TokenStore.java
+
+# Workflows
+.github/workflows/check-updates.yml
+.github/workflows/test.yml
+
+#tests
+src/test/
