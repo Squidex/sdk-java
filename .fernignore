@@ -1,6 +1,6 @@
 README.md
 
-#  Wrappers
+# Wrappers
 **/ClientOptions.java
 
 # Client files
@@ -11,5 +11,8 @@ src/main/java/com/squidex/api/*.*
 .github/workflows/ci.yml
 .github/workflows/test.yml
 
-#tests
+# Tests
 src/test/
+
+# Docker Compose
+tests

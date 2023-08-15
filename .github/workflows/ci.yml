@@ -40,6 +40,10 @@ jobs:
 
       - name: Test
         run: ./gradlew test
+        env:
+          CONFIG__WAIT: 60
+          CONFIG__SERVER__URL: http://localhost:8080
+        working-directory: .
        
       - name: Test - Dump docker logs on failure
         if: failure()
