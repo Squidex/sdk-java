@@ -44,8 +44,3 @@ final class Utils {
     }
 }
 
-record ClientProvider(SquidexApiClientBuilder builder, SquidexApiClient client) {
-    public SquidexApiClient client(String appName) {
-        return this.builder.appName(appName).build();
-    }
-}

@@ -29,7 +29,7 @@ public final class ClientOptions {
                 "X-Fern-SDK-Name",
                 "com.squidex.fern:api-sdk",
                 "X-Fern-SDK-Version",
-                "0.0.8",
+                "0.0.7",
                 "X-Fern-Language",
                 "JAVA"));
         this.headerSuppliers = headerSuppliers;
@@ -67,6 +67,8 @@ public final class ClientOptions {
     public static final class Builder {
         private Environment environment;
 
+        private OkHttpClient httpClient;
+
         private final Map<String, String> headers = new HashMap<>();
 
         private final Map<String, Supplier<String>> headerSuppliers = new HashMap<>();
@@ -93,8 +95,17 @@ public final class ClientOptions {
             return this;
         }
 
+        public Builder httpClient(OkHttpClient httpClient) {
+            this.httpClient = httpClient;
+            return this;
+        }
+
         public ClientOptions build() {
-            return new ClientOptions(environment, headers, headerSuppliers, new OkHttpClient(), this.appName);
+            if (this.httpClient == null) {
+                this.httpClient = new OkHttpClient();
+            }
+
+            return new ClientOptions(environment, headers, headerSuppliers, this.httpClient, this.appName);
         }
     }
 }

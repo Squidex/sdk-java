@@ -1,5 +1,6 @@
 package com.squidex.api;
 
+import com.squidex.api.core.ApiError;
 import com.squidex.api.resources.apps.requests.CreateAppDto;
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -53,6 +54,12 @@ public class TestSetup implements BeforeAllCallback {
             try {
                 client.client().ping().getPing();
                 break;
+            } catch (ApiError ex) {
+                if (ex.statusCode() == 400) {
+                    break;
+                } else {
+                    throw ex;
+                }
             } catch (Exception ex) {
                 if (expires.isBefore(Instant.now())) {
                     throw new Error(String.format("Cannot connect to test system with: %s.", ex.getMessage()));

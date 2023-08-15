@@ -1,17 +1,14 @@
 README.md
 
 #  Wrappers
-ClientOptions.java
+**/ClientOptions.java
 
-AccessToken.java
-AuthInterceptor.java
-InMemoryTokenStore.java
-SquidexApiClient.java
-SquidexApiClientBuilder.java
-TokenStore.java
+# Client files
+src/main/java/com/squidex/api/*.*
 
 # Workflows
 .github/workflows/check-updates.yml
+.github/workflows/ci.yml
 .github/workflows/test.yml
 
 #tests

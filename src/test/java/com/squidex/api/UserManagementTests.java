@@ -13,7 +13,7 @@ public class UserManagementTests extends TestBase {
 
     @Test()
     public void Should_create_and_fetch_user() {
-        String email = "user%s@email.com".formatted(UUID.randomUUID());
+        String email = String.format("user%s@email.com", UUID.randomUUID());
 
         CreateUserDto request = CreateUserDto.builder()
                 .email(email)
