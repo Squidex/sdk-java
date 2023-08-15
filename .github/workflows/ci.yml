@@ -49,7 +49,7 @@ jobs:
         if: failure()
         uses: jwalton/gh-docker-logs@v2.2.1
         with:
-         images: 'squidex,squidex/resizer'
+         images: 'squidex/squidex,squidex/resizer'
          tail: '100'
 
       - name: Test - Cleanup
@@ -73,10 +73,6 @@ jobs:
           java-version: "11"
           architecture: x64
 
-      - name: Test - Start Compose
-        run: docker-compose up -d
-        working-directory: tests
-
       - name: Publish to maven
         run: |
           ./gradlew publish
@@ -84,15 +80,3 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
           MAVEN_PUBLISH_REGISTRY_URL: "https://s01.oss.sonatype.org/content/repositories/releases/"
-       
-      - name: Test - Dump docker logs on failure
-        if: failure()
-        uses: jwalton/gh-docker-logs@v2.2.1
-        with:
-         images: 'squidex,squidex/resizer'
-         tail: '100'
-
-      - name: Test - Cleanup
-        if: always()
-        run: docker-compose down
-        working-directory: tests

@@ -15,7 +15,7 @@ public class SchemasTests extends TestBase {
     @Test
     public void should_create_and_fetch_schema() {
         CreateSchemaDto request = CreateSchemaDto.builder()
-                .name(String.format("schema-%%s%s", UUID.randomUUID()))
+                .name(String.format("schema-%s", UUID.randomUUID()))
                 .fields(Collections.singletonList(
                             UpsertSchemaFieldDto.builder()
                                     .name("field1")
