@@ -1,6 +1,7 @@
 package com.squidex.api.resources.comments;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.squidex.api.core.ApiError;
 import com.squidex.api.core.ClientOptions;
 import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.core.RequestOptions;
@@ -8,6 +9,7 @@ import com.squidex.api.resources.comments.requests.CommentsGetCommentsRequest;
 import com.squidex.api.types.CommentDto;
 import com.squidex.api.types.CommentsDto;
 import com.squidex.api.types.UpsertCommentDto;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import okhttp3.Headers;
@@ -50,8 +52,10 @@ public class CommentsClient {
                 return ObjectMappers.JSON_MAPPER.readValue(
                         _response.body().string(), new TypeReference<List<String>>() {});
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -84,8 +88,10 @@ public class CommentsClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), CommentsDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -120,8 +126,10 @@ public class CommentsClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), CommentDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -158,8 +166,10 @@ public class CommentsClient {
             if (_response.isSuccessful()) {
                 return;
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -187,8 +197,10 @@ public class CommentsClient {
             if (_response.isSuccessful()) {
                 return;
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

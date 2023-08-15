@@ -1,10 +1,12 @@
 package com.squidex.api.resources.news;
 
+import com.squidex.api.core.ApiError;
 import com.squidex.api.core.ClientOptions;
 import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.core.RequestOptions;
 import com.squidex.api.resources.news.requests.NewsGetNewsRequest;
 import com.squidex.api.types.FeaturesDto;
+import java.io.IOException;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
@@ -42,8 +44,10 @@ public class NewsClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), FeaturesDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

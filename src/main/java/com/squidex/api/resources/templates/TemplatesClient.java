@@ -1,10 +1,12 @@
 package com.squidex.api.resources.templates;
 
+import com.squidex.api.core.ApiError;
 import com.squidex.api.core.ClientOptions;
 import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.core.RequestOptions;
 import com.squidex.api.types.TemplateDetailsDto;
 import com.squidex.api.types.TemplatesDto;
+import java.io.IOException;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
 import okhttp3.Request;
@@ -37,8 +39,10 @@ public class TemplatesClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), TemplatesDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -64,8 +68,10 @@ public class TemplatesClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), TemplateDetailsDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

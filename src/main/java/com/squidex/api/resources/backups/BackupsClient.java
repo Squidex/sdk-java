@@ -1,5 +1,6 @@
 package com.squidex.api.resources.backups;
 
+import com.squidex.api.core.ApiError;
 import com.squidex.api.core.ClientOptions;
 import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.core.RequestOptions;
@@ -7,6 +8,7 @@ import com.squidex.api.resources.backups.requests.BackupsGetBackupContentV2Reque
 import com.squidex.api.resources.backups.requests.RestoreRequestDto;
 import com.squidex.api.types.BackupJobsDto;
 import com.squidex.api.types.RestoreJobDto;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,8 +49,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return _response.body().byteStream();
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -75,8 +79,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return;
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -110,8 +116,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return _response.body().byteStream();
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -138,8 +146,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), BackupJobsDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -165,8 +175,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return;
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -191,8 +203,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), RestoreJobDto.class);
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
@@ -230,8 +244,10 @@ public class BackupsClient {
             if (_response.isSuccessful()) {
                 return;
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

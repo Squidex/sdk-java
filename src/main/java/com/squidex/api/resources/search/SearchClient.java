@@ -1,11 +1,13 @@
 package com.squidex.api.resources.search;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.squidex.api.core.ApiError;
 import com.squidex.api.core.ClientOptions;
 import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.core.RequestOptions;
 import com.squidex.api.resources.search.requests.SearchGetSearchResultsRequest;
 import com.squidex.api.types.SearchResultDto;
+import java.io.IOException;
 import java.util.List;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
@@ -48,8 +50,10 @@ public class SearchClient {
                 return ObjectMappers.JSON_MAPPER.readValue(
                         _response.body().string(), new TypeReference<List<SearchResultDto>>() {});
             }
-            throw new RuntimeException();
-        } catch (Exception e) {
+            throw new ApiError(
+                    _response.code(),
+                    ObjectMappers.JSON_MAPPER.readValue(_response.body().string(), Object.class));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
