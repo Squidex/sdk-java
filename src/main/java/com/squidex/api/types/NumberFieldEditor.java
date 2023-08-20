@@ -1,0 +1,25 @@
+package com.squidex.api.types;
+
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum NumberFieldEditor {
+    INPUT("Input"),
+
+    RADIO("Radio"),
+
+    DROPDOWN("Dropdown"),
+
+    STARS("Stars");
+
+    private final String value;
+
+    NumberFieldEditor(String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    @Override
+    public String toString() {
+        return this.value;
+    }
+}

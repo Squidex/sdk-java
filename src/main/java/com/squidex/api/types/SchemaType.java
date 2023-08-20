@@ -1,0 +1,23 @@
+package com.squidex.api.types;
+
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum SchemaType {
+    DEFAULT("Default"),
+
+    SINGLETON("Singleton"),
+
+    COMPONENT("Component");
+
+    private final String value;
+
+    SchemaType(String value) {
+        this.value = value;
+    }
+
+    @JsonValue
+    @Override
+    public String toString() {
+        return this.value;
+    }
+}
