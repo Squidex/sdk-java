@@ -1,7 +1,7 @@
 README.md
 
 # Wrappers
-**/ClientOptions.java
+src/main/java/com/squidex/api/core/ClientOptions.java
 
 # Client files
 src/main/java/com/squidex/api/AccessToken.java
