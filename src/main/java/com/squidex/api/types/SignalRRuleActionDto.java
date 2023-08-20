@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -107,9 +108,7 @@ public final class SignalRRuleActionDto {
 
     @Override
     public String toString() {
-        return "SignalRRuleActionDto{" + "connectionString: " + connectionString + ", hubName: " + hubName
-                + ", action: " + action + ", methodName: " + methodName + ", target: " + target + ", payload: "
-                + payload + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static ConnectionStringStage builder() {

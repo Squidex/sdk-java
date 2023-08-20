@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -159,10 +160,7 @@ public final class CallsUsageDtoDto {
 
     @Override
     public String toString() {
-        return "CallsUsageDtoDto{" + "totalCalls: " + totalCalls + ", totalBytes: " + totalBytes + ", monthCalls: "
-                + monthCalls + ", monthBytes: " + monthBytes + ", blockingApiCalls: " + blockingApiCalls
-                + ", allowedBytes: " + allowedBytes + ", allowedCalls: " + allowedCalls + ", averageElapsedMs: "
-                + averageElapsedMs + ", details: " + details + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static TotalCallsStage builder() {

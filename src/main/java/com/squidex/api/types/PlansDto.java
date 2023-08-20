@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -106,8 +107,7 @@ public final class PlansDto {
 
     @Override
     public String toString() {
-        return "PlansDto{" + "plans: " + plans + ", currentPlanId: " + currentPlanId + ", planOwner: " + planOwner
-                + ", portalLink: " + portalLink + ", referral: " + referral + ", locked: " + locked + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static LockedStage builder() {

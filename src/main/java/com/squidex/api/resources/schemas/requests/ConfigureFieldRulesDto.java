@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.types.FieldRuleDto;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ConfigureFieldRulesDto {
 
     @Override
     public String toString() {
-        return "ConfigureFieldRulesDto{" + "fieldRules: " + fieldRules + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

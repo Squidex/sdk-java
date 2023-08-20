@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -113,8 +114,7 @@ public final class WorkflowDto implements IResource {
 
     @Override
     public String toString() {
-        return "WorkflowDto{" + "links: " + links + ", id: " + id + ", name: " + name + ", steps: " + steps
-                + ", schemaIds: " + schemaIds + ", initial: " + initial + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

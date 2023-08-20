@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -54,7 +55,7 @@ public final class CreateAssetFolderDto {
 
     @Override
     public String toString() {
-        return "CreateAssetFolderDto{" + "folderName: " + folderName + ", parentId: " + parentId + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static FolderNameStage builder() {

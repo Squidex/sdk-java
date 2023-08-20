@@ -867,7 +867,7 @@ public class ContentsClient {
                 .addPathSegment(id)
                 .addPathSegments("draft")
                 .build();
-        RequestBody _requestBody = null;
+        RequestBody _requestBody = RequestBody.create("", null);
         Request.Builder _requestBuilder = new Request.Builder()
                 .url(_httpUrl)
                 .method("POST", _requestBody)

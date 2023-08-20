@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
@@ -103,8 +104,7 @@ public final class HistoryEventDto {
 
     @Override
     public String toString() {
-        return "HistoryEventDto{" + "message: " + message + ", eventType: " + eventType + ", actor: " + actor
-                + ", eventId: " + eventId + ", created: " + created + ", version: " + version + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static MessageStage builder() {

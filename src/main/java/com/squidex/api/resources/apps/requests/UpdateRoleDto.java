@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -57,7 +58,7 @@ public final class UpdateRoleDto {
 
     @Override
     public String toString() {
-        return "UpdateRoleDto{" + "permissions: " + permissions + ", properties: " + properties + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

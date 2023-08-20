@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -127,8 +128,7 @@ public final class TeamDto implements IResource {
 
     @Override
     public String toString() {
-        return "TeamDto{" + "links: " + links + ", id: " + id + ", name: " + name + ", version: " + version
-                + ", created: " + created + ", lastModified: " + lastModified + ", roleName: " + roleName + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

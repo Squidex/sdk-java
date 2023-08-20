@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -153,10 +154,7 @@ public final class ReferencesFieldPropertiesDto {
 
     @Override
     public String toString() {
-        return "ReferencesFieldPropertiesDto{" + "defaultValues: " + defaultValues + ", defaultValue: " + defaultValue
-                + ", minItems: " + minItems + ", maxItems: " + maxItems + ", allowDuplicates: " + allowDuplicates
-                + ", resolveReference: " + resolveReference + ", mustBePublished: " + mustBePublished + ", editor: "
-                + editor + ", schemaIds: " + schemaIds + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
@@ -90,8 +91,7 @@ public final class ScheduleJobDto {
 
     @Override
     public String toString() {
-        return "ScheduleJobDto{" + "id: " + id + ", status: " + status + ", dueTime: " + dueTime + ", color: " + color
-                + ", scheduledBy: " + scheduledBy + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

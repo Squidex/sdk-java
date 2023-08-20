@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.types.WorkflowStepDto;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -87,8 +88,7 @@ public final class UpdateWorkflowDto {
 
     @Override
     public String toString() {
-        return "UpdateWorkflowDto{" + "name: " + name + ", steps: " + steps + ", schemaIds: " + schemaIds
-                + ", initial: " + initial + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static InitialStage builder() {

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -65,8 +66,7 @@ public final class LanguageDto {
 
     @Override
     public String toString() {
-        return "LanguageDto{" + "iso2Code: " + iso2Code + ", englishName: " + englishName + ", nativeName: "
-                + nativeName + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Iso2CodeStage builder() {

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -76,8 +77,7 @@ public final class BulkResultDto {
 
     @Override
     public String toString() {
-        return "BulkResultDto{" + "error: " + error + ", jobIndex: " + jobIndex + ", id: " + id + ", contentId: "
-                + contentId + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static JobIndexStage builder() {

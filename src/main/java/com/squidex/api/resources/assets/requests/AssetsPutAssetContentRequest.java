@@ -1,5 +1,7 @@
 package com.squidex.api.resources.assets.requests;
 
+import com.squidex.api.core.ObjectMappers;
+
 public final class AssetsPutAssetContentRequest {
     private AssetsPutAssetContentRequest() {}
 
@@ -11,6 +13,6 @@ public final class AssetsPutAssetContentRequest {
 
     @Override
     public String toString() {
-        return "AssetsPutAssetContentRequest{" + "}";
+        return ObjectMappers.stringify(this);
     }
 }

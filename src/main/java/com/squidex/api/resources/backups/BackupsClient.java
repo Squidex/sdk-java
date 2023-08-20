@@ -167,7 +167,7 @@ public class BackupsClient {
                 .build();
         Request _request = new Request.Builder()
                 .url(_httpUrl)
-                .method("POST", null)
+                .method("POST", RequestBody.create("", null))
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .build();
         try {

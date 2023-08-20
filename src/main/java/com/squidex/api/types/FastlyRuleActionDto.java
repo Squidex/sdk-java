@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -52,7 +53,7 @@ public final class FastlyRuleActionDto {
 
     @Override
     public String toString() {
-        return "FastlyRuleActionDto{" + "apiKey: " + apiKey + ", serviceId: " + serviceId + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static ApiKeyStage builder() {

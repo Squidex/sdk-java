@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -170,9 +171,7 @@ public final class BulkUpdateAssetsJobDto {
 
     @Override
     public String toString() {
-        return "BulkUpdateAssetsJobDto{" + "id: " + id + ", type: " + type + ", parentId: " + parentId + ", fileName: "
-                + fileName + ", slug: " + slug + ", isProtected: " + isProtected + ", tags: " + tags + ", metadata: "
-                + metadata + ", permanent: " + permanent + ", expectedVersion: " + expectedVersion + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

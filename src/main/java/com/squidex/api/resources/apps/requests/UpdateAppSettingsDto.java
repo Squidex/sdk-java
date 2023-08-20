@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.types.EditorDto;
 import com.squidex.api.types.PatternDto;
 import java.util.ArrayList;
@@ -87,8 +88,7 @@ public final class UpdateAppSettingsDto {
 
     @Override
     public String toString() {
-        return "UpdateAppSettingsDto{" + "patterns: " + patterns + ", editors: " + editors + ", hideScheduler: "
-                + hideScheduler + ", hideDateTimeModeButton: " + hideDateTimeModeButton + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

@@ -1,5 +1,7 @@
 package com.squidex.api.resources.apps.requests;
 
+import com.squidex.api.core.ObjectMappers;
+
 public final class AppsUploadImageRequest {
     private AppsUploadImageRequest() {}
 
@@ -11,6 +13,6 @@ public final class AppsUploadImageRequest {
 
     @Override
     public String toString() {
-        return "AppsUploadImageRequest{" + "}";
+        return ObjectMappers.stringify(this);
     }
 }

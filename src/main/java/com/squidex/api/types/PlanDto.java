@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -185,10 +186,7 @@ public final class PlanDto {
 
     @Override
     public String toString() {
-        return "PlanDto{" + "id: " + id + ", name: " + name + ", costs: " + costs + ", confirmText: " + confirmText
-                + ", yearlyConfirmText: " + yearlyConfirmText + ", yearlyCosts: " + yearlyCosts + ", yearlyId: "
-                + yearlyId + ", maxApiBytes: " + maxApiBytes + ", maxApiCalls: " + maxApiCalls + ", maxAssetSize: "
-                + maxAssetSize + ", maxContributors: " + maxContributors + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

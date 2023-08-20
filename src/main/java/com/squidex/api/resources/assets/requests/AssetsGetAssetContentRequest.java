@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.types.ImageFormat;
 import com.squidex.api.types.ResizeMode;
 import java.util.Objects;
@@ -229,10 +230,7 @@ public final class AssetsGetAssetContentRequest {
 
     @Override
     public String toString() {
-        return "AssetsGetAssetContentRequest{" + "version: " + version + ", cache: " + cache + ", download: " + download
-                + ", width: " + width + ", height: " + height + ", quality: " + quality + ", mode: " + mode + ", bg: "
-                + bg + ", focusX: " + focusX + ", focusY: " + focusY + ", nofocus: " + nofocus + ", auto: " + auto
-                + ", force: " + force + ", format: " + format + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -199,10 +200,7 @@ public final class ContentsGetContentsRequest {
 
     @Override
     public String toString() {
-        return "ContentsGetContentsRequest{" + "flatten: " + flatten + ", languages: " + languages + ", noSlowTotal: "
-                + noSlowTotal + ", noTotal: " + noTotal + ", unpublished: " + unpublished + ", ids: " + ids + ", q: "
-                + q + ", search: " + search + ", top: " + top + ", skip: " + skip + ", orderby: " + orderby
-                + ", filter: " + filter + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

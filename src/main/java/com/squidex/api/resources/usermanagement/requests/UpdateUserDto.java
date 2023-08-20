@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -81,8 +82,7 @@ public final class UpdateUserDto {
 
     @Override
     public String toString() {
-        return "UpdateUserDto{" + "email: " + email + ", displayName: " + displayName + ", password: " + password
-                + ", permissions: " + permissions + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static EmailStage builder() {

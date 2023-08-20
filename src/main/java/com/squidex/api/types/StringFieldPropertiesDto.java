@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -290,13 +291,7 @@ public final class StringFieldPropertiesDto {
 
     @Override
     public String toString() {
-        return "StringFieldPropertiesDto{" + "defaultValues: " + defaultValues + ", defaultValue: " + defaultValue
-                + ", pattern: " + pattern + ", patternMessage: " + patternMessage + ", folderId: " + folderId
-                + ", minLength: " + minLength + ", maxLength: " + maxLength + ", minCharacters: " + minCharacters
-                + ", maxCharacters: " + maxCharacters + ", minWords: " + minWords + ", maxWords: " + maxWords
-                + ", allowedValues: " + allowedValues + ", schemaIds: " + schemaIds + ", isUnique: " + isUnique
-                + ", isEmbeddable: " + isEmbeddable + ", inlineEditable: " + inlineEditable + ", createEnum: "
-                + createEnum + ", contentType: " + contentType + ", editor: " + editor + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

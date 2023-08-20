@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -139,9 +140,7 @@ public final class NumberFieldPropertiesDto {
 
     @Override
     public String toString() {
-        return "NumberFieldPropertiesDto{" + "defaultValues: " + defaultValues + ", defaultValue: " + defaultValue
-                + ", maxValue: " + maxValue + ", minValue: " + minValue + ", allowedValues: " + allowedValues
-                + ", isUnique: " + isUnique + ", inlineEditable: " + inlineEditable + ", editor: " + editor + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

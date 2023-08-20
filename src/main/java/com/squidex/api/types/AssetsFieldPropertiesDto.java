@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -318,14 +319,7 @@ public final class AssetsFieldPropertiesDto {
 
     @Override
     public String toString() {
-        return "AssetsFieldPropertiesDto{" + "previewMode: " + previewMode + ", defaultValues: " + defaultValues
-                + ", defaultValue: " + defaultValue + ", folderId: " + folderId + ", previewFormat: " + previewFormat
-                + ", minItems: " + minItems + ", maxItems: " + maxItems + ", minSize: " + minSize + ", maxSize: "
-                + maxSize + ", minWidth: " + minWidth + ", maxWidth: " + maxWidth + ", minHeight: " + minHeight
-                + ", maxHeight: " + maxHeight + ", aspectWidth: " + aspectWidth + ", aspectHeight: " + aspectHeight
-                + ", expectedType: " + expectedType + ", resolveFirst: " + resolveFirst + ", mustBeImage: "
-                + mustBeImage + ", resolveImage: " + resolveImage + ", allowedExtensions: " + allowedExtensions
-                + ", allowDuplicates: " + allowDuplicates + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

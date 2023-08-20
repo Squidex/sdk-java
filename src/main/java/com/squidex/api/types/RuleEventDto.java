@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -169,9 +170,7 @@ public final class RuleEventDto implements IResource {
 
     @Override
     public String toString() {
-        return "RuleEventDto{" + "links: " + links + ", id: " + id + ", created: " + created + ", description: "
-                + description + ", eventName: " + eventName + ", lastDump: " + lastDump + ", numCalls: " + numCalls
-                + ", nextAttempt: " + nextAttempt + ", result: " + result + ", jobResult: " + jobResult + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -93,8 +94,7 @@ public final class UpsertSchemaNestedFieldDto {
 
     @Override
     public String toString() {
-        return "UpsertSchemaNestedFieldDto{" + "name: " + name + ", isHidden: " + isHidden + ", isLocked: " + isLocked
-                + ", isDisabled: " + isDisabled + ", properties: " + properties + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static NameStage builder() {

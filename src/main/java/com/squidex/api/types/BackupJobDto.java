@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -124,9 +125,7 @@ public final class BackupJobDto implements IResource {
 
     @Override
     public String toString() {
-        return "BackupJobDto{" + "links: " + links + ", id: " + id + ", started: " + started + ", stopped: " + stopped
-                + ", handledEvents: " + handledEvents + ", handledAssets: " + handledAssets + ", status: " + status
-                + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

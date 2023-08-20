@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -233,11 +234,7 @@ public final class AppDto implements IResource {
 
     @Override
     public String toString() {
-        return "AppDto{" + "links: " + links + ", id: " + id + ", name: " + name + ", label: " + label
-                + ", description: " + description + ", version: " + version + ", created: " + created
-                + ", lastModified: " + lastModified + ", teamId: " + teamId + ", permissions: " + permissions
-                + ", canAccessApi: " + canAccessApi + ", canAccessContent: " + canAccessContent + ", roleName: "
-                + roleName + ", roleProperties: " + roleProperties + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {

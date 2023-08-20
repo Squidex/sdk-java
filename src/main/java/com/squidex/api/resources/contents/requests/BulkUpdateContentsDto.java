@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import com.squidex.api.types.BulkUpdateContentsJobDto;
 import java.util.ArrayList;
 import java.util.List;
@@ -132,9 +133,7 @@ public final class BulkUpdateContentsDto {
 
     @Override
     public String toString() {
-        return "BulkUpdateContentsDto{" + "jobs: " + jobs + ", publish: " + publish + ", doNotScript: " + doNotScript
-                + ", doNotValidate: " + doNotValidate + ", doNotValidateWorkflow: " + doNotValidateWorkflow
-                + ", checkReferrers: " + checkReferrers + ", optimizeValidation: " + optimizeValidation + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class TemplateDetailsDto implements IResource {
 
     @Override
     public String toString() {
-        return "TemplateDetailsDto{" + "links: " + links + ", details: " + details + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static DetailsStage builder() {

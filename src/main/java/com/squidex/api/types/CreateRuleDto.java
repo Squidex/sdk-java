@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -46,7 +47,7 @@ public final class CreateRuleDto {
 
     @Override
     public String toString() {
-        return "CreateRuleDto{" + "trigger: " + trigger + ", action: " + action + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static TriggerStage builder() {

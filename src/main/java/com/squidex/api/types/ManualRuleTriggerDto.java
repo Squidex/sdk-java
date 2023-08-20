@@ -1,5 +1,7 @@
 package com.squidex.api.types;
 
+import com.squidex.api.core.ObjectMappers;
+
 public final class ManualRuleTriggerDto {
     private ManualRuleTriggerDto() {}
 
@@ -11,6 +13,6 @@ public final class ManualRuleTriggerDto {
 
     @Override
     public String toString() {
-        return "ManualRuleTriggerDto{" + "}";
+        return ObjectMappers.stringify(this);
     }
 }

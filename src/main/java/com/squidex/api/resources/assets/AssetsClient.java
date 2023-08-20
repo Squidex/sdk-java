@@ -549,13 +549,16 @@ public class AssetsClient {
             _httpUrl.addQueryParameter("duplicate", request.getDuplicate().get().toString());
         }
         MultipartBody.Builder _multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
-        _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        try {
+            _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         RequestBody _requestBody = _multipartBody.build();
         Request.Builder _requestBuilder = new Request.Builder()
                 .url(_httpUrl.build())
                 .method("POST", _requestBody)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json");
+                .headers(Headers.of(clientOptions.headers(requestOptions)));
         Request _request = _requestBuilder.build();
         try {
             Response _response = clientOptions.httpClient().newCall(_request).execute();
@@ -666,13 +669,16 @@ public class AssetsClient {
             _httpUrl.addQueryParameter("duplicate", request.getDuplicate().get().toString());
         }
         MultipartBody.Builder _multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
-        _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        try {
+            _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         RequestBody _requestBody = _multipartBody.build();
         Request.Builder _requestBuilder = new Request.Builder()
                 .url(_httpUrl.build())
                 .method("POST", _requestBody)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json");
+                .headers(Headers.of(clientOptions.headers(requestOptions)));
         Request _request = _requestBuilder.build();
         try {
             Response _response = clientOptions.httpClient().newCall(_request).execute();
@@ -847,13 +853,16 @@ public class AssetsClient {
                 .addPathSegments("content")
                 .build();
         MultipartBody.Builder _multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
-        _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        try {
+            _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         RequestBody _requestBody = _multipartBody.build();
         Request.Builder _requestBuilder = new Request.Builder()
                 .url(_httpUrl)
                 .method("PUT", _requestBody)
-                .headers(Headers.of(clientOptions.headers(requestOptions)))
-                .addHeader("Content-Type", "application/json");
+                .headers(Headers.of(clientOptions.headers(requestOptions)));
         Request _request = _requestBuilder.build();
         try {
             Response _response = clientOptions.httpClient().newCall(_request).execute();

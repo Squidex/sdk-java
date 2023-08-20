@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -109,8 +110,7 @@ public final class SchemaScriptsDto {
 
     @Override
     public String toString() {
-        return "SchemaScriptsDto{" + "query: " + query + ", queryPre: " + queryPre + ", create: " + create
-                + ", update: " + update + ", delete: " + delete + ", change: " + change + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static Builder builder() {

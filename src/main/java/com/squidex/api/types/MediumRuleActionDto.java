@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -129,9 +130,7 @@ public final class MediumRuleActionDto {
 
     @Override
     public String toString() {
-        return "MediumRuleActionDto{" + "accessToken: " + accessToken + ", title: " + title + ", content: " + content
-                + ", canonicalUrl: " + canonicalUrl + ", tags: " + tags + ", publicationId: " + publicationId
-                + ", isHtml: " + isHtml + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static AccessTokenStage builder() {

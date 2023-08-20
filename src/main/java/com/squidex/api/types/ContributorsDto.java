@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -85,8 +86,7 @@ public final class ContributorsDto implements IResource {
 
     @Override
     public String toString() {
-        return "ContributorsDto{" + "links: " + links + ", items: " + items + ", maxContributors: " + maxContributors
-                + ", meta: " + meta + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static MaxContributorsStage builder() {

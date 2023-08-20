@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.squidex.api.core.ObjectMappers;
 import java.time.OffsetDateTime;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -307,13 +308,7 @@ public final class ContentDto implements IResource {
 
     @Override
     public String toString() {
-        return "ContentDto{" + "links: " + links + ", id: " + id + ", createdBy: " + createdBy + ", lastModifiedBy: "
-                + lastModifiedBy + ", data: " + data + ", referenceData: " + referenceData + ", created: " + created
-                + ", lastModified: " + lastModified + ", status: " + status + ", newStatus: " + newStatus
-                + ", statusColor: " + statusColor + ", newStatusColor: " + newStatusColor + ", editToken: " + editToken
-                + ", scheduleJob: " + scheduleJob + ", schemaId: " + schemaId + ", schemaName: " + schemaName
-                + ", schemaDisplayName: " + schemaDisplayName + ", referenceFields: " + referenceFields
-                + ", isDeleted: " + isDeleted + ", version: " + version + "}";
+        return ObjectMappers.stringify(this);
     }
 
     public static IdStage builder() {
