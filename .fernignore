@@ -4,7 +4,12 @@ README.md
 **/ClientOptions.java
 
 # Client files
-src/main/java/com/squidex/api/*.*
+src/main/java/com/squidex/api/AccessToken.java
+src/main/java/com/squidex/api/AuthInterceptor.java
+src/main/java/com/squidex/api/InMemoryTokenStore.java
+src/main/java/com/squidex/api/SquidexApiClient.java
+src/main/java/com/squidex/api/SquidexApiClientBuilder.java
+src/main/java/com/squidex/api/TokenStore.java
 
 # Workflows
 .github/workflows/check-updates.yml
