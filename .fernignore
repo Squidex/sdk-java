@@ -19,5 +19,8 @@ src/main/java/com/squidex/api/TokenStore.java
 # Tests
 src/test/
 
+# Sample App
+sample-app
+
 # Docker Compose
 tests
