@@ -26,9 +26,13 @@ public class TestSetup implements BeforeAllCallback {
                     CreateAppDto.builder()
                             .name(client.client().clientOptions.appName())
                             .build());
-        } catch (Exception ex) {
-            System.out.println("App probably already exists.");
-            return;
+        } catch (ApiError ex) {
+            if (ex.statusCode() == 400) {
+                System.out.println("App probably already exists.");
+                return;
+            } else {
+                throw ex;
+            }
         }
     }
 
@@ -54,12 +58,6 @@ public class TestSetup implements BeforeAllCallback {
             try {
                 client.client().ping().getPing();
                 break;
-            } catch (ApiError ex) {
-                if (ex.statusCode() == 400) {
-                    break;
-                } else {
-                    throw ex;
-                }
             } catch (Exception ex) {
                 if (expires.isBefore(Instant.now())) {
                     throw new Error(String.format("Cannot connect to test system with: %s.", ex.getMessage()));
@@ -69,7 +67,5 @@ public class TestSetup implements BeforeAllCallback {
             //noinspection BusyWait
             Thread.sleep(100);
         }
-
-        System.out.println("Connected to server.");
     }
 }
