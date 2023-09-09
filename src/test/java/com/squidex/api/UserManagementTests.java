@@ -4,9 +4,9 @@ import com.squidex.api.resources.usermanagement.requests.CreateUserDto;
 import com.squidex.api.types.UserDto;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.UUID;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserManagementTests extends TestBase {
     private static final SquidexApiClient client = Utils.getClient().client();

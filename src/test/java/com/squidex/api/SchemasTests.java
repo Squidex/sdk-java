@@ -17,11 +17,11 @@ public class SchemasTests extends TestBase {
         CreateSchemaDto request = CreateSchemaDto.builder()
                 .name(String.format("schema-%s", UUID.randomUUID()))
                 .fields(Collections.singletonList(
-                            UpsertSchemaFieldDto.builder()
-                                    .name("field1")
-                                    .properties(FieldPropertiesDto.string(StringFieldPropertiesDto.builder().build()))
-                                    .build()
-                            )
+                                UpsertSchemaFieldDto.builder()
+                                        .name("field1")
+                                        .properties(FieldPropertiesDto.string(StringFieldPropertiesDto.builder().build()))
+                                        .build()
+                        )
                 )
                 .isPublished(true)
                 .build();

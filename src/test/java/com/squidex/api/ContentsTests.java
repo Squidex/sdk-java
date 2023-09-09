@@ -7,9 +7,13 @@ import com.squidex.api.types.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SuppressWarnings("unchecked")
 public class ContentsTests extends TestBase {
@@ -51,7 +55,7 @@ public class ContentsTests extends TestBase {
         ContentDto createdContent = client.contents().postContent(schema.getName(), request);
 
         ContentDto content = client.contents().getContent(schema.getName(), createdContent.getId());
-        assertEquals(id.toString(), ((Map<String, Map<String, Object>>)content.getData()).get("field1").get("iv"));
+        assertEquals(id.toString(), ((Map<String, Map<String, Object>>) content.getData()).get("field1").get("iv"));
         assertNotNull(content.getLastModified());
         assertNotNull(content.getLastModifiedBy());
         assertEquals("Published", content.getStatus());
@@ -73,13 +77,10 @@ public class ContentsTests extends TestBase {
 
         ContentDto createdContent = client.contents().postContent(schema.getName(), request);
 
-
-
         ContentDto content = client.contents().getContent(schema.getName(), createdContent.getId(), ContentsGetContentRequest.builder().unpublished(true).build());
-        assertEquals(id.toString(), ((Map<String, Map<String, Object>>)content.getData()).get("field1").get("iv"));
+        assertEquals(id.toString(), ((Map<String, Map<String, Object>>) content.getData()).get("field1").get("iv"));
         assertNotNull(content.getLastModified());
         assertNotNull(content.getLastModifiedBy());
         assertEquals("Draft", content.getStatus());
-
     }
 }

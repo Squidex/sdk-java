@@ -12,7 +12,7 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AssetsTests extends TestBase {
     private static final SquidexApiClient client = Utils.getClient().client();

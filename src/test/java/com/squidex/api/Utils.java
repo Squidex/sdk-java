@@ -3,7 +3,8 @@ package com.squidex.api;
 final class Utils {
     private static ClientProvider singleClient;
 
-    private Utils() {}
+    private Utils() {
+    }
 
     public static ClientProvider getClient() {
         if (singleClient != null) {
