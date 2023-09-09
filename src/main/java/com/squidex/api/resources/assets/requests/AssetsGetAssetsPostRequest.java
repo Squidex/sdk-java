@@ -67,7 +67,7 @@ public final class AssetsGetAssetsPostRequest {
         return ObjectMappers.stringify(this);
     }
 
-    public static BodyStage builder() {
+    public static Builder builder() {
         return new Builder();
     }
 

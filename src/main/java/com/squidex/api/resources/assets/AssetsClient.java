@@ -570,7 +570,7 @@ public class AssetsClient {
         }
         MultipartBody.Builder _multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
         try {
-            _multipartBody.addFormDataPart("file", null, RequestBody.create(null, file));
+            _multipartBody.addFormDataPart("file", "logo-wide.png", RequestBody.create(MediaType.parse("image/png"), file));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
