@@ -160,6 +160,10 @@ public class SchemasClient {
         }
     }
 
+    public SchemaDto putSchemaUiFields(String schema) {
+        return putSchemaUiFields(schema, ConfigureUiFieldsDto.builder().build());
+    }
+
     public SchemaDto putSchemaFieldOrdering(String schema, ReorderFieldsDto request) {
         return putSchemaFieldOrdering(schema, request, null);
     }
@@ -791,6 +795,33 @@ public class SchemasClient {
         if (request.getIsSingleton().isPresent()) {
             _requestBodyProperties.put("isSingleton", request.getIsSingleton());
         }
+        if (request.getProperties().isPresent()) {
+            _requestBodyProperties.put("properties", request.getProperties());
+        }
+        if (request.getScripts().isPresent()) {
+            _requestBodyProperties.put("scripts", request.getScripts());
+        }
+        if (request.getFieldsInReferences().isPresent()) {
+            _requestBodyProperties.put("fieldsInReferences", request.getFieldsInReferences());
+        }
+        if (request.getFieldsInLists().isPresent()) {
+            _requestBodyProperties.put("fieldsInLists", request.getFieldsInLists());
+        }
+        if (request.getFields().isPresent()) {
+            _requestBodyProperties.put("fields", request.getFields());
+        }
+        if (request.getPreviewUrls().isPresent()) {
+            _requestBodyProperties.put("previewUrls", request.getPreviewUrls());
+        }
+        if (request.getFieldRules().isPresent()) {
+            _requestBodyProperties.put("fieldRules", request.getFieldRules());
+        }
+        if (request.getCategory().isPresent()) {
+            _requestBodyProperties.put("category", request.getCategory());
+        }
+        if (request.getIsPublished().isPresent()) {
+            _requestBodyProperties.put("isPublished", request.getIsPublished());
+        }
         RequestBody _requestBody;
         try {
             _requestBody = RequestBody.create(
@@ -910,6 +941,10 @@ public class SchemasClient {
         }
     }
 
+    public SchemaDto putSchema(String schema) {
+        return putSchema(schema, UpdateSchemaDto.builder().build());
+    }
+
     public void deleteSchema(String schema) {
         deleteSchema(schema, null);
     }
@@ -960,6 +995,33 @@ public class SchemasClient {
         if (request.getNoFieldRecreation().isPresent()) {
             _requestBodyProperties.put("noFieldRecreation", request.getNoFieldRecreation());
         }
+        if (request.getProperties().isPresent()) {
+            _requestBodyProperties.put("properties", request.getProperties());
+        }
+        if (request.getScripts().isPresent()) {
+            _requestBodyProperties.put("scripts", request.getScripts());
+        }
+        if (request.getFieldsInReferences().isPresent()) {
+            _requestBodyProperties.put("fieldsInReferences", request.getFieldsInReferences());
+        }
+        if (request.getFieldsInLists().isPresent()) {
+            _requestBodyProperties.put("fieldsInLists", request.getFieldsInLists());
+        }
+        if (request.getFields().isPresent()) {
+            _requestBodyProperties.put("fields", request.getFields());
+        }
+        if (request.getPreviewUrls().isPresent()) {
+            _requestBodyProperties.put("previewUrls", request.getPreviewUrls());
+        }
+        if (request.getFieldRules().isPresent()) {
+            _requestBodyProperties.put("fieldRules", request.getFieldRules());
+        }
+        if (request.getCategory().isPresent()) {
+            _requestBodyProperties.put("category", request.getCategory());
+        }
+        if (request.getIsPublished().isPresent()) {
+            _requestBodyProperties.put("isPublished", request.getIsPublished());
+        }
         RequestBody _requestBody;
         try {
             _requestBody = RequestBody.create(
@@ -985,6 +1047,10 @@ public class SchemasClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public SchemaDto putSchemaSync(String schema) {
+        return putSchemaSync(schema, SynchronizeSchemaDto.builder().build());
     }
 
     public SchemaDto putCategory(String schema, ChangeCategoryDto request) {
@@ -1029,6 +1095,10 @@ public class SchemasClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public SchemaDto putCategory(String schema) {
+        return putCategory(schema, ChangeCategoryDto.builder().build());
     }
 
     public SchemaDto putPreviewUrls(String schema, Map<String, String> request) {
@@ -1109,6 +1179,10 @@ public class SchemasClient {
         }
     }
 
+    public SchemaDto putScripts(String schema) {
+        return putScripts(schema, SchemaScriptsDto.builder().build());
+    }
+
     public SchemaDto putRules(String schema, ConfigureFieldRulesDto request) {
         return putRules(schema, request, null);
     }
@@ -1151,6 +1225,10 @@ public class SchemasClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public SchemaDto putRules(String schema) {
+        return putRules(schema, ConfigureFieldRulesDto.builder().build());
     }
 
     public SchemaDto publishSchema(String schema) {

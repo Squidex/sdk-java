@@ -85,6 +85,10 @@ public class UsersClient {
         }
     }
 
+    public List<UserDto> getUsers() {
+        return getUsers(UsersGetUsersRequest.builder().build());
+    }
+
     public UserDto getUser(String id) {
         return getUser(id, null);
     }

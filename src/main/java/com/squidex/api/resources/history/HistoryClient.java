@@ -58,6 +58,10 @@ public class HistoryClient {
         }
     }
 
+    public List<HistoryEventDto> getAppHistory() {
+        return getAppHistory(HistoryGetAppHistoryRequest.builder().build());
+    }
+
     public List<HistoryEventDto> getTeamHistory(String team, HistoryGetTeamHistoryRequest request) {
         return getTeamHistory(team, request, null);
     }
@@ -92,5 +96,9 @@ public class HistoryClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<HistoryEventDto> getTeamHistory(String team) {
+        return getTeamHistory(team, HistoryGetTeamHistoryRequest.builder().build());
     }
 }

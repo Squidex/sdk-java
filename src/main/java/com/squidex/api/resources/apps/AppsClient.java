@@ -139,6 +139,10 @@ public class AppsClient {
         }
     }
 
+    public AssetScriptsDto putAssetScripts() {
+        return putAssetScripts(UpdateAssetScriptsDto.builder().build());
+    }
+
     public ClientsDto getClients() {
         return getClients(null);
     }
@@ -262,6 +266,10 @@ public class AppsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ClientsDto putClient(String id) {
+        return putClient(id, UpdateClientDto.builder().build());
     }
 
     public ClientsDto deleteClient(String id) {
@@ -636,6 +644,10 @@ public class AppsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public AppLanguagesDto putLanguage(String language) {
+        return putLanguage(language, UpdateLanguageDto.builder().build());
     }
 
     public AppLanguagesDto deleteLanguage(String language) {
@@ -1019,6 +1031,10 @@ public class AppsClient {
         }
     }
 
+    public AppDto putApp() {
+        return putApp(UpdateAppDto.builder().build());
+    }
+
     public void deleteApp() {
         deleteApp(null);
     }
@@ -1087,6 +1103,10 @@ public class AppsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public AppDto putAppTeam() {
+        return putAppTeam(TransferToTeamDto.builder().build());
     }
 
     public AppSettingsDto getSettings() {

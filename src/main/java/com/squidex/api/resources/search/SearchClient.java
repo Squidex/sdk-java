@@ -57,4 +57,8 @@ public class SearchClient {
             throw new RuntimeException(e);
         }
     }
+
+    public List<SearchResultDto> getSearchResults() {
+        return getSearchResults(SearchGetSearchResultsRequest.builder().build());
+    }
 }

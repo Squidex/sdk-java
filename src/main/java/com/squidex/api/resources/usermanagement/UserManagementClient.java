@@ -64,6 +64,10 @@ public class UserManagementClient {
         }
     }
 
+    public UsersDto getUsers() {
+        return getUsers(UserManagementGetUsersRequest.builder().build());
+    }
+
     public UserDto postUser(CreateUserDto request) {
         return postUser(request, null);
     }

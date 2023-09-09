@@ -116,6 +116,10 @@ public class ContentsClient {
         }
     }
 
+    public ContentsDto getContents(String schema) {
+        return getContents(schema, ContentsGetContentsRequest.builder().build());
+    }
+
     public ContentDto postContent(String schema, ContentsPostContentRequest request) {
         return postContent(schema, request, null);
     }
@@ -230,6 +234,10 @@ public class ContentsClient {
         }
     }
 
+    public ContentsDto getContentsPost(String schema) {
+        return getContentsPost(schema, ContentsGetContentsPostRequest.builder().build());
+    }
+
     public ContentDto getContent(String schema, String id, ContentsGetContentRequest request) {
         return getContent(schema, id, request, null);
     }
@@ -277,6 +285,10 @@ public class ContentsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ContentDto getContent(String schema, String id) {
+        return getContent(schema, id, ContentsGetContentRequest.builder().build());
     }
 
     public ContentDto postUpsertContent(String schema, String id, ContentsPostUpsertContentRequest request) {
@@ -468,6 +480,10 @@ public class ContentsClient {
         }
     }
 
+    public void deleteContent(String schema, String id) {
+        deleteContent(schema, id, ContentsDeleteContentRequest.builder().build());
+    }
+
     public void getContentValidity(String schema, String id) {
         getContentValidity(schema, id, null);
     }
@@ -556,6 +572,10 @@ public class ContentsClient {
         }
     }
 
+    public ContentsDto getReferences(String schema, String id) {
+        return getReferences(schema, id, ContentsGetReferencesRequest.builder().build());
+    }
+
     public ContentsDto getReferencing(String schema, String id, ContentsGetReferencingRequest request) {
         return getReferencing(schema, id, request, null);
     }
@@ -613,6 +633,11 @@ public class ContentsClient {
         }
     }
 
+    public ContentsDto getReferencing(String schema, String id) {
+        return getReferencing(
+                schema, id, ContentsGetReferencingRequest.builder().build());
+    }
+
     public InputStream getContentVersion(
             String schema, String id, int version, ContentsGetContentVersionRequest request) {
         return getContentVersion(schema, id, version, request, null);
@@ -657,6 +682,11 @@ public class ContentsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public InputStream getContentVersion(String schema, String id, int version) {
+        return getContentVersion(
+                schema, id, version, ContentsGetContentVersionRequest.builder().build());
     }
 
     public List<BulkResultDto> postContents(String schema, ImportContentsDto request) {
@@ -868,6 +898,11 @@ public class ContentsClient {
         }
     }
 
+    public ContentDto deleteContentStatus(String schema, String id) {
+        return deleteContentStatus(
+                schema, id, ContentsDeleteContentStatusRequest.builder().build());
+    }
+
     public ContentDto createDraft(String schema, String id, ContentsCreateDraftRequest request) {
         return createDraft(schema, id, request, null);
     }
@@ -909,6 +944,10 @@ public class ContentsClient {
         }
     }
 
+    public ContentDto createDraft(String schema, String id) {
+        return createDraft(schema, id, ContentsCreateDraftRequest.builder().build());
+    }
+
     public ContentDto deleteVersion(String schema, String id, ContentsDeleteVersionRequest request) {
         return deleteVersion(schema, id, request, null);
     }
@@ -948,5 +987,9 @@ public class ContentsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ContentDto deleteVersion(String schema, String id) {
+        return deleteVersion(schema, id, ContentsDeleteVersionRequest.builder().build());
     }
 }

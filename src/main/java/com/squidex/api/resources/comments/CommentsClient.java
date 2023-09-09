@@ -93,6 +93,10 @@ public class CommentsClient {
         }
     }
 
+    public CommentsDto getComments(String commentsId) {
+        return getComments(commentsId, CommentsGetCommentsRequest.builder().build());
+    }
+
     public CommentDto postComment(String commentsId, UpsertCommentDto request) {
         return postComment(commentsId, request, null);
     }

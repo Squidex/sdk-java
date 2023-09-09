@@ -209,6 +209,10 @@ public class RulesClient {
         }
     }
 
+    public RuleDto putRule(String id) {
+        return putRule(id, UpdateRuleDto.builder().build());
+    }
+
     public void deleteRule(String id) {
         deleteRule(id, null);
     }
@@ -370,6 +374,10 @@ public class RulesClient {
         }
     }
 
+    public void putRuleRun(String id) {
+        putRuleRun(id, RulesPutRuleRunRequest.builder().build());
+    }
+
     public void deleteRuleEvents(String id) {
         deleteRuleEvents(id, null);
     }
@@ -508,6 +516,10 @@ public class RulesClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public RuleEventsDto getEvents() {
+        return getEvents(RulesGetEventsRequest.builder().build());
     }
 
     public void deleteEvents() {

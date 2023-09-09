@@ -125,6 +125,11 @@ public class AssetsClient {
         }
     }
 
+    public InputStream getAssetContentBySlug(String idOrSlug, String more) {
+        return getAssetContentBySlug(
+                idOrSlug, more, AssetsGetAssetContentBySlugRequest.builder().build());
+    }
+
     public InputStream getAssetContent(String id, AssetsGetAssetContentRequest request) {
         return getAssetContent(id, request, null);
     }
@@ -200,6 +205,10 @@ public class AssetsClient {
         }
     }
 
+    public InputStream getAssetContent(String id) {
+        return getAssetContent(id, AssetsGetAssetContentRequest.builder().build());
+    }
+
     public AssetFoldersDto getAssetFolders(AssetsGetAssetFoldersRequest request) {
         return getAssetFolders(request, null);
     }
@@ -235,6 +244,10 @@ public class AssetsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public AssetFoldersDto getAssetFolders() {
+        return getAssetFolders(AssetsGetAssetFoldersRequest.builder().build());
     }
 
     public AssetFolderDto postAssetFolder(CreateAssetFolderDto request) {
@@ -395,6 +408,10 @@ public class AssetsClient {
         }
     }
 
+    public AssetFolderDto putAssetFolderParent(String id) {
+        return putAssetFolderParent(id, MoveAssetFolderDto.builder().build());
+    }
+
     public Map<String, Integer> getTags() {
         return getTags(null);
     }
@@ -527,6 +544,10 @@ public class AssetsClient {
         }
     }
 
+    public AssetsDto getAssets() {
+        return getAssets(AssetsGetAssetsRequest.builder().build());
+    }
+
     public AssetDto postAsset(File file, AssetsPostAssetRequest request) {
         return postAsset(file, request, null);
     }
@@ -615,6 +636,10 @@ public class AssetsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public AssetsDto getAssetsPost() {
+        return getAssetsPost(AssetsGetAssetsPostRequest.builder().build());
     }
 
     public AssetDto getAsset(String id) {
@@ -747,6 +772,10 @@ public class AssetsClient {
         }
     }
 
+    public AssetDto putAsset(String id) {
+        return putAsset(id, AnnotateAssetDto.builder().build());
+    }
+
     public void deleteAsset(String id, AssetsDeleteAssetRequest request) {
         deleteAsset(id, request, null);
     }
@@ -783,6 +812,10 @@ public class AssetsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void deleteAsset(String id) {
+        deleteAsset(id, AssetsDeleteAssetRequest.builder().build());
     }
 
     public List<BulkResultDto> bulkUpdateAssets(BulkUpdateAssetsDto request) {
@@ -835,6 +868,10 @@ public class AssetsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<BulkResultDto> bulkUpdateAssets() {
+        return bulkUpdateAssets(BulkUpdateAssetsDto.builder().build());
     }
 
     public AssetDto putAssetContent(String id, File file, AssetsPutAssetContentRequest request) {
@@ -918,5 +955,9 @@ public class AssetsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public AssetDto putAssetParent(String id) {
+        return putAssetParent(id, MoveAssetDto.builder().build());
     }
 }

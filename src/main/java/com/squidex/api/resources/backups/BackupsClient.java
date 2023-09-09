@@ -124,6 +124,10 @@ public class BackupsClient {
         }
     }
 
+    public InputStream getBackupContentV2(String id) {
+        return getBackupContentV2(id, BackupsGetBackupContentV2Request.builder().build());
+    }
+
     public BackupJobsDto getBackups() {
         return getBackups(null);
     }

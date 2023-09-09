@@ -40,7 +40,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'io.squidex'
             artifactId = 'squidex'
-            version = '0.0.13'
+            version = '0.0.14'
             from components.java
         }
     }

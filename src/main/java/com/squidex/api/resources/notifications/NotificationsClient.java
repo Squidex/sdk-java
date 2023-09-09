@@ -55,6 +55,11 @@ public class NotificationsClient {
         }
     }
 
+    public CommentsDto getNotifications(String userId) {
+        return getNotifications(
+                userId, NotificationsGetNotificationsRequest.builder().build());
+    }
+
     public void deleteComment(String userId, String commentId) {
         deleteComment(userId, commentId, null);
     }

@@ -51,4 +51,8 @@ public class NewsClient {
             throw new RuntimeException(e);
         }
     }
+
+    public FeaturesDto getNews() {
+        return getNews(NewsGetNewsRequest.builder().build());
+    }
 }
