@@ -50,6 +50,9 @@ public final class NumberFieldPropertiesDto {
         this.editor = editor;
     }
 
+    /**
+     * @return The language specific default value for the field value.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, Optional<Double>>> getDefaultValues() {
         return defaultValues;
@@ -103,6 +106,9 @@ public final class NumberFieldPropertiesDto {
         return inlineEditable;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<NumberFieldEditor> getEditor() {
         return editor;

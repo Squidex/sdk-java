@@ -14,6 +14,8 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = ContentsGetContentsPostRequest.Builder.class)
 public final class ContentsGetContentsPostRequest {
+    private final Optional<String> fields;
+
     private final Optional<Boolean> flatten;
 
     private final Optional<String> languages;
@@ -27,18 +29,28 @@ public final class ContentsGetContentsPostRequest {
     private final QueryDto body;
 
     private ContentsGetContentsPostRequest(
+            Optional<String> fields,
             Optional<Boolean> flatten,
             Optional<String> languages,
             Optional<Boolean> noSlowTotal,
             Optional<Boolean> noTotal,
             Optional<Boolean> unpublished,
             QueryDto body) {
+        this.fields = fields;
         this.flatten = flatten;
         this.languages = languages;
         this.noSlowTotal = noSlowTotal;
         this.noTotal = noTotal;
         this.unpublished = unpublished;
         this.body = body;
+    }
+
+    /**
+     * @return The list of content fields (comma-separated).
+     */
+    @JsonProperty("X-Fields")
+    public Optional<String> getFields() {
+        return fields;
     }
 
     /**
@@ -50,7 +62,7 @@ public final class ContentsGetContentsPostRequest {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {
@@ -93,7 +105,8 @@ public final class ContentsGetContentsPostRequest {
     }
 
     private boolean equalTo(ContentsGetContentsPostRequest other) {
-        return flatten.equals(other.flatten)
+        return fields.equals(other.fields)
+                && flatten.equals(other.flatten)
                 && languages.equals(other.languages)
                 && noSlowTotal.equals(other.noSlowTotal)
                 && noTotal.equals(other.noTotal)
@@ -103,7 +116,8 @@ public final class ContentsGetContentsPostRequest {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.flatten, this.languages, this.noSlowTotal, this.noTotal, this.unpublished, this.body);
+        return Objects.hash(
+                this.fields, this.flatten, this.languages, this.noSlowTotal, this.noTotal, this.unpublished, this.body);
     }
 
     @Override
@@ -123,6 +137,10 @@ public final class ContentsGetContentsPostRequest {
 
     public interface _FinalStage {
         ContentsGetContentsPostRequest build();
+
+        _FinalStage fields(Optional<String> fields);
+
+        _FinalStage fields(String fields);
 
         _FinalStage flatten(Optional<Boolean> flatten);
 
@@ -159,10 +177,13 @@ public final class ContentsGetContentsPostRequest {
 
         private Optional<Boolean> flatten = Optional.empty();
 
+        private Optional<String> fields = Optional.empty();
+
         private Builder() {}
 
         @Override
         public Builder from(ContentsGetContentsPostRequest other) {
+            fields(other.getFields());
             flatten(other.getFlatten());
             languages(other.getLanguages());
             noSlowTotal(other.getNoSlowTotal());
@@ -231,7 +252,7 @@ public final class ContentsGetContentsPostRequest {
         }
 
         /**
-         * <p>Only resolve these languages (comma-separated).</p>
+         * <p>The list of languages to resolve (comma-separated).</p>
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @Override
@@ -264,9 +285,27 @@ public final class ContentsGetContentsPostRequest {
             return this;
         }
 
+        /**
+         * <p>The list of content fields (comma-separated).</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
+        @Override
+        public _FinalStage fields(String fields) {
+            this.fields = Optional.of(fields);
+            return this;
+        }
+
+        @Override
+        @JsonSetter(value = "X-Fields", nulls = Nulls.SKIP)
+        public _FinalStage fields(Optional<String> fields) {
+            this.fields = fields;
+            return this;
+        }
+
         @Override
         public ContentsGetContentsPostRequest build() {
-            return new ContentsGetContentsPostRequest(flatten, languages, noSlowTotal, noTotal, unpublished, body);
+            return new ContentsGetContentsPostRequest(
+                    fields, flatten, languages, noSlowTotal, noTotal, unpublished, body);
         }
     }
 }

@@ -28,6 +28,9 @@ public final class BulkResultDto {
         this.contentId = contentId;
     }
 
+    /**
+     * @return The error when the bulk job failed.
+     */
     @JsonProperty("error")
     public Optional<ErrorDto> getError() {
         return error;
@@ -172,6 +175,10 @@ public final class BulkResultDto {
             return this;
         }
 
+        /**
+         * <p>The error when the bulk job failed.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage error(ErrorDto error) {
             this.error = Optional.of(error);

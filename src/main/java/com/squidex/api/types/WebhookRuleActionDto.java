@@ -48,6 +48,9 @@ public final class WebhookRuleActionDto {
         return url;
     }
 
+    /**
+     * @return The type of the request.
+     */
     @JsonProperty("method")
     public WebhookMethod getMethod() {
         return method;
@@ -182,6 +185,10 @@ public final class WebhookRuleActionDto {
             return this;
         }
 
+        /**
+         * <p>The type of the request.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("method")
         public _FinalStage method(WebhookMethod method) {

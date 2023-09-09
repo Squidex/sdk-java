@@ -33,6 +33,9 @@ public final class BooleanFieldPropertiesDto {
         this.editor = editor;
     }
 
+    /**
+     * @return The language specific default value for the field value.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, Optional<Boolean>>> getDefaultValues() {
         return defaultValues;
@@ -54,6 +57,9 @@ public final class BooleanFieldPropertiesDto {
         return inlineEditable;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<BooleanFieldEditor> getEditor() {
         return editor;

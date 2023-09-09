@@ -241,6 +241,9 @@ public final class AssetDto implements IResource {
         return fileVersion;
     }
 
+    /**
+     * @return The type of the asset.
+     */
     @JsonProperty("type")
     public AssetType getType() {
         return type;
@@ -286,6 +289,9 @@ public final class AssetDto implements IResource {
         return version;
     }
 
+    /**
+     * @return The metadata.
+     */
     @JsonProperty("_meta")
     public Optional<AssetMeta> getMeta() {
         return meta;
@@ -710,6 +716,10 @@ public final class AssetDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The type of the asset.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("type")
         public CreatedByStage type(AssetType type) {
@@ -817,6 +827,10 @@ public final class AssetDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The metadata.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage meta(AssetMeta meta) {
             this.meta = Optional.of(meta);

@@ -61,6 +61,9 @@ public final class ContributorsDto implements IResource {
         return maxContributors;
     }
 
+    /**
+     * @return The metadata to provide information about this request.
+     */
     @JsonProperty("_meta")
     public Optional<ContributorsMetadata> getMeta() {
         return meta;
@@ -151,6 +154,10 @@ public final class ContributorsDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The metadata to provide information about this request.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage meta(ContributorsMetadata meta) {
             this.meta = Optional.of(meta);

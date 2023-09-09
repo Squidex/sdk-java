@@ -42,11 +42,17 @@ public final class UpdateRuleDto {
         return name;
     }
 
+    /**
+     * @return The trigger properties.
+     */
     @JsonProperty("trigger")
     public Optional<RuleTriggerDto> getTrigger() {
         return trigger;
     }
 
+    /**
+     * @return The action properties.
+     */
     @JsonProperty("action")
     public Optional<RuleActionDto> getAction() {
         return action;

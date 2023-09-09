@@ -2,7 +2,7 @@ package com.squidex.api.types;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum TranslationResultCode {
+public enum TranslationStatus {
     TRANSLATED("Translated"),
 
     LANGUAGE_NOT_SUPPORTED("LanguageNotSupported"),
@@ -17,7 +17,7 @@ public enum TranslationResultCode {
 
     private final String value;
 
-    TranslationResultCode(String value) {
+    TranslationStatus(String value) {
         this.value = value;
     }
 

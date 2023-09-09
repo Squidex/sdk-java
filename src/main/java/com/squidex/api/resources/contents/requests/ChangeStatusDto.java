@@ -46,7 +46,7 @@ public final class ChangeStatusDto {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {
@@ -201,7 +201,7 @@ public final class ChangeStatusDto {
         }
 
         /**
-         * <p>Only resolve these languages (comma-separated).</p>
+         * <p>The list of languages to resolve (comma-separated).</p>
          * @return Reference to {@code this} so that method calls can be chained together.
          */
         @Override

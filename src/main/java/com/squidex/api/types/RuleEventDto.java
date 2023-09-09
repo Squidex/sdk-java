@@ -124,11 +124,17 @@ public final class RuleEventDto implements IResource {
         return nextAttempt;
     }
 
+    /**
+     * @return The result of the event.
+     */
     @JsonProperty("result")
     public RuleResult getResult() {
         return result;
     }
 
+    /**
+     * @return The result of the job.
+     */
     @JsonProperty("jobResult")
     public RuleJobResult getJobResult() {
         return jobResult;
@@ -327,6 +333,10 @@ public final class RuleEventDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The result of the event.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("result")
         public JobResultStage result(RuleResult result) {
@@ -334,6 +344,10 @@ public final class RuleEventDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The result of the job.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("jobResult")
         public _FinalStage jobResult(RuleJobResult jobResult) {

@@ -138,6 +138,9 @@ public final class SchemaDto implements IResource {
         return name;
     }
 
+    /**
+     * @return The type of the schema.
+     */
     @JsonProperty("type")
     public SchemaType getType() {
         return type;
@@ -151,6 +154,9 @@ public final class SchemaDto implements IResource {
         return category;
     }
 
+    /**
+     * @return The schema properties.
+     */
     @JsonProperty("properties")
     public SchemaPropertiesDto getProperties() {
         return properties;
@@ -196,6 +202,9 @@ public final class SchemaDto implements IResource {
         return version;
     }
 
+    /**
+     * @return The scripts.
+     */
     @JsonProperty("scripts")
     public SchemaScriptsDto getScripts() {
         return scripts;
@@ -519,6 +528,10 @@ public final class SchemaDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The type of the schema.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("type")
         public PropertiesStage type(SchemaType type) {
@@ -526,6 +539,10 @@ public final class SchemaDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The schema properties.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("properties")
         public IsSingletonStage properties(SchemaPropertiesDto properties) {
@@ -588,6 +605,10 @@ public final class SchemaDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The scripts.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("scripts")
         public _FinalStage scripts(SchemaScriptsDto scripts) {

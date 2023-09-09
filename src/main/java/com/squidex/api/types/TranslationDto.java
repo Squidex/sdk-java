@@ -13,17 +13,31 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = TranslationDto.Builder.class)
 public final class TranslationDto {
-    private final TranslationResultCode result;
+    private final TranslationStatus status;
+
+    private final TranslationStatus result;
 
     private final Optional<String> text;
 
-    private TranslationDto(TranslationResultCode result, Optional<String> text) {
+    private TranslationDto(TranslationStatus status, TranslationStatus result, Optional<String> text) {
+        this.status = status;
         this.result = result;
         this.text = text;
     }
 
+    /**
+     * @return The result of the translation.
+     */
+    @JsonProperty("status")
+    public TranslationStatus getStatus() {
+        return status;
+    }
+
+    /**
+     * @return The result of the translation.
+     */
     @JsonProperty("result")
-    public TranslationResultCode getResult() {
+    public TranslationStatus getResult() {
         return result;
     }
 
@@ -42,12 +56,12 @@ public final class TranslationDto {
     }
 
     private boolean equalTo(TranslationDto other) {
-        return result.equals(other.result) && text.equals(other.text);
+        return status.equals(other.status) && result.equals(other.result) && text.equals(other.text);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.result, this.text);
+        return Objects.hash(this.status, this.result, this.text);
     }
 
     @Override
@@ -55,14 +69,18 @@ public final class TranslationDto {
         return ObjectMappers.stringify(this);
     }
 
-    public static ResultStage builder() {
+    public static StatusStage builder() {
         return new Builder();
     }
 
-    public interface ResultStage {
-        _FinalStage result(TranslationResultCode result);
+    public interface StatusStage {
+        ResultStage status(TranslationStatus status);
 
         Builder from(TranslationDto other);
+    }
+
+    public interface ResultStage {
+        _FinalStage result(TranslationStatus result);
     }
 
     public interface _FinalStage {
@@ -74,8 +92,10 @@ public final class TranslationDto {
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static final class Builder implements ResultStage, _FinalStage {
-        private TranslationResultCode result;
+    public static final class Builder implements StatusStage, ResultStage, _FinalStage {
+        private TranslationStatus status;
+
+        private TranslationStatus result;
 
         private Optional<String> text = Optional.empty();
 
@@ -83,14 +103,30 @@ public final class TranslationDto {
 
         @Override
         public Builder from(TranslationDto other) {
+            status(other.getStatus());
             result(other.getResult());
             text(other.getText());
             return this;
         }
 
+        /**
+         * <p>The result of the translation.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
+        @Override
+        @JsonSetter("status")
+        public ResultStage status(TranslationStatus status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The result of the translation.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("result")
-        public _FinalStage result(TranslationResultCode result) {
+        public _FinalStage result(TranslationStatus result) {
             this.result = result;
             return this;
         }
@@ -114,7 +150,7 @@ public final class TranslationDto {
 
         @Override
         public TranslationDto build() {
-            return new TranslationDto(result, text);
+            return new TranslationDto(status, result, text);
         }
     }
 }

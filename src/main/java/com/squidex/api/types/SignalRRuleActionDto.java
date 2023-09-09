@@ -56,6 +56,13 @@ public final class SignalRRuleActionDto {
         return hubName;
     }
 
+    /**
+     * @return <ul>
+     * <li>Broadcast = send to all users.</li>
+     * <li>User = send to all target users(s).</li>
+     * <li>Group = send to all target group(s).</li>
+     * </ul>
+     */
     @JsonProperty("action")
     public ActionTypeEnum getAction() {
         return action;
@@ -194,6 +201,14 @@ public final class SignalRRuleActionDto {
             return this;
         }
 
+        /**
+         * <ul>
+         * <li>Broadcast = send to all users.</li>
+         * <li>User = send to all target users(s).</li>
+         * <li>Group = send to all target group(s).</li>
+         * </ul>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("action")
         public _FinalStage action(ActionTypeEnum action) {

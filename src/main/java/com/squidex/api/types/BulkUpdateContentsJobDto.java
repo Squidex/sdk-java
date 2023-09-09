@@ -62,6 +62,9 @@ public final class BulkUpdateContentsJobDto {
         this.expectedVersion = expectedVersion;
     }
 
+    /**
+     * @return An optional query to identify the content to update.
+     */
     @JsonProperty("query")
     public Optional<QueryJsonDto> getQuery() {
         return query;
@@ -75,6 +78,9 @@ public final class BulkUpdateContentsJobDto {
         return id;
     }
 
+    /**
+     * @return The data of the content when type is set to 'Upsert', 'Create', 'Update' or 'Patch.
+     */
     @JsonProperty("data")
     public Optional<Map<String, Map<String, Object>>> getData() {
         return data;
@@ -96,6 +102,9 @@ public final class BulkUpdateContentsJobDto {
         return dueTime;
     }
 
+    /**
+     * @return The update type.
+     */
     @JsonProperty("type")
     public Optional<BulkUpdateContentType> getType() {
         return type;

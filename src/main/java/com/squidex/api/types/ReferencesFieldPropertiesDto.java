@@ -54,6 +54,9 @@ public final class ReferencesFieldPropertiesDto {
         this.schemaIds = schemaIds;
     }
 
+    /**
+     * @return The language specific default value as a list of content ids.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, List<String>>> getDefaultValues() {
         return defaultValues;
@@ -107,6 +110,9 @@ public final class ReferencesFieldPropertiesDto {
         return mustBePublished;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<ReferencesFieldEditor> getEditor() {
         return editor;

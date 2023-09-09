@@ -46,6 +46,9 @@ public final class DateTimeFieldPropertiesDto {
         this.calculatedDefaultValue = calculatedDefaultValue;
     }
 
+    /**
+     * @return The language specific default value for the field value.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, Optional<OffsetDateTime>>> getDefaultValues() {
         return defaultValues;
@@ -83,11 +86,17 @@ public final class DateTimeFieldPropertiesDto {
         return format;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<DateTimeFieldEditor> getEditor() {
         return editor;
     }
 
+    /**
+     * @return The calculated default value for the field value.
+     */
     @JsonProperty("calculatedDefaultValue")
     public Optional<DateTimeCalculatedDefaultValue> getCalculatedDefaultValue() {
         return calculatedDefaultValue;

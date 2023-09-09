@@ -46,6 +46,9 @@ public final class TagsFieldPropertiesDto {
         this.editor = editor;
     }
 
+    /**
+     * @return The language specific default value for the field value.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, List<String>>> getDefaultValues() {
         return defaultValues;
@@ -91,6 +94,9 @@ public final class TagsFieldPropertiesDto {
         return createEnum;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<TagsFieldEditor> getEditor() {
         return editor;

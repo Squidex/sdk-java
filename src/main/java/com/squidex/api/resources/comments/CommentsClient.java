@@ -11,7 +11,6 @@ import com.squidex.api.types.CommentsDto;
 import com.squidex.api.types.UpsertCommentDto;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
@@ -26,22 +25,20 @@ public class CommentsClient {
         this.clientOptions = clientOptions;
     }
 
-    public List<String> getWatchingUsers(Optional<String> resource) {
+    public List<String> getWatchingUsers(String resource) {
         return getWatchingUsers(resource, null);
     }
 
-    public List<String> getWatchingUsers(Optional<String> resource, RequestOptions requestOptions) {
-        HttpUrl.Builder _httpUrl = HttpUrl.parse(
-                        this.clientOptions.environment().getUrl())
+    public List<String> getWatchingUsers(String resource, RequestOptions requestOptions) {
+        HttpUrl _httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
                 .addPathSegments("api/apps")
                 .addPathSegment(clientOptions.appName())
-                .addPathSegments("watching");
-        if (resource.isPresent()) {
-            _httpUrl.addPathSegment(resource.get());
-        }
+                .addPathSegments("watching")
+                .addPathSegment(resource)
+                .build();
         Request _request = new Request.Builder()
-                .url(_httpUrl.build())
+                .url(_httpUrl)
                 .method("GET", null)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json")

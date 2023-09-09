@@ -102,11 +102,17 @@ public final class AssetsFieldPropertiesDto {
         this.allowDuplicates = allowDuplicates;
     }
 
+    /**
+     * @return The preview mode for the asset.
+     */
     @JsonProperty("previewMode")
     public Optional<AssetPreviewMode> getPreviewMode() {
         return previewMode;
     }
 
+    /**
+     * @return The language specific default value as a list of asset ids.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, List<String>>> getDefaultValues() {
         return defaultValues;
@@ -216,6 +222,9 @@ public final class AssetsFieldPropertiesDto {
         return aspectHeight;
     }
 
+    /**
+     * @return The expected type.
+     */
     @JsonProperty("expectedType")
     public Optional<AssetType> getExpectedType() {
         return expectedType;

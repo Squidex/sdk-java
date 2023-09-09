@@ -67,12 +67,18 @@ public final class SynchronizeSchemaDto implements IUpsertSchemaDto {
         this.noFieldRecreation = noFieldRecreation;
     }
 
+    /**
+     * @return The optional properties.
+     */
     @JsonProperty("properties")
     @Override
     public Optional<SchemaPropertiesDto> getProperties() {
         return properties;
     }
 
+    /**
+     * @return The optional scripts.
+     */
     @JsonProperty("scripts")
     @Override
     public Optional<SchemaScriptsDto> getScripts() {

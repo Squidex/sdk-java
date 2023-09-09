@@ -67,6 +67,9 @@ public final class RestoreJobDto {
         return stopped;
     }
 
+    /**
+     * @return The status of the operation.
+     */
     @JsonProperty("status")
     public JobStatus getStatus() {
         return status;
@@ -174,6 +177,10 @@ public final class RestoreJobDto {
             return this;
         }
 
+        /**
+         * <p>The status of the operation.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("status")
         public _FinalStage status(JobStatus status) {

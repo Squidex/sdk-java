@@ -19,6 +19,9 @@ public final class UiFieldPropertiesDto {
         this.editor = editor;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<String> getEditor() {
         return editor;

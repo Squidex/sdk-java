@@ -112,6 +112,9 @@ public final class FieldDto implements IResource {
         return partitioning;
     }
 
+    /**
+     * @return The field properties.
+     */
     @JsonProperty("properties")
     public FieldPropertiesDto getProperties() {
         return properties;
@@ -320,6 +323,10 @@ public final class FieldDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The field properties.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("properties")
         public _FinalStage properties(FieldPropertiesDto properties) {

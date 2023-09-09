@@ -32,7 +32,6 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import okhttp3.Headers;
 import okhttp3.HttpUrl;
 import okhttp3.MediaType;
@@ -48,25 +47,19 @@ public class AssetsClient {
         this.clientOptions = clientOptions;
     }
 
-    public InputStream getAssetContentBySlug(
-            String idOrSlug, Optional<String> more, AssetsGetAssetContentBySlugRequest request) {
+    public InputStream getAssetContentBySlug(String idOrSlug, String more, AssetsGetAssetContentBySlugRequest request) {
         return getAssetContentBySlug(idOrSlug, more, request, null);
     }
 
     public InputStream getAssetContentBySlug(
-            String idOrSlug,
-            Optional<String> more,
-            AssetsGetAssetContentBySlugRequest request,
-            RequestOptions requestOptions) {
+            String idOrSlug, String more, AssetsGetAssetContentBySlugRequest request, RequestOptions requestOptions) {
         HttpUrl.Builder _httpUrl = HttpUrl.parse(
                         this.clientOptions.environment().getUrl())
                 .newBuilder()
                 .addPathSegments("api/assets")
                 .addPathSegment(clientOptions.appName())
-                .addPathSegment(idOrSlug);
-        if (more.isPresent()) {
-            _httpUrl.addPathSegment(more.get());
-        }
+                .addPathSegment(idOrSlug)
+                .addPathSegment(more);
         if (request.getVersion().isPresent()) {
             _httpUrl.addQueryParameter("version", request.getVersion().get().toString());
         }
@@ -105,6 +98,9 @@ public class AssetsClient {
         }
         if (request.getForce().isPresent()) {
             _httpUrl.addQueryParameter("force", request.getForce().get().toString());
+        }
+        if (request.getDeleted().isPresent()) {
+            _httpUrl.addQueryParameter("deleted", request.getDeleted().get().toString());
         }
         if (request.getFormat().isPresent()) {
             _httpUrl.addQueryParameter("format", request.getFormat().get().toString());
@@ -177,6 +173,9 @@ public class AssetsClient {
         }
         if (request.getForce().isPresent()) {
             _httpUrl.addQueryParameter("force", request.getForce().get().toString());
+        }
+        if (request.getDeleted().isPresent()) {
+            _httpUrl.addQueryParameter("deleted", request.getDeleted().get().toString());
         }
         if (request.getFormat().isPresent()) {
             _httpUrl.addQueryParameter("format", request.getFormat().get().toString());

@@ -82,6 +82,9 @@ public class ContentsClient {
                 .method("GET", _requestBody)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json");
+        if (request.getFields().isPresent()) {
+            _requestBuilder.addHeader("X-Fields", request.getFields().get());
+        }
         if (request.getFlatten().isPresent()) {
             _requestBuilder.addHeader("X-Flatten", request.getFlatten().get().toString());
         }
@@ -193,6 +196,9 @@ public class ContentsClient {
                 .method("POST", _requestBody)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json");
+        if (request.getFields().isPresent()) {
+            _requestBuilder.addHeader("X-Fields", request.getFields().get());
+        }
         if (request.getFlatten().isPresent()) {
             _requestBuilder.addHeader("X-Flatten", request.getFlatten().get().toString());
         }
@@ -246,6 +252,9 @@ public class ContentsClient {
                 .method("GET", _requestBody)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json");
+        if (request.getFields().isPresent()) {
+            _requestBuilder.addHeader("X-Fields", request.getFields().get());
+        }
         if (request.getFlatten().isPresent()) {
             _requestBuilder.addHeader("X-Flatten", request.getFlatten().get().toString());
         }
@@ -513,6 +522,9 @@ public class ContentsClient {
                 .method("GET", _requestBody)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json");
+        if (request.getFields().isPresent()) {
+            _requestBuilder.addHeader("X-Fields", request.getFields().get());
+        }
         if (request.getFlatten().isPresent()) {
             _requestBuilder.addHeader("X-Flatten", request.getFlatten().get().toString());
         }
@@ -567,6 +579,9 @@ public class ContentsClient {
                 .method("GET", _requestBody)
                 .headers(Headers.of(clientOptions.headers(requestOptions)))
                 .addHeader("Content-Type", "application/json");
+        if (request.getFields().isPresent()) {
+            _requestBuilder.addHeader("X-Fields", request.getFields().get());
+        }
         if (request.getFlatten().isPresent()) {
             _requestBuilder.addHeader("X-Flatten", request.getFlatten().get().toString());
         }

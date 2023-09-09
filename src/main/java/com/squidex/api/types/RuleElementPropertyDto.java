@@ -45,6 +45,9 @@ public final class RuleElementPropertyDto {
         this.isRequired = isRequired;
     }
 
+    /**
+     * @return The html editor.
+     */
     @JsonProperty("editor")
     public RuleFieldEditor getEditor() {
         return editor;
@@ -200,6 +203,10 @@ public final class RuleElementPropertyDto {
             return this;
         }
 
+        /**
+         * <p>The html editor.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("editor")
         public NameStage editor(RuleFieldEditor editor) {

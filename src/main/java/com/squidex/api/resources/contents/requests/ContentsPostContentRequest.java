@@ -51,7 +51,7 @@ public final class ContentsPostContentRequest {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {

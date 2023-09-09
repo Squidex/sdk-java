@@ -13,6 +13,8 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = ContentsGetContentsRequest.Builder.class)
 public final class ContentsGetContentsRequest {
+    private final Optional<String> fields;
+
     private final Optional<Boolean> flatten;
 
     private final Optional<String> languages;
@@ -38,6 +40,7 @@ public final class ContentsGetContentsRequest {
     private final Optional<String> filter;
 
     private ContentsGetContentsRequest(
+            Optional<String> fields,
             Optional<Boolean> flatten,
             Optional<String> languages,
             Optional<Boolean> noSlowTotal,
@@ -50,6 +53,7 @@ public final class ContentsGetContentsRequest {
             Optional<Double> skip,
             Optional<String> orderby,
             Optional<String> filter) {
+        this.fields = fields;
         this.flatten = flatten;
         this.languages = languages;
         this.noSlowTotal = noSlowTotal;
@@ -65,6 +69,14 @@ public final class ContentsGetContentsRequest {
     }
 
     /**
+     * @return The list of content fields (comma-separated).
+     */
+    @JsonProperty("X-Fields")
+    public Optional<String> getFields() {
+        return fields;
+    }
+
+    /**
      * @return Provide the data as flat object.
      */
     @JsonProperty("X-Flatten")
@@ -73,7 +85,7 @@ public final class ContentsGetContentsRequest {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {
@@ -167,7 +179,8 @@ public final class ContentsGetContentsRequest {
     }
 
     private boolean equalTo(ContentsGetContentsRequest other) {
-        return flatten.equals(other.flatten)
+        return fields.equals(other.fields)
+                && flatten.equals(other.flatten)
                 && languages.equals(other.languages)
                 && noSlowTotal.equals(other.noSlowTotal)
                 && noTotal.equals(other.noTotal)
@@ -184,6 +197,7 @@ public final class ContentsGetContentsRequest {
     @Override
     public int hashCode() {
         return Objects.hash(
+                this.fields,
                 this.flatten,
                 this.languages,
                 this.noSlowTotal,
@@ -209,6 +223,8 @@ public final class ContentsGetContentsRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+        private Optional<String> fields = Optional.empty();
+
         private Optional<Boolean> flatten = Optional.empty();
 
         private Optional<String> languages = Optional.empty();
@@ -236,6 +252,7 @@ public final class ContentsGetContentsRequest {
         private Builder() {}
 
         public Builder from(ContentsGetContentsRequest other) {
+            fields(other.getFields());
             flatten(other.getFlatten());
             languages(other.getLanguages());
             noSlowTotal(other.getNoSlowTotal());
@@ -248,6 +265,17 @@ public final class ContentsGetContentsRequest {
             skip(other.getSkip());
             orderby(other.getOrderby());
             filter(other.getFilter());
+            return this;
+        }
+
+        @JsonSetter(value = "X-Fields", nulls = Nulls.SKIP)
+        public Builder fields(Optional<String> fields) {
+            this.fields = fields;
+            return this;
+        }
+
+        public Builder fields(String fields) {
+            this.fields = Optional.of(fields);
             return this;
         }
 
@@ -385,7 +413,19 @@ public final class ContentsGetContentsRequest {
 
         public ContentsGetContentsRequest build() {
             return new ContentsGetContentsRequest(
-                    flatten, languages, noSlowTotal, noTotal, unpublished, ids, q, search, top, skip, orderby, filter);
+                    fields,
+                    flatten,
+                    languages,
+                    noSlowTotal,
+                    noTotal,
+                    unpublished,
+                    ids,
+                    q,
+                    search,
+                    top,
+                    skip,
+                    orderby,
+                    filter);
         }
     }
 }

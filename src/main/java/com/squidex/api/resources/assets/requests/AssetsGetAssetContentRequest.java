@@ -41,6 +41,8 @@ public final class AssetsGetAssetContentRequest {
 
     private final Optional<Boolean> force;
 
+    private final Optional<Boolean> deleted;
+
     private final Optional<ImageFormat> format;
 
     private AssetsGetAssetContentRequest(
@@ -57,6 +59,7 @@ public final class AssetsGetAssetContentRequest {
             Optional<Boolean> nofocus,
             Optional<Boolean> auto,
             Optional<Boolean> force,
+            Optional<Boolean> deleted,
             Optional<ImageFormat> format) {
         this.version = version;
         this.cache = cache;
@@ -71,6 +74,7 @@ public final class AssetsGetAssetContentRequest {
         this.nofocus = nofocus;
         this.auto = auto;
         this.force = force;
+        this.deleted = deleted;
         this.format = format;
     }
 
@@ -179,6 +183,14 @@ public final class AssetsGetAssetContentRequest {
     }
 
     /**
+     * @return Also return deleted content items.
+     */
+    @JsonProperty("deleted")
+    public Optional<Boolean> getDeleted() {
+        return deleted;
+    }
+
+    /**
      * @return True to force a new resize even if it already stored.
      */
     @JsonProperty("format")
@@ -206,6 +218,7 @@ public final class AssetsGetAssetContentRequest {
                 && nofocus.equals(other.nofocus)
                 && auto.equals(other.auto)
                 && force.equals(other.force)
+                && deleted.equals(other.deleted)
                 && format.equals(other.format);
     }
 
@@ -225,6 +238,7 @@ public final class AssetsGetAssetContentRequest {
                 this.nofocus,
                 this.auto,
                 this.force,
+                this.deleted,
                 this.format);
     }
 
@@ -265,6 +279,8 @@ public final class AssetsGetAssetContentRequest {
 
         private Optional<Boolean> force = Optional.empty();
 
+        private Optional<Boolean> deleted = Optional.empty();
+
         private Optional<ImageFormat> format = Optional.empty();
 
         private Builder() {}
@@ -283,6 +299,7 @@ public final class AssetsGetAssetContentRequest {
             nofocus(other.getNofocus());
             auto(other.getAuto());
             force(other.getForce());
+            deleted(other.getDeleted());
             format(other.getFormat());
             return this;
         }
@@ -430,6 +447,17 @@ public final class AssetsGetAssetContentRequest {
             return this;
         }
 
+        @JsonSetter(value = "deleted", nulls = Nulls.SKIP)
+        public Builder deleted(Optional<Boolean> deleted) {
+            this.deleted = deleted;
+            return this;
+        }
+
+        public Builder deleted(Boolean deleted) {
+            this.deleted = Optional.of(deleted);
+            return this;
+        }
+
         @JsonSetter(value = "format", nulls = Nulls.SKIP)
         public Builder format(Optional<ImageFormat> format) {
             this.format = format;
@@ -444,7 +472,7 @@ public final class AssetsGetAssetContentRequest {
         public AssetsGetAssetContentRequest build() {
             return new AssetsGetAssetContentRequest(
                     version, cache, download, width, height, quality, mode, bg, focusX, focusY, nofocus, auto, force,
-                    format);
+                    deleted, format);
         }
     }
 }

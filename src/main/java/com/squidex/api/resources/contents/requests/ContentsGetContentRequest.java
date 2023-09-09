@@ -13,6 +13,8 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = ContentsGetContentRequest.Builder.class)
 public final class ContentsGetContentRequest {
+    private final Optional<String> fields;
+
     private final Optional<Boolean> flatten;
 
     private final Optional<String> languages;
@@ -22,14 +24,24 @@ public final class ContentsGetContentRequest {
     private final Optional<Integer> version;
 
     private ContentsGetContentRequest(
+            Optional<String> fields,
             Optional<Boolean> flatten,
             Optional<String> languages,
             Optional<Boolean> unpublished,
             Optional<Integer> version) {
+        this.fields = fields;
         this.flatten = flatten;
         this.languages = languages;
         this.unpublished = unpublished;
         this.version = version;
+    }
+
+    /**
+     * @return The list of content fields (comma-separated).
+     */
+    @JsonProperty("X-Fields")
+    public Optional<String> getFields() {
+        return fields;
     }
 
     /**
@@ -41,7 +53,7 @@ public final class ContentsGetContentRequest {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {
@@ -71,7 +83,8 @@ public final class ContentsGetContentRequest {
     }
 
     private boolean equalTo(ContentsGetContentRequest other) {
-        return flatten.equals(other.flatten)
+        return fields.equals(other.fields)
+                && flatten.equals(other.flatten)
                 && languages.equals(other.languages)
                 && unpublished.equals(other.unpublished)
                 && version.equals(other.version);
@@ -79,7 +92,7 @@ public final class ContentsGetContentRequest {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.flatten, this.languages, this.unpublished, this.version);
+        return Objects.hash(this.fields, this.flatten, this.languages, this.unpublished, this.version);
     }
 
     @Override
@@ -93,6 +106,8 @@ public final class ContentsGetContentRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+        private Optional<String> fields = Optional.empty();
+
         private Optional<Boolean> flatten = Optional.empty();
 
         private Optional<String> languages = Optional.empty();
@@ -104,10 +119,22 @@ public final class ContentsGetContentRequest {
         private Builder() {}
 
         public Builder from(ContentsGetContentRequest other) {
+            fields(other.getFields());
             flatten(other.getFlatten());
             languages(other.getLanguages());
             unpublished(other.getUnpublished());
             version(other.getVersion());
+            return this;
+        }
+
+        @JsonSetter(value = "X-Fields", nulls = Nulls.SKIP)
+        public Builder fields(Optional<String> fields) {
+            this.fields = fields;
+            return this;
+        }
+
+        public Builder fields(String fields) {
+            this.fields = Optional.of(fields);
             return this;
         }
 
@@ -156,7 +183,7 @@ public final class ContentsGetContentRequest {
         }
 
         public ContentsGetContentRequest build() {
-            return new ContentsGetContentRequest(flatten, languages, unpublished, version);
+            return new ContentsGetContentRequest(fields, flatten, languages, unpublished, version);
         }
     }
 }

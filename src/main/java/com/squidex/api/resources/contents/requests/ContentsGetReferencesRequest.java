@@ -13,6 +13,8 @@ import java.util.Optional;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonDeserialize(builder = ContentsGetReferencesRequest.Builder.class)
 public final class ContentsGetReferencesRequest {
+    private final Optional<String> fields;
+
     private final Optional<Boolean> flatten;
 
     private final Optional<String> languages;
@@ -26,18 +28,28 @@ public final class ContentsGetReferencesRequest {
     private final Optional<String> q;
 
     private ContentsGetReferencesRequest(
+            Optional<String> fields,
             Optional<Boolean> flatten,
             Optional<String> languages,
             Optional<Boolean> unpublished,
             Optional<Boolean> noSlowTotal,
             Optional<Boolean> noTotal,
             Optional<String> q) {
+        this.fields = fields;
         this.flatten = flatten;
         this.languages = languages;
         this.unpublished = unpublished;
         this.noSlowTotal = noSlowTotal;
         this.noTotal = noTotal;
         this.q = q;
+    }
+
+    /**
+     * @return The list of content fields (comma-separated).
+     */
+    @JsonProperty("X-Fields")
+    public Optional<String> getFields() {
+        return fields;
     }
 
     /**
@@ -49,7 +61,7 @@ public final class ContentsGetReferencesRequest {
     }
 
     /**
-     * @return Only resolve these languages (comma-separated).
+     * @return The list of languages to resolve (comma-separated).
      */
     @JsonProperty("X-Languages")
     public Optional<String> getLanguages() {
@@ -95,7 +107,8 @@ public final class ContentsGetReferencesRequest {
     }
 
     private boolean equalTo(ContentsGetReferencesRequest other) {
-        return flatten.equals(other.flatten)
+        return fields.equals(other.fields)
+                && flatten.equals(other.flatten)
                 && languages.equals(other.languages)
                 && unpublished.equals(other.unpublished)
                 && noSlowTotal.equals(other.noSlowTotal)
@@ -105,7 +118,8 @@ public final class ContentsGetReferencesRequest {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.flatten, this.languages, this.unpublished, this.noSlowTotal, this.noTotal, this.q);
+        return Objects.hash(
+                this.fields, this.flatten, this.languages, this.unpublished, this.noSlowTotal, this.noTotal, this.q);
     }
 
     @Override
@@ -119,6 +133,8 @@ public final class ContentsGetReferencesRequest {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static final class Builder {
+        private Optional<String> fields = Optional.empty();
+
         private Optional<Boolean> flatten = Optional.empty();
 
         private Optional<String> languages = Optional.empty();
@@ -134,12 +150,24 @@ public final class ContentsGetReferencesRequest {
         private Builder() {}
 
         public Builder from(ContentsGetReferencesRequest other) {
+            fields(other.getFields());
             flatten(other.getFlatten());
             languages(other.getLanguages());
             unpublished(other.getUnpublished());
             noSlowTotal(other.getNoSlowTotal());
             noTotal(other.getNoTotal());
             q(other.getQ());
+            return this;
+        }
+
+        @JsonSetter(value = "X-Fields", nulls = Nulls.SKIP)
+        public Builder fields(Optional<String> fields) {
+            this.fields = fields;
+            return this;
+        }
+
+        public Builder fields(String fields) {
+            this.fields = Optional.of(fields);
             return this;
         }
 
@@ -210,7 +238,7 @@ public final class ContentsGetReferencesRequest {
         }
 
         public ContentsGetReferencesRequest build() {
-            return new ContentsGetReferencesRequest(flatten, languages, unpublished, noSlowTotal, noTotal, q);
+            return new ContentsGetReferencesRequest(fields, flatten, languages, unpublished, noSlowTotal, noTotal, q);
         }
     }
 }

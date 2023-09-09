@@ -94,6 +94,9 @@ public final class StringFieldPropertiesDto {
         this.editor = editor;
     }
 
+    /**
+     * @return The language specific default value for the field value.
+     */
     @JsonProperty("defaultValues")
     public Optional<Map<String, String>> getDefaultValues() {
         return defaultValues;
@@ -227,11 +230,17 @@ public final class StringFieldPropertiesDto {
         return createEnum;
     }
 
+    /**
+     * @return How the string content should be interpreted.
+     */
     @JsonProperty("contentType")
     public Optional<StringContentType> getContentType() {
         return contentType;
     }
 
+    /**
+     * @return The editor that is used to manage this field.
+     */
     @JsonProperty("editor")
     public Optional<StringFieldEditor> getEditor() {
         return editor;

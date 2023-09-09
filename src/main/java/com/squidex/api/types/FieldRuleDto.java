@@ -25,6 +25,9 @@ public final class FieldRuleDto {
         this.condition = condition;
     }
 
+    /**
+     * @return The action to perform when the condition is met.
+     */
     @JsonProperty("action")
     public FieldRuleAction getAction() {
         return action;
@@ -106,6 +109,10 @@ public final class FieldRuleDto {
             return this;
         }
 
+        /**
+         * <p>The action to perform when the condition is met.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("action")
         public FieldStage action(FieldRuleAction action) {

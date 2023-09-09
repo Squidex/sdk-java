@@ -74,11 +74,17 @@ public final class PlansDto {
         return portalLink;
     }
 
+    /**
+     * @return The referral management.
+     */
     @JsonProperty("referral")
     public Optional<ReferralInfo> getReferral() {
         return referral;
     }
 
+    /**
+     * @return The reason why the plan cannot be changed.
+     */
     @JsonProperty("locked")
     public PlansLockedReason getLocked() {
         return locked;
@@ -173,6 +179,10 @@ public final class PlansDto {
             return this;
         }
 
+        /**
+         * <p>The reason why the plan cannot be changed.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("locked")
         public _FinalStage locked(PlansLockedReason locked) {
@@ -180,6 +190,10 @@ public final class PlansDto {
             return this;
         }
 
+        /**
+         * <p>The referral management.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage referral(ReferralInfo referral) {
             this.referral = Optional.of(referral);

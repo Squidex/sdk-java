@@ -148,11 +148,17 @@ public final class RuleDto implements IResource {
         return name;
     }
 
+    /**
+     * @return The trigger properties.
+     */
     @JsonProperty("trigger")
     public RuleTriggerDto getTrigger() {
         return trigger;
     }
 
+    /**
+     * @return The action properties.
+     */
     @JsonProperty("action")
     public RuleActionDto getAction() {
         return action;
@@ -437,6 +443,10 @@ public final class RuleDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The trigger properties.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("trigger")
         public ActionStage trigger(RuleTriggerDto trigger) {
@@ -444,6 +454,10 @@ public final class RuleDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The action properties.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("action")
         public NumSucceededStage action(RuleActionDto action) {

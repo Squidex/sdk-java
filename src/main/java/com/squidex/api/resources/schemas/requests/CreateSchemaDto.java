@@ -72,12 +72,18 @@ public final class CreateSchemaDto implements IUpsertSchemaDto {
         this.isSingleton = isSingleton;
     }
 
+    /**
+     * @return The optional properties.
+     */
     @JsonProperty("properties")
     @Override
     public Optional<SchemaPropertiesDto> getProperties() {
         return properties;
     }
 
+    /**
+     * @return The optional scripts.
+     */
     @JsonProperty("scripts")
     @Override
     public Optional<SchemaScriptsDto> getScripts() {
@@ -155,6 +161,9 @@ public final class CreateSchemaDto implements IUpsertSchemaDto {
         return name;
     }
 
+    /**
+     * @return The type of the schema.
+     */
     @JsonProperty("type")
     public Optional<SchemaType> getType() {
         return type;
@@ -342,6 +351,10 @@ public final class CreateSchemaDto implements IUpsertSchemaDto {
             return this;
         }
 
+        /**
+         * <p>The type of the schema.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage type(SchemaType type) {
             this.type = Optional.of(type);
@@ -474,6 +487,10 @@ public final class CreateSchemaDto implements IUpsertSchemaDto {
             return this;
         }
 
+        /**
+         * <p>The optional scripts.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage scripts(SchemaScriptsDto scripts) {
             this.scripts = Optional.of(scripts);
@@ -487,6 +504,10 @@ public final class CreateSchemaDto implements IUpsertSchemaDto {
             return this;
         }
 
+        /**
+         * <p>The optional properties.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage properties(SchemaPropertiesDto properties) {
             this.properties = Optional.of(properties);

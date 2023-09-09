@@ -66,6 +66,9 @@ public final class BulkUpdateAssetsJobDto {
         return id;
     }
 
+    /**
+     * @return The update type.
+     */
     @JsonProperty("type")
     public Optional<BulkUpdateAssetType> getType() {
         return type;

@@ -138,6 +138,9 @@ public final class ContentDto implements IResource {
         return data;
     }
 
+    /**
+     * @return The reference data for the frontend UI.
+     */
     @JsonProperty("referenceData")
     public Optional<Map<String, Map<String, Object>>> getReferenceData() {
         return referenceData;
@@ -199,6 +202,9 @@ public final class ContentDto implements IResource {
         return editToken;
     }
 
+    /**
+     * @return The scheduled status.
+     */
     @JsonProperty("scheduleJob")
     public Optional<ScheduleJobDto> getScheduleJob() {
         return scheduleJob;
@@ -652,6 +658,10 @@ public final class ContentDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The scheduled status.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage scheduleJob(ScheduleJobDto scheduleJob) {
             this.scheduleJob = Optional.of(scheduleJob);
@@ -716,6 +726,10 @@ public final class ContentDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The reference data for the frontend UI.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         public _FinalStage referenceData(Map<String, Map<String, Object>> referenceData) {
             this.referenceData = Optional.of(referenceData);

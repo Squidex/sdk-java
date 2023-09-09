@@ -7,7 +7,9 @@ public enum BulkUpdateAssetType {
 
     MOVE("Move"),
 
-    DELETE("Delete");
+    DELETE("Delete"),
+
+    RESTORE("Restore");
 
     private final String value;
 

@@ -48,6 +48,9 @@ public final class SearchResultDto implements IResource {
         return name;
     }
 
+    /**
+     * @return The type of the search result.
+     */
     @JsonProperty("type")
     public SearchResultType getType() {
         return type;
@@ -144,6 +147,10 @@ public final class SearchResultDto implements IResource {
             return this;
         }
 
+        /**
+         * <p>The type of the search result.</p>
+         * @return Reference to {@code this} so that method calls can be chained together.
+         */
         @Override
         @JsonSetter("type")
         public _FinalStage type(SearchResultType type) {
