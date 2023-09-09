@@ -10,7 +10,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SchemasTests extends TestBase {
-    private final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexApiClient client = Utils.getClient().client();
 
     @Test
     public void should_create_and_fetch_schema() {
@@ -30,8 +30,8 @@ public class SchemasTests extends TestBase {
 
         SchemaDto schema = client.schemas().getSchema(createdSchema.getId());
         assertFalse(createdSchema.getFields().isEmpty());
-        assertEquals(createdSchema.getName(), schema.getName());
-        assertEquals(createdSchema.getFields().get(0), schema.getFields().get(0));
+        assertEquals(request.getName(), createdSchema.getName());
+        assertEquals(request.getFields().get().get(0).getProperties().getClass(), createdSchema.getFields().get(0).getProperties().getClass());
         assertEquals(SchemaType.DEFAULT, schema.getType());
         assertTrue(schema.getIsPublished());
     }

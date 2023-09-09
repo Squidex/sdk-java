@@ -20,11 +20,9 @@ public final class AccessToken {
         this.expiresAt = Instant.now().plusSeconds(expiresIn);
     }
 
-
     public String getAccessToken() {
         return accessToken;
     }
-
 
     public int getExpiresIn() {
         return expiresIn;

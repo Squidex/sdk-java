@@ -15,7 +15,7 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AssetsTests extends TestBase {
-    private final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexApiClient client = Utils.getClient().client();
 
     @Test
     public void Should_upload_and_fetch_asset() {
@@ -25,7 +25,7 @@ public class AssetsTests extends TestBase {
 
         AssetDto asset = client.assets().getAsset(createdAsset.getId());
         assertEquals(createdAsset.getId(), asset.getId());
-        assertEquals(file.getTotalSpace(), asset.getFileSize());
+        assertEquals(file.length(), asset.getFileSize());
         assertEquals(file.getName(), asset.getFileName());
         assertEquals("image/png", asset.getMimeType());
     }
@@ -49,6 +49,6 @@ public class AssetsTests extends TestBase {
             }
         }
 
-        assertEquals(tempFilePath.toFile().getTotalSpace(), createdAsset.getFileSize());
+        assertEquals(tempFilePath.toFile().length(), createdAsset.getFileSize());
     }
 }
