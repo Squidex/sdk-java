@@ -26,10 +26,6 @@ public class StatisticsClient {
         this.clientOptions = clientOptions;
     }
 
-    public LogDownloadDto getLog() {
-        return getLog(null);
-    }
-
     public LogDownloadDto getLog(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -57,8 +53,8 @@ public class StatisticsClient {
         }
     }
 
-    public CallsUsageDtoDto getUsages(String fromDate, String toDate) {
-        return getUsages(fromDate, toDate, null);
+    public LogDownloadDto getLog() {
+        return getLog(null);
     }
 
     public CallsUsageDtoDto getUsages(String fromDate, String toDate, RequestOptions requestOptions) {
@@ -90,8 +86,8 @@ public class StatisticsClient {
         }
     }
 
-    public CallsUsageDtoDto getUsagesForTeam(String team, String fromDate, String toDate) {
-        return getUsagesForTeam(team, fromDate, toDate, null);
+    public CallsUsageDtoDto getUsages(String fromDate, String toDate) {
+        return getUsages(fromDate, toDate, null);
     }
 
     public CallsUsageDtoDto getUsagesForTeam(
@@ -124,8 +120,8 @@ public class StatisticsClient {
         }
     }
 
-    public CurrentStorageDto getCurrentStorageSize() {
-        return getCurrentStorageSize(null);
+    public CallsUsageDtoDto getUsagesForTeam(String team, String fromDate, String toDate) {
+        return getUsagesForTeam(team, fromDate, toDate, null);
     }
 
     public CurrentStorageDto getCurrentStorageSize(RequestOptions requestOptions) {
@@ -155,8 +151,8 @@ public class StatisticsClient {
         }
     }
 
-    public CurrentStorageDto getTeamCurrentStorageSizeForTeam(String team) {
-        return getTeamCurrentStorageSizeForTeam(team, null);
+    public CurrentStorageDto getCurrentStorageSize() {
+        return getCurrentStorageSize(null);
     }
 
     public CurrentStorageDto getTeamCurrentStorageSizeForTeam(String team, RequestOptions requestOptions) {
@@ -186,8 +182,8 @@ public class StatisticsClient {
         }
     }
 
-    public List<StorageUsagePerDateDto> getStorageSizes(String fromDate, String toDate) {
-        return getStorageSizes(fromDate, toDate, null);
+    public CurrentStorageDto getTeamCurrentStorageSizeForTeam(String team) {
+        return getTeamCurrentStorageSizeForTeam(team, null);
     }
 
     public List<StorageUsagePerDateDto> getStorageSizes(String fromDate, String toDate, RequestOptions requestOptions) {
@@ -220,8 +216,8 @@ public class StatisticsClient {
         }
     }
 
-    public List<StorageUsagePerDateDto> getStorageSizesForTeam(String team, String fromDate, String toDate) {
-        return getStorageSizesForTeam(team, fromDate, toDate, null);
+    public List<StorageUsagePerDateDto> getStorageSizes(String fromDate, String toDate) {
+        return getStorageSizes(fromDate, toDate, null);
     }
 
     public List<StorageUsagePerDateDto> getStorageSizesForTeam(
@@ -253,5 +249,9 @@ public class StatisticsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<StorageUsagePerDateDto> getStorageSizesForTeam(String team, String fromDate, String toDate) {
+        return getStorageSizesForTeam(team, fromDate, toDate, null);
     }
 }

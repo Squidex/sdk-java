@@ -27,10 +27,6 @@ public class BackupsClient {
         this.clientOptions = clientOptions;
     }
 
-    public InputStream getBackupContent(String id) {
-        return getBackupContent(id, null);
-    }
-
     public InputStream getBackupContent(String id, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -59,8 +55,8 @@ public class BackupsClient {
         }
     }
 
-    public void deleteBackup(String id) {
-        deleteBackup(id, null);
+    public InputStream getBackupContent(String id) {
+        return getBackupContent(id, null);
     }
 
     public void deleteBackup(String id, RequestOptions requestOptions) {
@@ -90,8 +86,12 @@ public class BackupsClient {
         }
     }
 
-    public InputStream getBackupContentV2(String id, BackupsGetBackupContentV2Request request) {
-        return getBackupContentV2(id, request, null);
+    public void deleteBackup(String id) {
+        deleteBackup(id, null);
+    }
+
+    public InputStream getBackupContentV2(String id) {
+        return getBackupContentV2(id, BackupsGetBackupContentV2Request.builder().build());
     }
 
     public InputStream getBackupContentV2(
@@ -126,12 +126,8 @@ public class BackupsClient {
         }
     }
 
-    public InputStream getBackupContentV2(String id) {
-        return getBackupContentV2(id, BackupsGetBackupContentV2Request.builder().build());
-    }
-
-    public BackupJobsDto getBackups() {
-        return getBackups(null);
+    public InputStream getBackupContentV2(String id, BackupsGetBackupContentV2Request request) {
+        return getBackupContentV2(id, request, null);
     }
 
     public BackupJobsDto getBackups(RequestOptions requestOptions) {
@@ -161,8 +157,8 @@ public class BackupsClient {
         }
     }
 
-    public void postBackup() {
-        postBackup(null);
+    public BackupJobsDto getBackups() {
+        return getBackups(null);
     }
 
     public void postBackup(RequestOptions requestOptions) {
@@ -191,8 +187,8 @@ public class BackupsClient {
         }
     }
 
-    public RestoreJobDto getRestoreJob() {
-        return getRestoreJob(null);
+    public void postBackup() {
+        postBackup(null);
     }
 
     public RestoreJobDto getRestoreJob(RequestOptions requestOptions) {
@@ -220,8 +216,8 @@ public class BackupsClient {
         }
     }
 
-    public void postRestoreJob(RestoreRequestDto request) {
-        postRestoreJob(request, null);
+    public RestoreJobDto getRestoreJob() {
+        return getRestoreJob(null);
     }
 
     public void postRestoreJob(RestoreRequestDto request, RequestOptions requestOptions) {
@@ -254,5 +250,9 @@ public class BackupsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void postRestoreJob(RestoreRequestDto request) {
+        postRestoreJob(request, null);
     }
 }

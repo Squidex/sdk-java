@@ -57,8 +57,8 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getContents(String schema, ContentsGetContentsRequest request) {
-        return getContents(schema, request, null);
+    public ContentsDto getContents(String schema) {
+        return getContents(schema, ContentsGetContentsRequest.builder().build());
     }
 
     /**
@@ -131,15 +131,11 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getContents(String schema) {
-        return getContents(schema, ContentsGetContentsRequest.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto postContent(String schema, ContentsPostContentRequest request) {
-        return postContent(schema, request, null);
+    public ContentsDto getContents(String schema, ContentsGetContentsRequest request) {
+        return getContents(schema, request, null);
     }
 
     /**
@@ -198,8 +194,15 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getContentsPost(String schema, ContentsGetContentsPostRequest request) {
-        return getContentsPost(schema, request, null);
+    public ContentDto postContent(String schema, ContentsPostContentRequest request) {
+        return postContent(schema, request, null);
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getContentsPost(String schema) {
+        return getContentsPost(schema, ContentsGetContentsPostRequest.builder().build());
     }
 
     /**
@@ -262,15 +265,18 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getContentsPost(String schema) {
-        return getContentsPost(schema, ContentsGetContentsPostRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getContentsPost(String schema, ContentsGetContentsPostRequest request) {
+        return getContentsPost(schema, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto getContent(String schema, String id, ContentsGetContentRequest request) {
-        return getContent(schema, id, request, null);
+    public ContentDto getContent(String schema, String id) {
+        return getContent(schema, id, ContentsGetContentRequest.builder().build());
     }
 
     /**
@@ -320,15 +326,11 @@ public class ContentsClient {
         }
     }
 
-    public ContentDto getContent(String schema, String id) {
-        return getContent(schema, id, ContentsGetContentRequest.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto postUpsertContent(String schema, String id, ContentsPostUpsertContentRequest request) {
-        return postUpsertContent(schema, id, request, null);
+    public ContentDto getContent(String schema, String id, ContentsGetContentRequest request) {
+        return getContent(schema, id, request, null);
     }
 
     /**
@@ -389,8 +391,8 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto putContent(String schema, String id, ContentsPutContentRequest request) {
-        return putContent(schema, id, request, null);
+    public ContentDto postUpsertContent(String schema, String id, ContentsPostUpsertContentRequest request) {
+        return postUpsertContent(schema, id, request, null);
     }
 
     /**
@@ -443,8 +445,8 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto patchContent(String schema, String id, ContentsPatchContentRequest request) {
-        return patchContent(schema, id, request, null);
+    public ContentDto putContent(String schema, String id, ContentsPutContentRequest request) {
+        return putContent(schema, id, request, null);
     }
 
     /**
@@ -495,10 +497,17 @@ public class ContentsClient {
     }
 
     /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentDto patchContent(String schema, String id, ContentsPatchContentRequest request) {
+        return patchContent(schema, id, request, null);
+    }
+
+    /**
      * You can create an generated documentation for your app at /api/content/{appName}/docs.
      */
-    public void deleteContent(String schema, String id, ContentsDeleteContentRequest request) {
-        deleteContent(schema, id, request, null);
+    public void deleteContent(String schema, String id) {
+        deleteContent(schema, id, ContentsDeleteContentRequest.builder().build());
     }
 
     /**
@@ -538,15 +547,11 @@ public class ContentsClient {
         }
     }
 
-    public void deleteContent(String schema, String id) {
-        deleteContent(schema, id, ContentsDeleteContentRequest.builder().build());
-    }
-
     /**
-     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     * You can create an generated documentation for your app at /api/content/{appName}/docs.
      */
-    public void getContentValidity(String schema, String id) {
-        getContentValidity(schema, id, null);
+    public void deleteContent(String schema, String id, ContentsDeleteContentRequest request) {
+        deleteContent(schema, id, request, null);
     }
 
     /**
@@ -583,8 +588,15 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getReferences(String schema, String id, ContentsGetReferencesRequest request) {
-        return getReferences(schema, id, request, null);
+    public void getContentValidity(String schema, String id) {
+        getContentValidity(schema, id, null);
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getReferences(String schema, String id) {
+        return getReferences(schema, id, ContentsGetReferencesRequest.builder().build());
     }
 
     /**
@@ -642,15 +654,19 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getReferences(String schema, String id) {
-        return getReferences(schema, id, ContentsGetReferencesRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getReferences(String schema, String id, ContentsGetReferencesRequest request) {
+        return getReferences(schema, id, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getReferencing(String schema, String id, ContentsGetReferencingRequest request) {
-        return getReferencing(schema, id, request, null);
+    public ContentsDto getReferencing(String schema, String id) {
+        return getReferencing(
+                schema, id, ContentsGetReferencingRequest.builder().build());
     }
 
     /**
@@ -708,17 +724,19 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getReferencing(String schema, String id) {
-        return getReferencing(
-                schema, id, ContentsGetReferencingRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getReferencing(String schema, String id, ContentsGetReferencingRequest request) {
+        return getReferencing(schema, id, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public InputStream getContentVersion(
-            String schema, String id, int version, ContentsGetContentVersionRequest request) {
-        return getContentVersion(schema, id, version, request, null);
+    public InputStream getContentVersion(String schema, String id, int version) {
+        return getContentVersion(
+                schema, id, version, ContentsGetContentVersionRequest.builder().build());
     }
 
     /**
@@ -765,16 +783,12 @@ public class ContentsClient {
         }
     }
 
-    public InputStream getContentVersion(String schema, String id, int version) {
-        return getContentVersion(
-                schema, id, version, ContentsGetContentVersionRequest.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public List<BulkResultDto> postContents(String schema, ImportContentsDto request) {
-        return postContents(schema, request, null);
+    public InputStream getContentVersion(
+            String schema, String id, int version, ContentsGetContentVersionRequest request) {
+        return getContentVersion(schema, id, version, request, null);
     }
 
     /**
@@ -819,8 +833,8 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public List<BulkResultDto> bulkUpdateContents(String schema, BulkUpdateContentsDto request) {
-        return bulkUpdateContents(schema, request, null);
+    public List<BulkResultDto> postContents(String schema, ImportContentsDto request) {
+        return postContents(schema, request, null);
     }
 
     /**
@@ -866,8 +880,8 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto putContentStatus(String schema, String id, ChangeStatusDto request) {
-        return putContentStatus(schema, id, request, null);
+    public List<BulkResultDto> bulkUpdateContents(String schema, BulkUpdateContentsDto request) {
+        return bulkUpdateContents(schema, request, null);
     }
 
     /**
@@ -928,8 +942,16 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto deleteContentStatus(String schema, String id, ContentsDeleteContentStatusRequest request) {
-        return deleteContentStatus(schema, id, request, null);
+    public ContentDto putContentStatus(String schema, String id, ChangeStatusDto request) {
+        return putContentStatus(schema, id, request, null);
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentDto deleteContentStatus(String schema, String id) {
+        return deleteContentStatus(
+                schema, id, ContentsDeleteContentStatusRequest.builder().build());
     }
 
     /**
@@ -972,16 +994,18 @@ public class ContentsClient {
         }
     }
 
-    public ContentDto deleteContentStatus(String schema, String id) {
-        return deleteContentStatus(
-                schema, id, ContentsDeleteContentStatusRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentDto deleteContentStatus(String schema, String id, ContentsDeleteContentStatusRequest request) {
+        return deleteContentStatus(schema, id, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto createDraft(String schema, String id, ContentsCreateDraftRequest request) {
-        return createDraft(schema, id, request, null);
+    public ContentDto createDraft(String schema, String id) {
+        return createDraft(schema, id, ContentsCreateDraftRequest.builder().build());
     }
 
     /**
@@ -1024,15 +1048,18 @@ public class ContentsClient {
         }
     }
 
-    public ContentDto createDraft(String schema, String id) {
-        return createDraft(schema, id, ContentsCreateDraftRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentDto createDraft(String schema, String id, ContentsCreateDraftRequest request) {
+        return createDraft(schema, id, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentDto deleteVersion(String schema, String id, ContentsDeleteVersionRequest request) {
-        return deleteVersion(schema, id, request, null);
+    public ContentDto deleteVersion(String schema, String id) {
+        return deleteVersion(schema, id, ContentsDeleteVersionRequest.builder().build());
     }
 
     /**
@@ -1075,15 +1102,18 @@ public class ContentsClient {
         }
     }
 
-    public ContentDto deleteVersion(String schema, String id) {
-        return deleteVersion(schema, id, ContentsDeleteVersionRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentDto deleteVersion(String schema, String id, ContentsDeleteVersionRequest request) {
+        return deleteVersion(schema, id, request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public Object getGraphQl(ContentsGetGraphQlRequest request) {
-        return getGraphQl(request, null);
+    public Object getGraphQl() {
+        return getGraphQl(ContentsGetGraphQlRequest.builder().build());
     }
 
     /**
@@ -1129,15 +1159,11 @@ public class ContentsClient {
         }
     }
 
-    public Object getGraphQl() {
-        return getGraphQl(ContentsGetGraphQlRequest.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public Object postGraphQl(ContentsPostGraphQlRequest request) {
-        return postGraphQl(request, null);
+    public Object getGraphQl(ContentsGetGraphQlRequest request) {
+        return getGraphQl(request, null);
     }
 
     /**
@@ -1185,8 +1211,15 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public Object getGraphQlBatch(ContentsGetGraphQlBatchRequest request) {
-        return getGraphQlBatch(request, null);
+    public Object postGraphQl(ContentsPostGraphQlRequest request) {
+        return postGraphQl(request, null);
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public Object getGraphQlBatch() {
+        return getGraphQlBatch(ContentsGetGraphQlBatchRequest.builder().build());
     }
 
     /**
@@ -1232,15 +1265,11 @@ public class ContentsClient {
         }
     }
 
-    public Object getGraphQlBatch() {
-        return getGraphQlBatch(ContentsGetGraphQlBatchRequest.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public Object postGraphQlBatch(ContentsPostGraphQlBatchRequest request) {
-        return postGraphQlBatch(request, null);
+    public Object getGraphQlBatch(ContentsGetGraphQlBatchRequest request) {
+        return getGraphQlBatch(request, null);
     }
 
     /**
@@ -1288,8 +1317,15 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getAllContents(ContentsGetAllContentsRequest request) {
-        return getAllContents(request, null);
+    public Object postGraphQlBatch(ContentsPostGraphQlBatchRequest request) {
+        return postGraphQlBatch(request, null);
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getAllContents() {
+        return getAllContents(ContentsGetAllContentsRequest.builder().build());
     }
 
     /**
@@ -1360,15 +1396,18 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getAllContents() {
-        return getAllContents(ContentsGetAllContentsRequest.builder().build());
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public ContentsDto getAllContents(ContentsGetAllContentsRequest request) {
+        return getAllContents(request, null);
     }
 
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getAllContentsPost(AllContentsByPostDto request) {
-        return getAllContentsPost(request, null);
+    public ContentsDto getAllContentsPost() {
+        return getAllContentsPost(AllContentsByPostDto.builder().build());
     }
 
     /**
@@ -1449,15 +1488,11 @@ public class ContentsClient {
         }
     }
 
-    public ContentsDto getAllContentsPost() {
-        return getAllContentsPost(AllContentsByPostDto.builder().build());
-    }
-
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public List<BulkResultDto> bulkUpdateAllContents(ContentsBulkUpdateAllContentsRequest request) {
-        return bulkUpdateAllContents(request, null);
+    public ContentsDto getAllContentsPost(AllContentsByPostDto request) {
+        return getAllContentsPost(request, null);
     }
 
     /**
@@ -1500,5 +1535,12 @@ public class ContentsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * You can read the generated documentation for your app at /api/content/{appName}/docs.
+     */
+    public List<BulkResultDto> bulkUpdateAllContents(ContentsBulkUpdateAllContentsRequest request) {
+        return bulkUpdateAllContents(request, null);
     }
 }

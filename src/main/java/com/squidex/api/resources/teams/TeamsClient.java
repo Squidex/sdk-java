@@ -29,10 +29,6 @@ public class TeamsClient {
         this.clientOptions = clientOptions;
     }
 
-    public ContributorsDto getContributors(String team) {
-        return getContributors(team, null);
-    }
-
     public ContributorsDto getContributors(String team, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -60,8 +56,8 @@ public class TeamsClient {
         }
     }
 
-    public ContributorsDto postContributor(String team, AssignContributorDto request) {
-        return postContributor(team, request, null);
+    public ContributorsDto getContributors(String team) {
+        return getContributors(team, null);
     }
 
     public ContributorsDto postContributor(String team, AssignContributorDto request, RequestOptions requestOptions) {
@@ -98,8 +94,8 @@ public class TeamsClient {
         }
     }
 
-    public ContributorsDto deleteMyself(String team) {
-        return deleteMyself(team, null);
+    public ContributorsDto postContributor(String team, AssignContributorDto request) {
+        return postContributor(team, request, null);
     }
 
     public ContributorsDto deleteMyself(String team, RequestOptions requestOptions) {
@@ -129,8 +125,8 @@ public class TeamsClient {
         }
     }
 
-    public ContributorsDto deleteContributor(String team, String id) {
-        return deleteContributor(team, id, null);
+    public ContributorsDto deleteMyself(String team) {
+        return deleteMyself(team, null);
     }
 
     public ContributorsDto deleteContributor(String team, String id, RequestOptions requestOptions) {
@@ -161,12 +157,8 @@ public class TeamsClient {
         }
     }
 
-    /**
-     * You can only retrieve the list of teams when you are authenticated as a user (OpenID implicit flow).
-     * You will retrieve all teams, where you are assigned as a contributor.
-     */
-    public List<TeamDto> getTeams() {
-        return getTeams(null);
+    public ContributorsDto deleteContributor(String team, String id) {
+        return deleteContributor(team, id, null);
     }
 
     /**
@@ -200,11 +192,11 @@ public class TeamsClient {
     }
 
     /**
-     * You can only create an team when you are authenticated as a user (OpenID implicit flow).
-     * You will be assigned as owner of the new team automatically.
+     * You can only retrieve the list of teams when you are authenticated as a user (OpenID implicit flow).
+     * You will retrieve all teams, where you are assigned as a contributor.
      */
-    public TeamDto postTeam(CreateTeamDto request) {
-        return postTeam(request, null);
+    public List<TeamDto> getTeams() {
+        return getTeams(null);
     }
 
     /**
@@ -243,8 +235,12 @@ public class TeamsClient {
         }
     }
 
-    public TeamDto getTeam(String team) {
-        return getTeam(team, null);
+    /**
+     * You can only create an team when you are authenticated as a user (OpenID implicit flow).
+     * You will be assigned as owner of the new team automatically.
+     */
+    public TeamDto postTeam(CreateTeamDto request) {
+        return postTeam(request, null);
     }
 
     public TeamDto getTeam(String team, RequestOptions requestOptions) {
@@ -273,8 +269,8 @@ public class TeamsClient {
         }
     }
 
-    public TeamDto putTeam(String team, UpdateTeamDto request) {
-        return putTeam(team, request, null);
+    public TeamDto getTeam(String team) {
+        return getTeam(team, null);
     }
 
     public TeamDto putTeam(String team, UpdateTeamDto request, RequestOptions requestOptions) {
@@ -308,5 +304,9 @@ public class TeamsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public TeamDto putTeam(String team, UpdateTeamDto request) {
+        return putTeam(team, request, null);
     }
 }

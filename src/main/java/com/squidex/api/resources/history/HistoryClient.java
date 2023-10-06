@@ -25,8 +25,8 @@ public class HistoryClient {
         this.clientOptions = clientOptions;
     }
 
-    public List<HistoryEventDto> getAppHistory(HistoryGetAppHistoryRequest request) {
-        return getAppHistory(request, null);
+    public List<HistoryEventDto> getAppHistory() {
+        return getAppHistory(HistoryGetAppHistoryRequest.builder().build());
     }
 
     public List<HistoryEventDto> getAppHistory(HistoryGetAppHistoryRequest request, RequestOptions requestOptions) {
@@ -59,12 +59,12 @@ public class HistoryClient {
         }
     }
 
-    public List<HistoryEventDto> getAppHistory() {
-        return getAppHistory(HistoryGetAppHistoryRequest.builder().build());
+    public List<HistoryEventDto> getAppHistory(HistoryGetAppHistoryRequest request) {
+        return getAppHistory(request, null);
     }
 
-    public List<HistoryEventDto> getTeamHistory(String team, HistoryGetTeamHistoryRequest request) {
-        return getTeamHistory(team, request, null);
+    public List<HistoryEventDto> getTeamHistory(String team) {
+        return getTeamHistory(team, HistoryGetTeamHistoryRequest.builder().build());
     }
 
     public List<HistoryEventDto> getTeamHistory(
@@ -98,7 +98,7 @@ public class HistoryClient {
         }
     }
 
-    public List<HistoryEventDto> getTeamHistory(String team) {
-        return getTeamHistory(team, HistoryGetTeamHistoryRequest.builder().build());
+    public List<HistoryEventDto> getTeamHistory(String team, HistoryGetTeamHistoryRequest request) {
+        return getTeamHistory(team, request, null);
     }
 }

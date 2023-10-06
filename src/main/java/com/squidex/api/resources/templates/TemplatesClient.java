@@ -22,10 +22,6 @@ public class TemplatesClient {
         this.clientOptions = clientOptions;
     }
 
-    public TemplatesDto getTemplates() {
-        return getTemplates(null);
-    }
-
     public TemplatesDto getTemplates(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -51,8 +47,8 @@ public class TemplatesClient {
         }
     }
 
-    public TemplateDetailsDto getTemplate(String name) {
-        return getTemplate(name, null);
+    public TemplatesDto getTemplates() {
+        return getTemplates(null);
     }
 
     public TemplateDetailsDto getTemplate(String name, RequestOptions requestOptions) {
@@ -79,5 +75,9 @@ public class TemplatesClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public TemplateDetailsDto getTemplate(String name) {
+        return getTemplate(name, null);
     }
 }

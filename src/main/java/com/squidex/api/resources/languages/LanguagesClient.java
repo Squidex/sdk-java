@@ -26,13 +26,6 @@ public class LanguagesClient {
     /**
      * Provide a list of supported language codes, following the ISO2Code standard.
      */
-    public List<LanguageDto> getLanguages() {
-        return getLanguages(null);
-    }
-
-    /**
-     * Provide a list of supported language codes, following the ISO2Code standard.
-     */
     public List<LanguageDto> getLanguages(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -57,5 +50,12 @@ public class LanguagesClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Provide a list of supported language codes, following the ISO2Code standard.
+     */
+    public List<LanguageDto> getLanguages() {
+        return getLanguages(null);
     }
 }

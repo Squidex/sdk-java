@@ -35,10 +35,6 @@ public class SchemasClient {
         this.clientOptions = clientOptions;
     }
 
-    public SchemaDto postField(String schema, AddFieldDto request) {
-        return postField(schema, request, null);
-    }
-
     public SchemaDto postField(String schema, AddFieldDto request, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -75,8 +71,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto postNestedField(String schema, int parentId, AddFieldDto request) {
-        return postNestedField(schema, parentId, request, null);
+    public SchemaDto postField(String schema, AddFieldDto request) {
+        return postField(schema, request, null);
     }
 
     public SchemaDto postNestedField(String schema, int parentId, AddFieldDto request, RequestOptions requestOptions) {
@@ -117,8 +113,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchemaUiFields(String schema, ConfigureUiFieldsDto request) {
-        return putSchemaUiFields(schema, request, null);
+    public SchemaDto postNestedField(String schema, int parentId, AddFieldDto request) {
+        return postNestedField(schema, parentId, request, null);
+    }
+
+    public SchemaDto putSchemaUiFields(String schema) {
+        return putSchemaUiFields(schema, ConfigureUiFieldsDto.builder().build());
     }
 
     public SchemaDto putSchemaUiFields(String schema, ConfigureUiFieldsDto request, RequestOptions requestOptions) {
@@ -157,12 +157,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchemaUiFields(String schema) {
-        return putSchemaUiFields(schema, ConfigureUiFieldsDto.builder().build());
-    }
-
-    public SchemaDto putSchemaFieldOrdering(String schema, ReorderFieldsDto request) {
-        return putSchemaFieldOrdering(schema, request, null);
+    public SchemaDto putSchemaUiFields(String schema, ConfigureUiFieldsDto request) {
+        return putSchemaUiFields(schema, request, null);
     }
 
     public SchemaDto putSchemaFieldOrdering(String schema, ReorderFieldsDto request, RequestOptions requestOptions) {
@@ -201,8 +197,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putNestedFieldOrdering(String schema, int parentId, ReorderFieldsDto request) {
-        return putNestedFieldOrdering(schema, parentId, request, null);
+    public SchemaDto putSchemaFieldOrdering(String schema, ReorderFieldsDto request) {
+        return putSchemaFieldOrdering(schema, request, null);
     }
 
     public SchemaDto putNestedFieldOrdering(
@@ -244,8 +240,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putField(String schema, int id, UpdateFieldDto request) {
-        return putField(schema, id, request, null);
+    public SchemaDto putNestedFieldOrdering(String schema, int parentId, ReorderFieldsDto request) {
+        return putNestedFieldOrdering(schema, parentId, request, null);
     }
 
     public SchemaDto putField(String schema, int id, UpdateFieldDto request, RequestOptions requestOptions) {
@@ -285,8 +281,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto deleteField(String schema, int id) {
-        return deleteField(schema, id, null);
+    public SchemaDto putField(String schema, int id, UpdateFieldDto request) {
+        return putField(schema, id, request, null);
     }
 
     public SchemaDto deleteField(String schema, int id, RequestOptions requestOptions) {
@@ -319,8 +315,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putNestedField(String schema, int parentId, int id, UpdateFieldDto request) {
-        return putNestedField(schema, parentId, id, request, null);
+    public SchemaDto deleteField(String schema, int id) {
+        return deleteField(schema, id, null);
     }
 
     public SchemaDto putNestedField(
@@ -363,8 +359,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto deleteNestedField(String schema, int parentId, int id) {
-        return deleteNestedField(schema, parentId, id, null);
+    public SchemaDto putNestedField(String schema, int parentId, int id, UpdateFieldDto request) {
+        return putNestedField(schema, parentId, id, request, null);
     }
 
     public SchemaDto deleteNestedField(String schema, int parentId, int id, RequestOptions requestOptions) {
@@ -399,11 +395,8 @@ public class SchemasClient {
         }
     }
 
-    /**
-     * A locked field cannot be updated or deleted.
-     */
-    public SchemaDto lockField(String schema, int id) {
-        return lockField(schema, id, null);
+    public SchemaDto deleteNestedField(String schema, int parentId, int id) {
+        return deleteNestedField(schema, parentId, id, null);
     }
 
     /**
@@ -441,10 +434,10 @@ public class SchemasClient {
     }
 
     /**
-     * A locked field cannot be edited or deleted.
+     * A locked field cannot be updated or deleted.
      */
-    public SchemaDto lockNestedField(String schema, int parentId, int id) {
-        return lockNestedField(schema, parentId, id, null);
+    public SchemaDto lockField(String schema, int id) {
+        return lockField(schema, id, null);
     }
 
     /**
@@ -484,10 +477,10 @@ public class SchemasClient {
     }
 
     /**
-     * A hidden field is not part of the API response, but can still be edited in the portal.
+     * A locked field cannot be edited or deleted.
      */
-    public SchemaDto hideField(String schema, int id) {
-        return hideField(schema, id, null);
+    public SchemaDto lockNestedField(String schema, int parentId, int id) {
+        return lockNestedField(schema, parentId, id, null);
     }
 
     /**
@@ -527,8 +520,8 @@ public class SchemasClient {
     /**
      * A hidden field is not part of the API response, but can still be edited in the portal.
      */
-    public SchemaDto hideNestedField(String schema, int parentId, int id) {
-        return hideNestedField(schema, parentId, id, null);
+    public SchemaDto hideField(String schema, int id) {
+        return hideField(schema, id, null);
     }
 
     /**
@@ -570,8 +563,8 @@ public class SchemasClient {
     /**
      * A hidden field is not part of the API response, but can still be edited in the portal.
      */
-    public SchemaDto showField(String schema, int id) {
-        return showField(schema, id, null);
+    public SchemaDto hideNestedField(String schema, int parentId, int id) {
+        return hideNestedField(schema, parentId, id, null);
     }
 
     /**
@@ -611,8 +604,8 @@ public class SchemasClient {
     /**
      * A hidden field is not part of the API response, but can still be edited in the portal.
      */
-    public SchemaDto showNestedField(String schema, int parentId, int id) {
-        return showNestedField(schema, parentId, id, null);
+    public SchemaDto showField(String schema, int id) {
+        return showField(schema, id, null);
     }
 
     /**
@@ -652,10 +645,10 @@ public class SchemasClient {
     }
 
     /**
-     * A disabled field cannot not be edited in the squidex portal anymore, but will be part of the API response.
+     * A hidden field is not part of the API response, but can still be edited in the portal.
      */
-    public SchemaDto enableField(String schema, int id) {
-        return enableField(schema, id, null);
+    public SchemaDto showNestedField(String schema, int parentId, int id) {
+        return showNestedField(schema, parentId, id, null);
     }
 
     /**
@@ -695,8 +688,8 @@ public class SchemasClient {
     /**
      * A disabled field cannot not be edited in the squidex portal anymore, but will be part of the API response.
      */
-    public SchemaDto enableNestedField(String schema, int parentId, int id) {
-        return enableNestedField(schema, parentId, id, null);
+    public SchemaDto enableField(String schema, int id) {
+        return enableField(schema, id, null);
     }
 
     /**
@@ -738,8 +731,8 @@ public class SchemasClient {
     /**
      * A disabled field cannot not be edited in the squidex portal anymore, but will be part of the API response.
      */
-    public SchemaDto disableField(String schema, int id) {
-        return disableField(schema, id, null);
+    public SchemaDto enableNestedField(String schema, int parentId, int id) {
+        return enableNestedField(schema, parentId, id, null);
     }
 
     /**
@@ -779,8 +772,8 @@ public class SchemasClient {
     /**
      * A disabled field cannot not be edited in the squidex portal anymore, but will be part of the API response.
      */
-    public SchemaDto disableNestedField(String schema, int parentId, int id) {
-        return disableNestedField(schema, parentId, id, null);
+    public SchemaDto disableField(String schema, int id) {
+        return disableField(schema, id, null);
     }
 
     /**
@@ -819,8 +812,11 @@ public class SchemasClient {
         }
     }
 
-    public SchemasDto getSchemas() {
-        return getSchemas(null);
+    /**
+     * A disabled field cannot not be edited in the squidex portal anymore, but will be part of the API response.
+     */
+    public SchemaDto disableNestedField(String schema, int parentId, int id) {
+        return disableNestedField(schema, parentId, id, null);
     }
 
     public SchemasDto getSchemas(RequestOptions requestOptions) {
@@ -850,8 +846,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto postSchema(CreateSchemaDto request) {
-        return postSchema(request, null);
+    public SchemasDto getSchemas() {
+        return getSchemas(null);
     }
 
     public SchemaDto postSchema(CreateSchemaDto request, RequestOptions requestOptions) {
@@ -888,8 +884,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto getSchema(String schema) {
-        return getSchema(schema, null);
+    public SchemaDto postSchema(CreateSchemaDto request) {
+        return postSchema(request, null);
     }
 
     public SchemaDto getSchema(String schema, RequestOptions requestOptions) {
@@ -920,8 +916,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchema(String schema, UpdateSchemaDto request) {
-        return putSchema(schema, request, null);
+    public SchemaDto getSchema(String schema) {
+        return getSchema(schema, null);
+    }
+
+    public SchemaDto putSchema(String schema) {
+        return putSchema(schema, UpdateSchemaDto.builder().build());
     }
 
     public SchemaDto putSchema(String schema, UpdateSchemaDto request, RequestOptions requestOptions) {
@@ -959,12 +959,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchema(String schema) {
-        return putSchema(schema, UpdateSchemaDto.builder().build());
-    }
-
-    public void deleteSchema(String schema) {
-        deleteSchema(schema, null);
+    public SchemaDto putSchema(String schema, UpdateSchemaDto request) {
+        return putSchema(schema, request, null);
     }
 
     public void deleteSchema(String schema, RequestOptions requestOptions) {
@@ -994,8 +990,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchemaSync(String schema, SynchronizeSchemaDto request) {
-        return putSchemaSync(schema, request, null);
+    public void deleteSchema(String schema) {
+        deleteSchema(schema, null);
+    }
+
+    public SchemaDto putSchemaSync(String schema) {
+        return putSchemaSync(schema, SynchronizeSchemaDto.builder().build());
     }
 
     public SchemaDto putSchemaSync(String schema, SynchronizeSchemaDto request, RequestOptions requestOptions) {
@@ -1034,12 +1034,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putSchemaSync(String schema) {
-        return putSchemaSync(schema, SynchronizeSchemaDto.builder().build());
+    public SchemaDto putSchemaSync(String schema, SynchronizeSchemaDto request) {
+        return putSchemaSync(schema, request, null);
     }
 
-    public SchemaDto putCategory(String schema, ChangeCategoryDto request) {
-        return putCategory(schema, request, null);
+    public SchemaDto putCategory(String schema) {
+        return putCategory(schema, ChangeCategoryDto.builder().build());
     }
 
     public SchemaDto putCategory(String schema, ChangeCategoryDto request, RequestOptions requestOptions) {
@@ -1078,12 +1078,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putCategory(String schema) {
-        return putCategory(schema, ChangeCategoryDto.builder().build());
-    }
-
-    public SchemaDto putPreviewUrls(String schema, Map<String, String> request) {
-        return putPreviewUrls(schema, request, null);
+    public SchemaDto putCategory(String schema, ChangeCategoryDto request) {
+        return putCategory(schema, request, null);
     }
 
     public SchemaDto putPreviewUrls(String schema, Map<String, String> request, RequestOptions requestOptions) {
@@ -1122,8 +1118,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putScripts(String schema, SchemaScriptsDto request) {
-        return putScripts(schema, request, null);
+    public SchemaDto putPreviewUrls(String schema, Map<String, String> request) {
+        return putPreviewUrls(schema, request, null);
+    }
+
+    public SchemaDto putScripts(String schema) {
+        return putScripts(schema, SchemaScriptsDto.builder().build());
     }
 
     public SchemaDto putScripts(String schema, SchemaScriptsDto request, RequestOptions requestOptions) {
@@ -1162,12 +1162,12 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putScripts(String schema) {
-        return putScripts(schema, SchemaScriptsDto.builder().build());
+    public SchemaDto putScripts(String schema, SchemaScriptsDto request) {
+        return putScripts(schema, request, null);
     }
 
-    public SchemaDto putRules(String schema, ConfigureFieldRulesDto request) {
-        return putRules(schema, request, null);
+    public SchemaDto putRules(String schema) {
+        return putRules(schema, ConfigureFieldRulesDto.builder().build());
     }
 
     public SchemaDto putRules(String schema, ConfigureFieldRulesDto request, RequestOptions requestOptions) {
@@ -1206,12 +1206,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto putRules(String schema) {
-        return putRules(schema, ConfigureFieldRulesDto.builder().build());
-    }
-
-    public SchemaDto publishSchema(String schema) {
-        return publishSchema(schema, null);
+    public SchemaDto putRules(String schema, ConfigureFieldRulesDto request) {
+        return putRules(schema, request, null);
     }
 
     public SchemaDto publishSchema(String schema, RequestOptions requestOptions) {
@@ -1243,8 +1239,8 @@ public class SchemasClient {
         }
     }
 
-    public SchemaDto unpublishSchema(String schema) {
-        return unpublishSchema(schema, null);
+    public SchemaDto publishSchema(String schema) {
+        return publishSchema(schema, null);
     }
 
     public SchemaDto unpublishSchema(String schema, RequestOptions requestOptions) {
@@ -1274,5 +1270,9 @@ public class SchemasClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public SchemaDto unpublishSchema(String schema) {
+        return unpublishSchema(schema, null);
     }
 }

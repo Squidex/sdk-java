@@ -25,10 +25,6 @@ public class PlansClient {
         this.clientOptions = clientOptions;
     }
 
-    public PlansDto getPlans() {
-        return getPlans(null);
-    }
-
     public PlansDto getPlans(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -56,8 +52,8 @@ public class PlansClient {
         }
     }
 
-    public PlanChangedDto putPlan(ChangePlanDto request) {
-        return putPlan(request, null);
+    public PlansDto getPlans() {
+        return getPlans(null);
     }
 
     public PlanChangedDto putPlan(ChangePlanDto request, RequestOptions requestOptions) {
@@ -94,8 +90,8 @@ public class PlansClient {
         }
     }
 
-    public PlansDto getTeamPlans(String team) {
-        return getTeamPlans(team, null);
+    public PlanChangedDto putPlan(ChangePlanDto request) {
+        return putPlan(request, null);
     }
 
     public PlansDto getTeamPlans(String team, RequestOptions requestOptions) {
@@ -125,8 +121,8 @@ public class PlansClient {
         }
     }
 
-    public PlanChangedDto putTeamPlan(String team, ChangePlanDto request) {
-        return putTeamPlan(team, request, null);
+    public PlansDto getTeamPlans(String team) {
+        return getTeamPlans(team, null);
     }
 
     public PlanChangedDto putTeamPlan(String team, ChangePlanDto request, RequestOptions requestOptions) {
@@ -161,5 +157,9 @@ public class PlansClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public PlanChangedDto putTeamPlan(String team, ChangePlanDto request) {
+        return putTeamPlan(team, request, null);
     }
 }

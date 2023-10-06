@@ -22,10 +22,6 @@ public class EventConsumersClient {
         this.clientOptions = clientOptions;
     }
 
-    public EventConsumersDto getEventConsumers() {
-        return getEventConsumers(null);
-    }
-
     public EventConsumersDto getEventConsumers(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -51,8 +47,8 @@ public class EventConsumersClient {
         }
     }
 
-    public EventConsumerDto startEventConsumer(String consumerName) {
-        return startEventConsumer(consumerName, null);
+    public EventConsumersDto getEventConsumers() {
+        return getEventConsumers(null);
     }
 
     public EventConsumerDto startEventConsumer(String consumerName, RequestOptions requestOptions) {
@@ -82,8 +78,8 @@ public class EventConsumersClient {
         }
     }
 
-    public EventConsumerDto stopEventConsumer(String consumerName) {
-        return stopEventConsumer(consumerName, null);
+    public EventConsumerDto startEventConsumer(String consumerName) {
+        return startEventConsumer(consumerName, null);
     }
 
     public EventConsumerDto stopEventConsumer(String consumerName, RequestOptions requestOptions) {
@@ -113,8 +109,8 @@ public class EventConsumersClient {
         }
     }
 
-    public EventConsumerDto resetEventConsumer(String consumerName) {
-        return resetEventConsumer(consumerName, null);
+    public EventConsumerDto stopEventConsumer(String consumerName) {
+        return stopEventConsumer(consumerName, null);
     }
 
     public EventConsumerDto resetEventConsumer(String consumerName, RequestOptions requestOptions) {
@@ -142,5 +138,9 @@ public class EventConsumersClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public EventConsumerDto resetEventConsumer(String consumerName) {
+        return resetEventConsumer(consumerName, null);
     }
 }

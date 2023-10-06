@@ -22,10 +22,6 @@ public class PingClient {
         this.clientOptions = clientOptions;
     }
 
-    public Map<String, String> getInfo() {
-        return getInfo(null);
-    }
-
     public Map<String, String> getInfo(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -52,11 +48,8 @@ public class PingClient {
         }
     }
 
-    /**
-     * Can be used to test, if the Squidex API is alive and responding.
-     */
-    public void getPing() {
-        getPing(null);
+    public Map<String, String> getInfo() {
+        return getInfo(null);
     }
 
     /**
@@ -89,8 +82,8 @@ public class PingClient {
     /**
      * Can be used to test, if the Squidex API is alive and responding.
      */
-    public void getAppPing() {
-        getAppPing(null);
+    public void getPing() {
+        getPing(null);
     }
 
     /**
@@ -119,5 +112,12 @@ public class PingClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Can be used to test, if the Squidex API is alive and responding.
+     */
+    public void getAppPing() {
+        getAppPing(null);
     }
 }

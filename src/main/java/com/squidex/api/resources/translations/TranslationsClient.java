@@ -27,10 +27,6 @@ public class TranslationsClient {
         this.clientOptions = clientOptions;
     }
 
-    public TranslationDto postTranslation(TranslateDto request) {
-        return postTranslation(request, null);
-    }
-
     public TranslationDto postTranslation(TranslateDto request, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -65,8 +61,8 @@ public class TranslationsClient {
         }
     }
 
-    public List<String> postQuestion(AskDto request) {
-        return postQuestion(request, null);
+    public TranslationDto postTranslation(TranslateDto request) {
+        return postTranslation(request, null);
     }
 
     public List<String> postQuestion(AskDto request, RequestOptions requestOptions) {
@@ -102,5 +98,9 @@ public class TranslationsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<String> postQuestion(AskDto request) {
+        return postQuestion(request, null);
     }
 }

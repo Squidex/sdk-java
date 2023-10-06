@@ -29,10 +29,6 @@ public class UsersClient {
         this.clientOptions = clientOptions;
     }
 
-    public ResourcesDto getUserResources() {
-        return getUserResources(null);
-    }
-
     public ResourcesDto getUserResources(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -58,8 +54,12 @@ public class UsersClient {
         }
     }
 
-    public void postUser(UpdateProfileDto request) {
-        postUser(request, null);
+    public ResourcesDto getUserResources() {
+        return getUserResources(null);
+    }
+
+    public void postUser() {
+        postUser(UpdateProfileDto.builder().build());
     }
 
     public void postUser(UpdateProfileDto request, RequestOptions requestOptions) {
@@ -94,15 +94,15 @@ public class UsersClient {
         }
     }
 
-    public void postUser() {
-        postUser(UpdateProfileDto.builder().build());
+    public void postUser(UpdateProfileDto request) {
+        postUser(request, null);
     }
 
     /**
      * Search the user by query that contains the email address or the part of the email address.
      */
-    public List<UserDto> getUsers(UsersGetUsersRequest request) {
-        return getUsers(request, null);
+    public List<UserDto> getUsers() {
+        return getUsers(UsersGetUsersRequest.builder().build());
     }
 
     /**
@@ -136,12 +136,11 @@ public class UsersClient {
         }
     }
 
-    public List<UserDto> getUsers() {
-        return getUsers(UsersGetUsersRequest.builder().build());
-    }
-
-    public UserDto getUser(String id) {
-        return getUser(id, null);
+    /**
+     * Search the user by query that contains the email address or the part of the email address.
+     */
+    public List<UserDto> getUsers(UsersGetUsersRequest request) {
+        return getUsers(request, null);
     }
 
     public UserDto getUser(String id, RequestOptions requestOptions) {
@@ -170,8 +169,8 @@ public class UsersClient {
         }
     }
 
-    public InputStream getUserPicture(String id) {
-        return getUserPicture(id, null);
+    public UserDto getUser(String id) {
+        return getUser(id, null);
     }
 
     public InputStream getUserPicture(String id, RequestOptions requestOptions) {
@@ -199,5 +198,9 @@ public class UsersClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public InputStream getUserPicture(String id) {
+        return getUserPicture(id, null);
     }
 }

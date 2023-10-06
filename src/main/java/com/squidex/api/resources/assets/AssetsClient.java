@@ -50,8 +50,9 @@ public class AssetsClient {
         this.clientOptions = clientOptions;
     }
 
-    public InputStream getAssetContentBySlug(String idOrSlug, String more, AssetsGetAssetContentBySlugRequest request) {
-        return getAssetContentBySlug(idOrSlug, more, request, null);
+    public InputStream getAssetContentBySlug(String idOrSlug, String more) {
+        return getAssetContentBySlug(
+                idOrSlug, more, AssetsGetAssetContentBySlugRequest.builder().build());
     }
 
     public InputStream getAssetContentBySlug(
@@ -127,13 +128,12 @@ public class AssetsClient {
         }
     }
 
-    public InputStream getAssetContentBySlug(String idOrSlug, String more) {
-        return getAssetContentBySlug(
-                idOrSlug, more, AssetsGetAssetContentBySlugRequest.builder().build());
+    public InputStream getAssetContentBySlug(String idOrSlug, String more, AssetsGetAssetContentBySlugRequest request) {
+        return getAssetContentBySlug(idOrSlug, more, request, null);
     }
 
-    public InputStream getAssetContent(String id, AssetsGetAssetContentRequest request) {
-        return getAssetContent(id, request, null);
+    public InputStream getAssetContent(String id) {
+        return getAssetContent(id, AssetsGetAssetContentRequest.builder().build());
     }
 
     public InputStream getAssetContent(String id, AssetsGetAssetContentRequest request, RequestOptions requestOptions) {
@@ -206,15 +206,15 @@ public class AssetsClient {
         }
     }
 
-    public InputStream getAssetContent(String id) {
-        return getAssetContent(id, AssetsGetAssetContentRequest.builder().build());
+    public InputStream getAssetContent(String id, AssetsGetAssetContentRequest request) {
+        return getAssetContent(id, request, null);
     }
 
     /**
      * Get all asset folders for the app.
      */
-    public AssetFoldersDto getAssetFolders(AssetsGetAssetFoldersRequest request) {
-        return getAssetFolders(request, null);
+    public AssetFoldersDto getAssetFolders() {
+        return getAssetFolders(AssetsGetAssetFoldersRequest.builder().build());
     }
 
     /**
@@ -252,12 +252,11 @@ public class AssetsClient {
         }
     }
 
-    public AssetFoldersDto getAssetFolders() {
-        return getAssetFolders(AssetsGetAssetFoldersRequest.builder().build());
-    }
-
-    public AssetFolderDto postAssetFolder(CreateAssetFolderDto request) {
-        return postAssetFolder(request, null);
+    /**
+     * Get all asset folders for the app.
+     */
+    public AssetFoldersDto getAssetFolders(AssetsGetAssetFoldersRequest request) {
+        return getAssetFolders(request, null);
     }
 
     public AssetFolderDto postAssetFolder(CreateAssetFolderDto request, RequestOptions requestOptions) {
@@ -294,8 +293,8 @@ public class AssetsClient {
         }
     }
 
-    public AssetFolderDto putAssetFolder(String id, RenameAssetFolderDto request) {
-        return putAssetFolder(id, request, null);
+    public AssetFolderDto postAssetFolder(CreateAssetFolderDto request) {
+        return postAssetFolder(request, null);
     }
 
     public AssetFolderDto putAssetFolder(String id, RenameAssetFolderDto request, RequestOptions requestOptions) {
@@ -333,8 +332,8 @@ public class AssetsClient {
         }
     }
 
-    public void deleteAssetFolder(String id) {
-        deleteAssetFolder(id, null);
+    public AssetFolderDto putAssetFolder(String id, RenameAssetFolderDto request) {
+        return putAssetFolder(id, request, null);
     }
 
     public void deleteAssetFolder(String id, RequestOptions requestOptions) {
@@ -364,8 +363,12 @@ public class AssetsClient {
         }
     }
 
-    public AssetFolderDto putAssetFolderParent(String id, MoveAssetFolderDto request) {
-        return putAssetFolderParent(id, request, null);
+    public void deleteAssetFolder(String id) {
+        deleteAssetFolder(id, null);
+    }
+
+    public AssetFolderDto putAssetFolderParent(String id) {
+        return putAssetFolderParent(id, MoveAssetFolderDto.builder().build());
     }
 
     public AssetFolderDto putAssetFolderParent(String id, MoveAssetFolderDto request, RequestOptions requestOptions) {
@@ -404,15 +407,8 @@ public class AssetsClient {
         }
     }
 
-    public AssetFolderDto putAssetFolderParent(String id) {
-        return putAssetFolderParent(id, MoveAssetFolderDto.builder().build());
-    }
-
-    /**
-     * Get all tags for assets.
-     */
-    public Map<String, Integer> getTags() {
-        return getTags(null);
+    public AssetFolderDto putAssetFolderParent(String id, MoveAssetFolderDto request) {
+        return putAssetFolderParent(id, request, null);
     }
 
     /**
@@ -446,8 +442,11 @@ public class AssetsClient {
         }
     }
 
-    public Map<String, Integer> putTag(String name, RenameTagDto request) {
-        return putTag(name, request, null);
+    /**
+     * Get all tags for assets.
+     */
+    public Map<String, Integer> getTags() {
+        return getTags(null);
     }
 
     public Map<String, Integer> putTag(String name, RenameTagDto request, RequestOptions requestOptions) {
@@ -486,11 +485,15 @@ public class AssetsClient {
         }
     }
 
+    public Map<String, Integer> putTag(String name, RenameTagDto request) {
+        return putTag(name, request, null);
+    }
+
     /**
      * Get all assets for the app.
      */
-    public AssetsDto getAssets(AssetsGetAssetsRequest request) {
-        return getAssets(request, null);
+    public AssetsDto getAssets() {
+        return getAssets(AssetsGetAssetsRequest.builder().build());
     }
 
     /**
@@ -550,15 +553,11 @@ public class AssetsClient {
         }
     }
 
-    public AssetsDto getAssets() {
-        return getAssets(AssetsGetAssetsRequest.builder().build());
-    }
-
     /**
-     * You can only upload one file at a time. The mime type of the file is not calculated by Squidex and is required correctly.
+     * Get all assets for the app.
      */
-    public AssetDto postAsset(File file, AssetsPostAssetRequest request) {
-        return postAsset(file, request, null);
+    public AssetsDto getAssets(AssetsGetAssetsRequest request) {
+        return getAssets(request, null);
     }
 
     /**
@@ -607,10 +606,17 @@ public class AssetsClient {
     }
 
     /**
+     * You can only upload one file at a time. The mime type of the file is not calculated by Squidex and is required correctly.
+     */
+    public AssetDto postAsset(File file, AssetsPostAssetRequest request) {
+        return postAsset(file, request, null);
+    }
+
+    /**
      * Get all assets for the app.
      */
-    public AssetsDto getAssetsPost(AssetsGetAssetsPostRequest request) {
-        return getAssetsPost(request, null);
+    public AssetsDto getAssetsPost() {
+        return getAssetsPost(AssetsGetAssetsPostRequest.builder().build());
     }
 
     /**
@@ -658,12 +664,11 @@ public class AssetsClient {
         }
     }
 
-    public AssetsDto getAssetsPost() {
-        return getAssetsPost(AssetsGetAssetsPostRequest.builder().build());
-    }
-
-    public AssetDto getAsset(String id) {
-        return getAsset(id, null);
+    /**
+     * Get all assets for the app.
+     */
+    public AssetsDto getAssetsPost(AssetsGetAssetsPostRequest request) {
+        return getAssetsPost(request, null);
     }
 
     public AssetDto getAsset(String id, RequestOptions requestOptions) {
@@ -694,11 +699,8 @@ public class AssetsClient {
         }
     }
 
-    /**
-     * You can only upload one file at a time. The mime type of the file is not calculated by Squidex and is required correctly.
-     */
-    public AssetDto postUpsertAsset(String id, File file, AssetsPostUpsertAssetRequest request) {
-        return postUpsertAsset(id, file, request, null);
+    public AssetDto getAsset(String id) {
+        return getAsset(id, null);
     }
 
     /**
@@ -745,8 +747,15 @@ public class AssetsClient {
         }
     }
 
-    public AssetDto putAsset(String id, AnnotateAssetDto request) {
-        return putAsset(id, request, null);
+    /**
+     * You can only upload one file at a time. The mime type of the file is not calculated by Squidex and is required correctly.
+     */
+    public AssetDto postUpsertAsset(String id, File file, AssetsPostUpsertAssetRequest request) {
+        return postUpsertAsset(id, file, request, null);
+    }
+
+    public AssetDto putAsset(String id) {
+        return putAsset(id, AnnotateAssetDto.builder().build());
     }
 
     public AssetDto putAsset(String id, AnnotateAssetDto request, RequestOptions requestOptions) {
@@ -784,12 +793,12 @@ public class AssetsClient {
         }
     }
 
-    public AssetDto putAsset(String id) {
-        return putAsset(id, AnnotateAssetDto.builder().build());
+    public AssetDto putAsset(String id, AnnotateAssetDto request) {
+        return putAsset(id, request, null);
     }
 
-    public void deleteAsset(String id, AssetsDeleteAssetRequest request) {
-        deleteAsset(id, request, null);
+    public void deleteAsset(String id) {
+        deleteAsset(id, AssetsDeleteAssetRequest.builder().build());
     }
 
     public void deleteAsset(String id, AssetsDeleteAssetRequest request, RequestOptions requestOptions) {
@@ -825,12 +834,12 @@ public class AssetsClient {
         }
     }
 
-    public void deleteAsset(String id) {
-        deleteAsset(id, AssetsDeleteAssetRequest.builder().build());
+    public void deleteAsset(String id, AssetsDeleteAssetRequest request) {
+        deleteAsset(id, request, null);
     }
 
-    public List<BulkResultDto> bulkUpdateAssets(BulkUpdateAssetsDto request) {
-        return bulkUpdateAssets(request, null);
+    public List<BulkResultDto> bulkUpdateAssets() {
+        return bulkUpdateAssets(BulkUpdateAssetsDto.builder().build());
     }
 
     public List<BulkResultDto> bulkUpdateAssets(BulkUpdateAssetsDto request, RequestOptions requestOptions) {
@@ -868,15 +877,8 @@ public class AssetsClient {
         }
     }
 
-    public List<BulkResultDto> bulkUpdateAssets() {
-        return bulkUpdateAssets(BulkUpdateAssetsDto.builder().build());
-    }
-
-    /**
-     * Use multipart request to upload an asset.
-     */
-    public AssetDto putAssetContent(String id, File file, AssetsPutAssetContentRequest request) {
-        return putAssetContent(id, file, request, null);
+    public List<BulkResultDto> bulkUpdateAssets(BulkUpdateAssetsDto request) {
+        return bulkUpdateAssets(request, null);
     }
 
     /**
@@ -919,8 +921,15 @@ public class AssetsClient {
         }
     }
 
-    public AssetDto putAssetParent(String id, MoveAssetDto request) {
-        return putAssetParent(id, request, null);
+    /**
+     * Use multipart request to upload an asset.
+     */
+    public AssetDto putAssetContent(String id, File file, AssetsPutAssetContentRequest request) {
+        return putAssetContent(id, file, request, null);
+    }
+
+    public AssetDto putAssetParent(String id) {
+        return putAssetParent(id, MoveAssetDto.builder().build());
     }
 
     public AssetDto putAssetParent(String id, MoveAssetDto request, RequestOptions requestOptions) {
@@ -959,7 +968,7 @@ public class AssetsClient {
         }
     }
 
-    public AssetDto putAssetParent(String id) {
-        return putAssetParent(id, MoveAssetDto.builder().build());
+    public AssetDto putAssetParent(String id, MoveAssetDto request) {
+        return putAssetParent(id, request, null);
     }
 }

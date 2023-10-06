@@ -34,10 +34,6 @@ public class RulesClient {
         this.clientOptions = clientOptions;
     }
 
-    public Map<String, RuleElementDto> getActions() {
-        return getActions(null);
-    }
-
     public Map<String, RuleElementDto> getActions(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -64,8 +60,8 @@ public class RulesClient {
         }
     }
 
-    public RulesDto getRules() {
-        return getRules(null);
+    public Map<String, RuleElementDto> getActions() {
+        return getActions(null);
     }
 
     public RulesDto getRules(RequestOptions requestOptions) {
@@ -95,8 +91,8 @@ public class RulesClient {
         }
     }
 
-    public RuleDto postRule(CreateRuleDto request) {
-        return postRule(request, null);
+    public RulesDto getRules() {
+        return getRules(null);
     }
 
     public RuleDto postRule(CreateRuleDto request, RequestOptions requestOptions) {
@@ -133,8 +129,8 @@ public class RulesClient {
         }
     }
 
-    public void deleteRuleRun() {
-        deleteRuleRun(null);
+    public RuleDto postRule(CreateRuleDto request) {
+        return postRule(request, null);
     }
 
     public void deleteRuleRun(RequestOptions requestOptions) {
@@ -163,8 +159,12 @@ public class RulesClient {
         }
     }
 
-    public RuleDto putRule(String id, UpdateRuleDto request) {
-        return putRule(id, request, null);
+    public void deleteRuleRun() {
+        deleteRuleRun(null);
+    }
+
+    public RuleDto putRule(String id) {
+        return putRule(id, UpdateRuleDto.builder().build());
     }
 
     public RuleDto putRule(String id, UpdateRuleDto request, RequestOptions requestOptions) {
@@ -202,12 +202,8 @@ public class RulesClient {
         }
     }
 
-    public RuleDto putRule(String id) {
-        return putRule(id, UpdateRuleDto.builder().build());
-    }
-
-    public void deleteRule(String id) {
-        deleteRule(id, null);
+    public RuleDto putRule(String id, UpdateRuleDto request) {
+        return putRule(id, request, null);
     }
 
     public void deleteRule(String id, RequestOptions requestOptions) {
@@ -237,8 +233,8 @@ public class RulesClient {
         }
     }
 
-    public RuleDto enableRule(String id) {
-        return enableRule(id, null);
+    public void deleteRule(String id) {
+        deleteRule(id, null);
     }
 
     public RuleDto enableRule(String id, RequestOptions requestOptions) {
@@ -270,8 +266,8 @@ public class RulesClient {
         }
     }
 
-    public RuleDto disableRule(String id) {
-        return disableRule(id, null);
+    public RuleDto enableRule(String id) {
+        return enableRule(id, null);
     }
 
     public RuleDto disableRule(String id, RequestOptions requestOptions) {
@@ -303,8 +299,8 @@ public class RulesClient {
         }
     }
 
-    public void triggerRule(String id) {
-        triggerRule(id, null);
+    public RuleDto disableRule(String id) {
+        return disableRule(id, null);
     }
 
     public void triggerRule(String id, RequestOptions requestOptions) {
@@ -335,8 +331,12 @@ public class RulesClient {
         }
     }
 
-    public void putRuleRun(String id, RulesPutRuleRunRequest request) {
-        putRuleRun(id, request, null);
+    public void triggerRule(String id) {
+        triggerRule(id, null);
+    }
+
+    public void putRuleRun(String id) {
+        putRuleRun(id, RulesPutRuleRunRequest.builder().build());
     }
 
     public void putRuleRun(String id, RulesPutRuleRunRequest request, RequestOptions requestOptions) {
@@ -370,12 +370,8 @@ public class RulesClient {
         }
     }
 
-    public void putRuleRun(String id) {
-        putRuleRun(id, RulesPutRuleRunRequest.builder().build());
-    }
-
-    public void deleteRuleEvents(String id) {
-        deleteRuleEvents(id, null);
+    public void putRuleRun(String id, RulesPutRuleRunRequest request) {
+        putRuleRun(id, request, null);
     }
 
     public void deleteRuleEvents(String id, RequestOptions requestOptions) {
@@ -406,8 +402,8 @@ public class RulesClient {
         }
     }
 
-    public SimulatedRuleEventsDto simulatePost(CreateRuleDto request) {
-        return simulatePost(request, null);
+    public void deleteRuleEvents(String id) {
+        deleteRuleEvents(id, null);
     }
 
     public SimulatedRuleEventsDto simulatePost(CreateRuleDto request, RequestOptions requestOptions) {
@@ -444,8 +440,8 @@ public class RulesClient {
         }
     }
 
-    public SimulatedRuleEventsDto simulateGet(String id) {
-        return simulateGet(id, null);
+    public SimulatedRuleEventsDto simulatePost(CreateRuleDto request) {
+        return simulatePost(request, null);
     }
 
     public SimulatedRuleEventsDto simulateGet(String id, RequestOptions requestOptions) {
@@ -477,8 +473,12 @@ public class RulesClient {
         }
     }
 
-    public RuleEventsDto getEvents(RulesGetEventsRequest request) {
-        return getEvents(request, null);
+    public SimulatedRuleEventsDto simulateGet(String id) {
+        return simulateGet(id, null);
+    }
+
+    public RuleEventsDto getEvents() {
+        return getEvents(RulesGetEventsRequest.builder().build());
     }
 
     public RuleEventsDto getEvents(RulesGetEventsRequest request, RequestOptions requestOptions) {
@@ -516,12 +516,8 @@ public class RulesClient {
         }
     }
 
-    public RuleEventsDto getEvents() {
-        return getEvents(RulesGetEventsRequest.builder().build());
-    }
-
-    public void deleteEvents() {
-        deleteEvents(null);
+    public RuleEventsDto getEvents(RulesGetEventsRequest request) {
+        return getEvents(request, null);
     }
 
     public void deleteEvents(RequestOptions requestOptions) {
@@ -550,8 +546,8 @@ public class RulesClient {
         }
     }
 
-    public void putEvent(String id) {
-        putEvent(id, null);
+    public void deleteEvents() {
+        deleteEvents(null);
     }
 
     public void putEvent(String id, RequestOptions requestOptions) {
@@ -581,8 +577,8 @@ public class RulesClient {
         }
     }
 
-    public void deleteEvent(String id) {
-        deleteEvent(id, null);
+    public void putEvent(String id) {
+        putEvent(id, null);
     }
 
     public void deleteEvent(String id, RequestOptions requestOptions) {
@@ -612,8 +608,8 @@ public class RulesClient {
         }
     }
 
-    public List<String> getEventTypes() {
-        return getEventTypes(null);
+    public void deleteEvent(String id) {
+        deleteEvent(id, null);
     }
 
     public List<String> getEventTypes(RequestOptions requestOptions) {
@@ -642,8 +638,8 @@ public class RulesClient {
         }
     }
 
-    public Object getEventSchema(String type) {
-        return getEventSchema(type, null);
+    public List<String> getEventTypes() {
+        return getEventTypes(null);
     }
 
     public Object getEventSchema(String type, RequestOptions requestOptions) {
@@ -670,5 +666,9 @@ public class RulesClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Object getEventSchema(String type) {
+        return getEventSchema(type, null);
     }
 }

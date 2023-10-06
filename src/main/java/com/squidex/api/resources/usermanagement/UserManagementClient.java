@@ -27,8 +27,8 @@ public class UserManagementClient {
         this.clientOptions = clientOptions;
     }
 
-    public UsersDto getUsers(UserManagementGetUsersRequest request) {
-        return getUsers(request, null);
+    public UsersDto getUsers() {
+        return getUsers(UserManagementGetUsersRequest.builder().build());
     }
 
     public UsersDto getUsers(UserManagementGetUsersRequest request, RequestOptions requestOptions) {
@@ -64,12 +64,8 @@ public class UserManagementClient {
         }
     }
 
-    public UsersDto getUsers() {
-        return getUsers(UserManagementGetUsersRequest.builder().build());
-    }
-
-    public UserDto postUser(CreateUserDto request) {
-        return postUser(request, null);
+    public UsersDto getUsers(UserManagementGetUsersRequest request) {
+        return getUsers(request, null);
     }
 
     public UserDto postUser(CreateUserDto request, RequestOptions requestOptions) {
@@ -104,8 +100,8 @@ public class UserManagementClient {
         }
     }
 
-    public UserDto getUser(String id) {
-        return getUser(id, null);
+    public UserDto postUser(CreateUserDto request) {
+        return postUser(request, null);
     }
 
     public UserDto getUser(String id, RequestOptions requestOptions) {
@@ -134,8 +130,8 @@ public class UserManagementClient {
         }
     }
 
-    public UserDto putUser(String id, UpdateUserDto request) {
-        return putUser(id, request, null);
+    public UserDto getUser(String id) {
+        return getUser(id, null);
     }
 
     public UserDto putUser(String id, UpdateUserDto request, RequestOptions requestOptions) {
@@ -171,8 +167,8 @@ public class UserManagementClient {
         }
     }
 
-    public void deleteUser(String id) {
-        deleteUser(id, null);
+    public UserDto putUser(String id, UpdateUserDto request) {
+        return putUser(id, request, null);
     }
 
     public void deleteUser(String id, RequestOptions requestOptions) {
@@ -200,8 +196,8 @@ public class UserManagementClient {
         }
     }
 
-    public UserDto lockUser(String id) {
-        return lockUser(id, null);
+    public void deleteUser(String id) {
+        deleteUser(id, null);
     }
 
     public UserDto lockUser(String id, RequestOptions requestOptions) {
@@ -231,8 +227,8 @@ public class UserManagementClient {
         }
     }
 
-    public UserDto unlockUser(String id) {
-        return unlockUser(id, null);
+    public UserDto lockUser(String id) {
+        return lockUser(id, null);
     }
 
     public UserDto unlockUser(String id, RequestOptions requestOptions) {
@@ -260,5 +256,9 @@ public class UserManagementClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public UserDto unlockUser(String id) {
+        return unlockUser(id, null);
     }
 }

@@ -51,10 +51,6 @@ public class AppsClient {
         this.clientOptions = clientOptions;
     }
 
-    public AssetScriptsDto getAssetScripts() {
-        return getAssetScripts(null);
-    }
-
     public AssetScriptsDto getAssetScripts(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -82,8 +78,12 @@ public class AppsClient {
         }
     }
 
-    public AssetScriptsDto putAssetScripts(UpdateAssetScriptsDto request) {
-        return putAssetScripts(request, null);
+    public AssetScriptsDto getAssetScripts() {
+        return getAssetScripts(null);
+    }
+
+    public AssetScriptsDto putAssetScripts() {
+        return putAssetScripts(UpdateAssetScriptsDto.builder().build());
     }
 
     public AssetScriptsDto putAssetScripts(UpdateAssetScriptsDto request, RequestOptions requestOptions) {
@@ -120,15 +120,8 @@ public class AppsClient {
         }
     }
 
-    public AssetScriptsDto putAssetScripts() {
-        return putAssetScripts(UpdateAssetScriptsDto.builder().build());
-    }
-
-    /**
-     * Gets all configured clients for the app with the specified name.
-     */
-    public ClientsDto getClients() {
-        return getClients(null);
+    public AssetScriptsDto putAssetScripts(UpdateAssetScriptsDto request) {
+        return putAssetScripts(request, null);
     }
 
     /**
@@ -162,11 +155,10 @@ public class AppsClient {
     }
 
     /**
-     * Create a new client for the app with the specified name.
-     * The client secret is auto generated on the server and returned. The client does not expire, the access token is valid for 30 days.
+     * Gets all configured clients for the app with the specified name.
      */
-    public ClientsDto postClient(CreateClientDto request) {
-        return postClient(request, null);
+    public ClientsDto getClients() {
+        return getClients(null);
     }
 
     /**
@@ -208,10 +200,18 @@ public class AppsClient {
     }
 
     /**
+     * Create a new client for the app with the specified name.
+     * The client secret is auto generated on the server and returned. The client does not expire, the access token is valid for 30 days.
+     */
+    public ClientsDto postClient(CreateClientDto request) {
+        return postClient(request, null);
+    }
+
+    /**
      * Only the display name can be changed, create a new client if necessary.
      */
-    public ClientsDto putClient(String id, UpdateClientDto request) {
-        return putClient(id, request, null);
+    public ClientsDto putClient(String id) {
+        return putClient(id, UpdateClientDto.builder().build());
     }
 
     /**
@@ -252,15 +252,11 @@ public class AppsClient {
         }
     }
 
-    public ClientsDto putClient(String id) {
-        return putClient(id, UpdateClientDto.builder().build());
-    }
-
     /**
-     * The application that uses this client credentials cannot access the API after it has been revoked.
+     * Only the display name can be changed, create a new client if necessary.
      */
-    public ClientsDto deleteClient(String id) {
-        return deleteClient(id, null);
+    public ClientsDto putClient(String id, UpdateClientDto request) {
+        return putClient(id, request, null);
     }
 
     /**
@@ -294,8 +290,11 @@ public class AppsClient {
         }
     }
 
-    public ContributorsDto getContributors() {
-        return getContributors(null);
+    /**
+     * The application that uses this client credentials cannot access the API after it has been revoked.
+     */
+    public ClientsDto deleteClient(String id) {
+        return deleteClient(id, null);
     }
 
     public ContributorsDto getContributors(RequestOptions requestOptions) {
@@ -325,8 +324,8 @@ public class AppsClient {
         }
     }
 
-    public ContributorsDto postContributor(AssignContributorDto request) {
-        return postContributor(request, null);
+    public ContributorsDto getContributors() {
+        return getContributors(null);
     }
 
     public ContributorsDto postContributor(AssignContributorDto request, RequestOptions requestOptions) {
@@ -363,8 +362,8 @@ public class AppsClient {
         }
     }
 
-    public ContributorsDto deleteMyself() {
-        return deleteMyself(null);
+    public ContributorsDto postContributor(AssignContributorDto request) {
+        return postContributor(request, null);
     }
 
     public ContributorsDto deleteMyself(RequestOptions requestOptions) {
@@ -394,8 +393,8 @@ public class AppsClient {
         }
     }
 
-    public ContributorsDto deleteContributor(String id) {
-        return deleteContributor(id, null);
+    public ContributorsDto deleteMyself() {
+        return deleteMyself(null);
     }
 
     public ContributorsDto deleteContributor(String id, RequestOptions requestOptions) {
@@ -426,8 +425,8 @@ public class AppsClient {
         }
     }
 
-    public InputStream getImage() {
-        return getImage(null);
+    public ContributorsDto deleteContributor(String id) {
+        return deleteContributor(id, null);
     }
 
     public InputStream getImage(RequestOptions requestOptions) {
@@ -457,8 +456,8 @@ public class AppsClient {
         }
     }
 
-    public AppDto uploadImage(File file, AppsUploadImageRequest request) {
-        return uploadImage(file, request, null);
+    public InputStream getImage() {
+        return getImage(null);
     }
 
     public AppDto uploadImage(File file, AppsUploadImageRequest request, RequestOptions requestOptions) {
@@ -495,8 +494,8 @@ public class AppsClient {
         }
     }
 
-    public AppDto deleteImage() {
-        return deleteImage(null);
+    public AppDto uploadImage(File file, AppsUploadImageRequest request) {
+        return uploadImage(file, request, null);
     }
 
     public AppDto deleteImage(RequestOptions requestOptions) {
@@ -526,8 +525,8 @@ public class AppsClient {
         }
     }
 
-    public AppLanguagesDto getLanguages() {
-        return getLanguages(null);
+    public AppDto deleteImage() {
+        return deleteImage(null);
     }
 
     public AppLanguagesDto getLanguages(RequestOptions requestOptions) {
@@ -557,8 +556,8 @@ public class AppsClient {
         }
     }
 
-    public AppLanguagesDto postLanguage(AddLanguageDto request) {
-        return postLanguage(request, null);
+    public AppLanguagesDto getLanguages() {
+        return getLanguages(null);
     }
 
     public AppLanguagesDto postLanguage(AddLanguageDto request, RequestOptions requestOptions) {
@@ -595,8 +594,12 @@ public class AppsClient {
         }
     }
 
-    public AppLanguagesDto putLanguage(String language, UpdateLanguageDto request) {
-        return putLanguage(language, request, null);
+    public AppLanguagesDto postLanguage(AddLanguageDto request) {
+        return postLanguage(request, null);
+    }
+
+    public AppLanguagesDto putLanguage(String language) {
+        return putLanguage(language, UpdateLanguageDto.builder().build());
     }
 
     public AppLanguagesDto putLanguage(String language, UpdateLanguageDto request, RequestOptions requestOptions) {
@@ -634,12 +637,8 @@ public class AppsClient {
         }
     }
 
-    public AppLanguagesDto putLanguage(String language) {
-        return putLanguage(language, UpdateLanguageDto.builder().build());
-    }
-
-    public AppLanguagesDto deleteLanguage(String language) {
-        return deleteLanguage(language, null);
+    public AppLanguagesDto putLanguage(String language, UpdateLanguageDto request) {
+        return putLanguage(language, request, null);
     }
 
     public AppLanguagesDto deleteLanguage(String language, RequestOptions requestOptions) {
@@ -670,8 +669,8 @@ public class AppsClient {
         }
     }
 
-    public RolesDto getRoles() {
-        return getRoles(null);
+    public AppLanguagesDto deleteLanguage(String language) {
+        return deleteLanguage(language, null);
     }
 
     public RolesDto getRoles(RequestOptions requestOptions) {
@@ -701,8 +700,8 @@ public class AppsClient {
         }
     }
 
-    public RolesDto postRole(AddRoleDto request) {
-        return postRole(request, null);
+    public RolesDto getRoles() {
+        return getRoles(null);
     }
 
     public RolesDto postRole(AddRoleDto request, RequestOptions requestOptions) {
@@ -739,8 +738,8 @@ public class AppsClient {
         }
     }
 
-    public List<String> getPermissions() {
-        return getPermissions(null);
+    public RolesDto postRole(AddRoleDto request) {
+        return postRole(request, null);
     }
 
     public List<String> getPermissions(RequestOptions requestOptions) {
@@ -771,8 +770,8 @@ public class AppsClient {
         }
     }
 
-    public RolesDto putRole(String roleName, UpdateRoleDto request) {
-        return putRole(roleName, request, null);
+    public List<String> getPermissions() {
+        return getPermissions(null);
     }
 
     public RolesDto putRole(String roleName, UpdateRoleDto request, RequestOptions requestOptions) {
@@ -810,8 +809,8 @@ public class AppsClient {
         }
     }
 
-    public RolesDto deleteRole(String roleName) {
-        return deleteRole(roleName, null);
+    public RolesDto putRole(String roleName, UpdateRoleDto request) {
+        return putRole(roleName, request, null);
     }
 
     public RolesDto deleteRole(String roleName, RequestOptions requestOptions) {
@@ -842,12 +841,8 @@ public class AppsClient {
         }
     }
 
-    /**
-     * You can only retrieve the list of apps when you are authenticated as a user (OpenID implicit flow).
-     * You will retrieve all apps, where you are assigned as a contributor.
-     */
-    public List<AppDto> getApps() {
-        return getApps(null);
+    public RolesDto deleteRole(String roleName) {
+        return deleteRole(roleName, null);
     }
 
     /**
@@ -881,11 +876,11 @@ public class AppsClient {
     }
 
     /**
-     * You can only create an app when you are authenticated as a user (OpenID implicit flow).
-     * You will be assigned as owner of the new app automatically.
+     * You can only retrieve the list of apps when you are authenticated as a user (OpenID implicit flow).
+     * You will retrieve all apps, where you are assigned as a contributor.
      */
-    public AppDto postApp(CreateAppDto request) {
-        return postApp(request, null);
+    public List<AppDto> getApps() {
+        return getApps(null);
     }
 
     /**
@@ -925,11 +920,11 @@ public class AppsClient {
     }
 
     /**
-     * You can only retrieve the list of apps when you are authenticated as a user (OpenID implicit flow).
-     * You will retrieve all apps, where you are assigned as a contributor.
+     * You can only create an app when you are authenticated as a user (OpenID implicit flow).
+     * You will be assigned as owner of the new app automatically.
      */
-    public List<AppDto> getTeamApps(String team) {
-        return getTeamApps(team, null);
+    public AppDto postApp(CreateAppDto request) {
+        return postApp(request, null);
     }
 
     /**
@@ -964,8 +959,12 @@ public class AppsClient {
         }
     }
 
-    public AppDto getApp() {
-        return getApp(null);
+    /**
+     * You can only retrieve the list of apps when you are authenticated as a user (OpenID implicit flow).
+     * You will retrieve all apps, where you are assigned as a contributor.
+     */
+    public List<AppDto> getTeamApps(String team) {
+        return getTeamApps(team, null);
     }
 
     public AppDto getApp(RequestOptions requestOptions) {
@@ -994,8 +993,12 @@ public class AppsClient {
         }
     }
 
-    public AppDto putApp(UpdateAppDto request) {
-        return putApp(request, null);
+    public AppDto getApp() {
+        return getApp(null);
+    }
+
+    public AppDto putApp() {
+        return putApp(UpdateAppDto.builder().build());
     }
 
     public AppDto putApp(UpdateAppDto request, RequestOptions requestOptions) {
@@ -1031,12 +1034,8 @@ public class AppsClient {
         }
     }
 
-    public AppDto putApp() {
-        return putApp(UpdateAppDto.builder().build());
-    }
-
-    public void deleteApp() {
-        deleteApp(null);
+    public AppDto putApp(UpdateAppDto request) {
+        return putApp(request, null);
     }
 
     public void deleteApp(RequestOptions requestOptions) {
@@ -1064,8 +1063,12 @@ public class AppsClient {
         }
     }
 
-    public AppDto putAppTeam(TransferToTeamDto request) {
-        return putAppTeam(request, null);
+    public void deleteApp() {
+        deleteApp(null);
+    }
+
+    public AppDto putAppTeam() {
+        return putAppTeam(TransferToTeamDto.builder().build());
     }
 
     public AppDto putAppTeam(TransferToTeamDto request, RequestOptions requestOptions) {
@@ -1102,12 +1105,8 @@ public class AppsClient {
         }
     }
 
-    public AppDto putAppTeam() {
-        return putAppTeam(TransferToTeamDto.builder().build());
-    }
-
-    public AppSettingsDto getSettings() {
-        return getSettings(null);
+    public AppDto putAppTeam(TransferToTeamDto request) {
+        return putAppTeam(request, null);
     }
 
     public AppSettingsDto getSettings(RequestOptions requestOptions) {
@@ -1137,8 +1136,8 @@ public class AppsClient {
         }
     }
 
-    public AppSettingsDto putSettings(UpdateAppSettingsDto request) {
-        return putSettings(request, null);
+    public AppSettingsDto getSettings() {
+        return getSettings(null);
     }
 
     public AppSettingsDto putSettings(UpdateAppSettingsDto request, RequestOptions requestOptions) {
@@ -1175,8 +1174,8 @@ public class AppsClient {
         }
     }
 
-    public WorkflowsDto getWorkflows() {
-        return getWorkflows(null);
+    public AppSettingsDto putSettings(UpdateAppSettingsDto request) {
+        return putSettings(request, null);
     }
 
     public WorkflowsDto getWorkflows(RequestOptions requestOptions) {
@@ -1206,8 +1205,8 @@ public class AppsClient {
         }
     }
 
-    public WorkflowsDto postWorkflow(AddWorkflowDto request) {
-        return postWorkflow(request, null);
+    public WorkflowsDto getWorkflows() {
+        return getWorkflows(null);
     }
 
     public WorkflowsDto postWorkflow(AddWorkflowDto request, RequestOptions requestOptions) {
@@ -1244,8 +1243,8 @@ public class AppsClient {
         }
     }
 
-    public WorkflowsDto putWorkflow(String id, UpdateWorkflowDto request) {
-        return putWorkflow(id, request, null);
+    public WorkflowsDto postWorkflow(AddWorkflowDto request) {
+        return postWorkflow(request, null);
     }
 
     public WorkflowsDto putWorkflow(String id, UpdateWorkflowDto request, RequestOptions requestOptions) {
@@ -1283,8 +1282,8 @@ public class AppsClient {
         }
     }
 
-    public WorkflowsDto deleteWorkflow(String id) {
-        return deleteWorkflow(id, null);
+    public WorkflowsDto putWorkflow(String id, UpdateWorkflowDto request) {
+        return putWorkflow(id, request, null);
     }
 
     public WorkflowsDto deleteWorkflow(String id, RequestOptions requestOptions) {
@@ -1313,5 +1312,9 @@ public class AppsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public WorkflowsDto deleteWorkflow(String id) {
+        return deleteWorkflow(id, null);
     }
 }

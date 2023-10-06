@@ -24,8 +24,8 @@ public class SearchClient {
         this.clientOptions = clientOptions;
     }
 
-    public List<SearchResultDto> getSearchResults(SearchGetSearchResultsRequest request) {
-        return getSearchResults(request, null);
+    public List<SearchResultDto> getSearchResults() {
+        return getSearchResults(SearchGetSearchResultsRequest.builder().build());
     }
 
     public List<SearchResultDto> getSearchResults(
@@ -59,7 +59,7 @@ public class SearchClient {
         }
     }
 
-    public List<SearchResultDto> getSearchResults() {
-        return getSearchResults(SearchGetSearchResultsRequest.builder().build());
+    public List<SearchResultDto> getSearchResults(SearchGetSearchResultsRequest request) {
+        return getSearchResults(request, null);
     }
 }

@@ -20,10 +20,6 @@ public class DiagnosticsClient {
         this.clientOptions = clientOptions;
     }
 
-    public void getDump() {
-        getDump(null);
-    }
-
     public void getDump(RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -48,8 +44,8 @@ public class DiagnosticsClient {
         }
     }
 
-    public void getGcDump() {
-        getGcDump(null);
+    public void getDump() {
+        getDump(null);
     }
 
     public void getGcDump(RequestOptions requestOptions) {
@@ -74,5 +70,9 @@ public class DiagnosticsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void getGcDump() {
+        getGcDump(null);
     }
 }

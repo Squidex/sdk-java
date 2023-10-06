@@ -22,8 +22,8 @@ public class NewsClient {
         this.clientOptions = clientOptions;
     }
 
-    public FeaturesDto getNews(NewsGetNewsRequest request) {
-        return getNews(request, null);
+    public FeaturesDto getNews() {
+        return getNews(NewsGetNewsRequest.builder().build());
     }
 
     public FeaturesDto getNews(NewsGetNewsRequest request, RequestOptions requestOptions) {
@@ -53,7 +53,7 @@ public class NewsClient {
         }
     }
 
-    public FeaturesDto getNews() {
-        return getNews(NewsGetNewsRequest.builder().build());
+    public FeaturesDto getNews(NewsGetNewsRequest request) {
+        return getNews(request, null);
     }
 }

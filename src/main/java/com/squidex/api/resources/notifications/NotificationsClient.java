@@ -25,8 +25,9 @@ public class NotificationsClient {
     /**
      * When passing in a version you can retrieve all updates since then.
      */
-    public CommentsDto getNotifications(String userId, NotificationsGetNotificationsRequest request) {
-        return getNotifications(userId, request, null);
+    public CommentsDto getNotifications(String userId) {
+        return getNotifications(
+                userId, NotificationsGetNotificationsRequest.builder().build());
     }
 
     /**
@@ -62,13 +63,11 @@ public class NotificationsClient {
         }
     }
 
-    public CommentsDto getNotifications(String userId) {
-        return getNotifications(
-                userId, NotificationsGetNotificationsRequest.builder().build());
-    }
-
-    public void deleteComment(String userId, String commentId) {
-        deleteComment(userId, commentId, null);
+    /**
+     * When passing in a version you can retrieve all updates since then.
+     */
+    public CommentsDto getNotifications(String userId, NotificationsGetNotificationsRequest request) {
+        return getNotifications(userId, request, null);
     }
 
     public void deleteComment(String userId, String commentId, RequestOptions requestOptions) {
@@ -96,5 +95,9 @@ public class NotificationsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void deleteComment(String userId, String commentId) {
+        deleteComment(userId, commentId, null);
     }
 }

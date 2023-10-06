@@ -28,10 +28,6 @@ public class CommentsClient {
         this.clientOptions = clientOptions;
     }
 
-    public List<String> getWatchingUsers(String resource) {
-        return getWatchingUsers(resource, null);
-    }
-
     public List<String> getWatchingUsers(String resource, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()
@@ -61,11 +57,15 @@ public class CommentsClient {
         }
     }
 
+    public List<String> getWatchingUsers(String resource) {
+        return getWatchingUsers(resource, null);
+    }
+
     /**
      * When passing in a version you can retrieve all updates since then.
      */
-    public CommentsDto getComments(String commentsId, CommentsGetCommentsRequest request) {
-        return getComments(commentsId, request, null);
+    public CommentsDto getComments(String commentsId) {
+        return getComments(commentsId, CommentsGetCommentsRequest.builder().build());
     }
 
     /**
@@ -102,12 +102,11 @@ public class CommentsClient {
         }
     }
 
-    public CommentsDto getComments(String commentsId) {
-        return getComments(commentsId, CommentsGetCommentsRequest.builder().build());
-    }
-
-    public CommentDto postComment(String commentsId, UpsertCommentDto request) {
-        return postComment(commentsId, request, null);
+    /**
+     * When passing in a version you can retrieve all updates since then.
+     */
+    public CommentsDto getComments(String commentsId, CommentsGetCommentsRequest request) {
+        return getComments(commentsId, request, null);
     }
 
     public CommentDto postComment(String commentsId, UpsertCommentDto request, RequestOptions requestOptions) {
@@ -145,8 +144,8 @@ public class CommentsClient {
         }
     }
 
-    public void putComment(String commentsId, String commentId, UpsertCommentDto request) {
-        putComment(commentsId, commentId, request, null);
+    public CommentDto postComment(String commentsId, UpsertCommentDto request) {
+        return postComment(commentsId, request, null);
     }
 
     public void putComment(
@@ -186,8 +185,8 @@ public class CommentsClient {
         }
     }
 
-    public void deleteComment(String commentsId, String commentId) {
-        deleteComment(commentsId, commentId, null);
+    public void putComment(String commentsId, String commentId, UpsertCommentDto request) {
+        putComment(commentsId, commentId, request, null);
     }
 
     public void deleteComment(String commentsId, String commentId, RequestOptions requestOptions) {
@@ -216,5 +215,9 @@ public class CommentsClient {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void deleteComment(String commentsId, String commentId) {
+        deleteComment(commentsId, commentId, null);
     }
 }
