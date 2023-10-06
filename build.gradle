@@ -33,14 +33,16 @@ java {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+    }
 }
-
 publishing {
     publications {
         maven(MavenPublication) {
             groupId = 'io.squidex'
             artifactId = 'squidex'
-            version = '0.0.17'
+            version = '0.0.18'
             from components.java
         }
     }

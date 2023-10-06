@@ -578,11 +578,11 @@ public class AssetsClient {
         if (request.getDuplicate().isPresent()) {
             httpUrl.addQueryParameter("duplicate", request.getDuplicate().get().toString());
         }
-        MultipartBody.Builder multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
+        MultipartBody.Builder body = new MultipartBody.Builder().setType(MultipartBody.FORM);
         try {
             String mimeType = Files.probeContentType(file.toPath());
             MediaType mediaType = mimeType != null ? MediaType.parse(mimeType) : null;
-            multipartBody.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
+            body.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -713,11 +713,11 @@ public class AssetsClient {
         if (request.getDuplicate().isPresent()) {
             httpUrl.addQueryParameter("duplicate", request.getDuplicate().get().toString());
         }
-        MultipartBody.Builder multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
+        MultipartBody.Builder body = new MultipartBody.Builder().setType(MultipartBody.FORM);
         try {
             String mimeType = Files.probeContentType(file.toPath());
             MediaType mediaType = mimeType != null ? MediaType.parse(mimeType) : null;
-            multipartBody.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
+            body.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -887,11 +887,11 @@ public class AssetsClient {
                 .addPathSegment(id)
                 .addPathSegments("content")
                 .build();
-        MultipartBody.Builder multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
+        MultipartBody.Builder body = new MultipartBody.Builder().setType(MultipartBody.FORM);
         try {
             String mimeType = Files.probeContentType(file.toPath());
             MediaType mediaType = mimeType != null ? MediaType.parse(mimeType) : null;
-            multipartBody.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
+            body.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

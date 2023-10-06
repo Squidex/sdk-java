@@ -467,11 +467,11 @@ public class AppsClient {
                 .addPathSegment(clientOptions.appName())
                 .addPathSegments("image")
                 .build();
-        MultipartBody.Builder multipartBody = new MultipartBody.Builder().setType(MultipartBody.FORM);
+        MultipartBody.Builder body = new MultipartBody.Builder().setType(MultipartBody.FORM);
         try {
             String mimeType = Files.probeContentType(file.toPath());
             MediaType mediaType = mimeType != null ? MediaType.parse(mimeType) : null;
-            multipartBody.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
+            body.addFormDataPart("file", file.getName(), RequestBody.create(mediaType, file));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
