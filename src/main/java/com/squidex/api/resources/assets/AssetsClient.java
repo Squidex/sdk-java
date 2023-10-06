@@ -615,13 +615,6 @@ public class AssetsClient {
     /**
      * Get all assets for the app.
      */
-    public AssetsDto getAssetsPost() {
-        return getAssetsPost(AssetsGetAssetsPostRequest.builder().build());
-    }
-
-    /**
-     * Get all assets for the app.
-     */
     public AssetsDto getAssetsPost(AssetsGetAssetsPostRequest request, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
                 .newBuilder()

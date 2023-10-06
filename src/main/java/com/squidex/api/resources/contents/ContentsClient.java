@@ -201,13 +201,6 @@ public class ContentsClient {
     /**
      * You can read the generated documentation for your app at /api/content/{appName}/docs.
      */
-    public ContentsDto getContentsPost(String schema) {
-        return getContentsPost(schema, ContentsGetContentsPostRequest.builder().build());
-    }
-
-    /**
-     * You can read the generated documentation for your app at /api/content/{appName}/docs.
-     */
     public ContentsDto getContentsPost(
             String schema, ContentsGetContentsPostRequest request, RequestOptions requestOptions) {
         HttpUrl httpUrl = HttpUrl.parse(this.clientOptions.environment().getUrl())
