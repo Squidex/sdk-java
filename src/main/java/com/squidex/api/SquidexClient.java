@@ -26,7 +26,7 @@ import com.squidex.api.resources.usermanagement.UserManagementClient;
 import com.squidex.api.resources.users.UsersClient;
 import java.util.function.Supplier;
 
-public class SquidexApiClient {
+public class SquidexClient {
     protected final ClientOptions clientOptions;
 
     protected final Supplier<UserManagementClient> userManagementClient;
@@ -73,7 +73,7 @@ public class SquidexApiClient {
 
     protected final Supplier<AppsClient> appsClient;
 
-    public SquidexApiClient(ClientOptions clientOptions) {
+    public SquidexClient(ClientOptions clientOptions) {
         this.clientOptions = clientOptions;
         this.userManagementClient = Suppliers.memoize(() -> new UserManagementClient(clientOptions));
         this.usersClient = Suppliers.memoize(() -> new UsersClient(clientOptions));
@@ -187,7 +187,7 @@ public class SquidexApiClient {
         return this.appsClient.get();
     }
 
-    public static SquidexApiClientBuilder builder() {
-        return new SquidexApiClientBuilder();
+    public static SquidexClientBuilder builder() {
+        return new SquidexClientBuilder();
     }
 }

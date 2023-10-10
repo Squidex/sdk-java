@@ -7,7 +7,7 @@ The Squidex Java SDK provides convenient access to the Squidex API from Java.
 
 ## Documentation
 
-API reference documentation is available [here](https://cloud.squidex.io/api/docs).
+API reference documentation is available [here](https://docs.squidex.io/02-documentation/software-development-kits/java).
 
 ## Installation
 
@@ -17,7 +17,7 @@ Add the dependency in your `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'io.squidex:squidex:0.x.x'
+    implementation 'io.squidex:squidex:1.0.0'
 }
 ```
 
@@ -29,17 +29,18 @@ Add the dependency in your `pom.xml`:
 <dependency>
     <groupId>io.squidex</groupId>
     <artifactId>squidex</artifactId>
-    <version>0.x.x</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
 ## Usage
 
 ```java
-SquidexApiClient squidex = SquidexApiClient.builder()
-    .token("YOUR_OAUTH_TOKEN")
-    .url("https://your.squidex-deployment")
+SquidexClient squidex = SquidexClient.builder()
     .appName("my-app")
+    .clientId("your-app:default")
+    .clientSecret("xxx")
+    .url("https://your.squidex-deployment")
     .build();
 
 RulesDto rules = squidex.rules().getRules();
@@ -48,15 +49,9 @@ System.out.println("Received response from Squidex: " + rules);
 ```
 
 ## Staged Builders
+
 The generated builders all follow the staged builder pattern. Read more [here](https://immutables.github.io/immutable.html#staged-builder). 
 Staged builders only allow you to build the object once all required properties have been specified. 
-
-## Beta status
-
-This SDK is in beta, and there may be breaking changes between versions without a major version update. 
-Therefore, we recommend pinning the package version to a specific version in your build.gradle file. 
-This way, you can install the same version each time without breaking changes unless you are intentionally 
-looking for the latest version.
 
 ## Contributing
 

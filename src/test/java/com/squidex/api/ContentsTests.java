@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SuppressWarnings("unchecked")
 public class ContentsTests extends TestBase {
-    private static final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexClient client = Utils.getClient().client();
     private static SchemaDto schema;
 
     @BeforeAll

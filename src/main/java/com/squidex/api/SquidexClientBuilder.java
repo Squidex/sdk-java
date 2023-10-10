@@ -8,7 +8,7 @@ import javax.net.ssl.*;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 
-public final class SquidexApiClientBuilder {
+public final class SquidexClientBuilder {
     private final ClientOptions.Builder clientOptionsBuilder = ClientOptions.builder();
 
     private Environment environment = Environment.DEFAULT;
@@ -18,17 +18,17 @@ public final class SquidexApiClientBuilder {
     private OkHttpClient httpClient;
     private boolean trustAllCerts;
 
-    public SquidexApiClientBuilder environment(Environment environment) {
+    public SquidexClientBuilder environment(Environment environment) {
         this.environment = environment;
         return this;
     }
 
-    public SquidexApiClientBuilder url(String url) {
+    public SquidexClientBuilder url(String url) {
         this.environment = Environment.custom(url);
         return this;
     }
 
-    public SquidexApiClientBuilder clientId(String clientId) {
+    public SquidexClientBuilder clientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
@@ -37,7 +37,7 @@ public final class SquidexApiClientBuilder {
         return this.clientId;
     }
 
-    public SquidexApiClientBuilder clientSecret(String clientSecret) {
+    public SquidexClientBuilder clientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
@@ -46,27 +46,27 @@ public final class SquidexApiClientBuilder {
         return this.clientSecret;
     }
 
-    public SquidexApiClientBuilder tokenStore(TokenStore tokenStore) {
+    public SquidexClientBuilder tokenStore(TokenStore tokenStore) {
         this.tokenStore = tokenStore;
         return this;
     }
 
-    public SquidexApiClientBuilder httpClient(OkHttpClient httpClient) {
+    public SquidexClientBuilder httpClient(OkHttpClient httpClient) {
         this.httpClient = httpClient;
         return this;
     }
 
-    public SquidexApiClientBuilder appName(String appName) {
+    public SquidexClientBuilder appName(String appName) {
         this.clientOptionsBuilder.appName(appName);
         return this;
     }
 
-    public SquidexApiClientBuilder trustAllCerts() {
+    public SquidexClientBuilder trustAllCerts() {
         this.trustAllCerts = true;
         return this;
     }
 
-    public SquidexApiClient build() {
+    public SquidexClient build() {
         clientOptionsBuilder.environment(this.environment);
 
         if (this.tokenStore == null) {
@@ -118,6 +118,6 @@ public final class SquidexApiClientBuilder {
 
         clientOptionsBuilder.httpClient(this.httpClient);
 
-        return new SquidexApiClient(clientOptionsBuilder.build());
+        return new SquidexClient(clientOptionsBuilder.build());
     }
 }

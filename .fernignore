@@ -7,8 +7,8 @@ src/main/java/com/squidex/api/core/ClientOptions.java
 src/main/java/com/squidex/api/AccessToken.java
 src/main/java/com/squidex/api/AuthInterceptor.java
 src/main/java/com/squidex/api/InMemoryTokenStore.java
-src/main/java/com/squidex/api/SquidexApiClient.java
-src/main/java/com/squidex/api/SquidexApiClientBuilder.java
+src/main/java/com/squidex/api/SquidexClient.java
+src/main/java/com/squidex/api/SquidexClientBuilder.java
 src/main/java/com/squidex/api/TokenStore.java
 
 # Workflows

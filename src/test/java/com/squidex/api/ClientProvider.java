@@ -1,23 +1,23 @@
 package com.squidex.api;
 
 public final class ClientProvider {
-    private final SquidexApiClientBuilder builder;
-    private final SquidexApiClient client;
+    private final SquidexClientBuilder builder;
+    private final SquidexClient client;
 
-    public ClientProvider(SquidexApiClientBuilder builder, SquidexApiClient client) {
+    public ClientProvider(SquidexClientBuilder builder, SquidexClient client) {
         this.builder = builder;
         this.client = client;
     }
 
-    public SquidexApiClient client(String appName) {
+    public SquidexClient client(String appName) {
         return this.builder.appName(appName).build();
     }
 
-    public SquidexApiClient client() {
+    public SquidexClient client() {
         return client;
     }
 
-    public SquidexApiClientBuilder builder() {
+    public SquidexClientBuilder builder() {
         return builder;
     }
 }

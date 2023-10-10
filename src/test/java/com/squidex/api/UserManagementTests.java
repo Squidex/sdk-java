@@ -9,7 +9,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserManagementTests extends TestBase {
-    private static final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexClient client = Utils.getClient().client();
 
     @Test()
     public void Should_create_and_fetch_user() {

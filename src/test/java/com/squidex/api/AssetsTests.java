@@ -15,7 +15,7 @@ import java.nio.file.Path;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AssetsTests extends TestBase {
-    private static final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexClient client = Utils.getClient().client();
 
     @Test
     public void Should_upload_and_fetch_asset() {

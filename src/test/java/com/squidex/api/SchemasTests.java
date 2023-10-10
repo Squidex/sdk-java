@@ -10,7 +10,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SchemasTests extends TestBase {
-    private static final SquidexApiClient client = Utils.getClient().client();
+    private static final SquidexClient client = Utils.getClient().client();
 
     @Test
     public void should_create_and_fetch_schema() {

@@ -32,7 +32,7 @@ final class Utils {
             environment = "https://localhost:5001";
         }
 
-        SquidexApiClientBuilder builder = SquidexApiClient.builder()
+        SquidexClientBuilder builder = SquidexClient.builder()
                 .trustAllCerts()
                 .appName(appName)
                 .clientId(clientId)
