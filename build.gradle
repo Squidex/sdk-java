@@ -62,10 +62,10 @@ publishing {
     }
     repositories {
         maven {
-            url '$System.env.MAVEN_PUBLISH_REGISTRY_URL'
+            url "$System.env.MAVEN_PUBLISH_REGISTRY_URL"
             credentials {
-                username '$System.env.MAVEN_USERNAME'
-                password '$System.env.MAVEN_PASSWORD'
+                username "$System.env.MAVEN_USERNAME"
+                password "$System.env.MAVEN_PASSWORD"
             }
         }
     }
