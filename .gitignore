@@ -22,3 +22,8 @@ generated/
 
 bin
 build
+
+local.properties
+
+# OpenAPI Generator creates a copy for whatver reason
+/api

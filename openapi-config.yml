@@ -1,0 +1,24 @@
+globalProperties:
+  apiDocs: false
+  apiTests: false
+  modelDocs: false
+  modelTests: false
+
+additionalProperties:
+  apiPackage: com.squidex.api.core.api
+  generateBuilders: true
+  groupId: com.squidex.api
+  hideGenerationTimestamp: true
+  invokerPackage: com.squidex.api.core
+  modelPackage: com.squidex.api.types
+  useRuntimeException: true
+  useSingleRequestParameter: true
+
+nameMappings:
+  file2: uploadFile
+  X-Fields: fields
+  X-Flatten: flatten
+  X-Languages: languages
+  X-NoSlowTotal: noSlowTotal
+  X-NoTotal: noTotal
+  X-Unpublished: unpublished

@@ -33,11 +33,11 @@ final class Utils {
         }
 
         SquidexClientBuilder builder = SquidexClient.builder()
-                .trustAllCerts()
+                .trustAllCerts(true)
                 .appName(appName)
                 .clientId(clientId)
                 .clientSecret(clientSecret)
-                .url(environment);
+                .baseUrl(environment);
 
         singleClient = new ClientProvider(builder, builder.build());
 

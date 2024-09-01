@@ -1,35 +1,35 @@
 package com.squidex.api;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.time.Instant;
 
+@SuppressWarnings("ClassCanBeRecord")
 public final class AccessToken {
     private final String accessToken;
-    private final int expiresIn;
-    private final Instant expiresAt;
+    private final long expiresIn;
+    private final long expiresAt;
 
-    @JsonCreator()
-    public AccessToken(
-            @JsonProperty("access_token")String accessToken,
-            @JsonProperty("expires_in")int expiresIn) {
+    public AccessToken(String accessToken, long expiresIn, long expiresAt) {
         this.accessToken = accessToken;
         this.expiresIn = expiresIn;
-        this.expiresAt = Instant.now().plusSeconds(expiresIn);
+        this.expiresAt = expiresAt;
     }
 
     public String getAccessToken() {
         return accessToken;
     }
 
-    public int getExpiresIn() {
+    public long getExpiresIn() {
         return expiresIn;
     }
 
-    @JsonIgnore()
-    public Instant getExpiresAt() {
+    public long getExpiresAt() {
         return expiresAt;
     }
+
+    public boolean isExpired() {
+        long now = Instant.now().toEpochMilli();
+
+        return expiresAt < now;
+    }
 }
+
