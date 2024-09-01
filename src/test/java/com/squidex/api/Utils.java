@@ -11,37 +11,30 @@ final class Utils {
             return singleClient;
         }
 
-        String appName = System.getenv("CONFIG__APP__NAME");
-        String clientId = System.getenv("CONFIG__CLIENT_ID");
-        String clientSecret = System.getenv("CONFIG__CLIENT_SECRET");
-        String environment = System.getenv("CONFIG__SERVER__URL");
-
-        if (appName == null) {
-            appName = "integration-tests";
-        }
-
-        if (clientId == null) {
-            clientId = "root";
-        }
-
-        if (clientSecret == null) {
-            clientSecret = "xeLd6jFxqbXJrfmNLlO2j1apagGGGSyZJhFnIuHp4I0=";
-        }
-
-        if (environment == null) {
-            environment = "https://localhost:5001";
-        }
+        String appName = getEnvOrDefault("CONFIG__APP__NAME", "integration-tests");
+        String clientId = getEnvOrDefault("CONFIG__CLIENT_ID", "root");
+        String clientSecret = getEnvOrDefault("CONFIG__CLIENT_SECRET", "xeLd6jFxqbXJrfmNLlO2j1apagGGGSyZJhFnIuHp4I0=");
+        String url = getEnvOrDefault("CONFIG__SERVER__URL", "https://localhost:5001");
 
         SquidexClientBuilder builder = SquidexClient.builder()
                 .trustAllCerts(true)
                 .appName(appName)
                 .clientId(clientId)
                 .clientSecret(clientSecret)
-                .url(environment);
+                .url(url);
 
         singleClient = new ClientProvider(builder, builder.build());
 
         return singleClient;
+    }
+
+    private static String getEnvOrDefault(String key, String defaultValue) {
+        String result = System.getenv(key);
+        if (result == null || result.isEmpty()) {
+            result = defaultValue;
+        }
+
+        return result;
     }
 }
 
