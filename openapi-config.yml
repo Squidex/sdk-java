@@ -13,12 +13,3 @@ additionalProperties:
   modelPackage: com.squidex.api.types
   useRuntimeException: true
   useSingleRequestParameter: true
-
-nameMappings:
-  file2: uploadFile
-  X-Fields: fields
-  X-Flatten: flatten
-  X-Languages: languages
-  X-NoSlowTotal: noSlowTotal
-  X-NoTotal: noTotal
-  X-Unpublished: unpublished

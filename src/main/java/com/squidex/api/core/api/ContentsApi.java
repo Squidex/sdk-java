@@ -289,11 +289,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -697,11 +697,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -903,11 +903,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -1113,19 +1113,19 @@ public class ContentsApi {
         }
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -1528,11 +1528,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -1776,27 +1776,27 @@ public class ContentsApi {
         }
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -2105,27 +2105,27 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -2376,27 +2376,27 @@ public class ContentsApi {
         }
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         final String[] localVarAccepts = {
@@ -2652,27 +2652,27 @@ public class ContentsApi {
         }
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         final String[] localVarAccepts = {
@@ -2924,11 +2924,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -3150,11 +3150,11 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -3593,11 +3593,11 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -3856,11 +3856,11 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -4086,11 +4086,11 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -4303,11 +4303,11 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         final String[] localVarAccepts = {
@@ -4722,27 +4722,27 @@ public class ContentsApi {
         }
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -5031,27 +5031,27 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (fields != null) {
-            localVarHeaderParams.put("fields", localVarApiClient.parameterToString(fields));
+            localVarHeaderParams.put("X-Fields", localVarApiClient.parameterToString(fields));
         }
 
         if (flatten != null) {
-            localVarHeaderParams.put("flatten", localVarApiClient.parameterToString(flatten));
+            localVarHeaderParams.put("X-Flatten", localVarApiClient.parameterToString(flatten));
         }
 
         if (languages != null) {
-            localVarHeaderParams.put("languages", localVarApiClient.parameterToString(languages));
+            localVarHeaderParams.put("X-Languages", localVarApiClient.parameterToString(languages));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -5300,7 +5300,7 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -5513,7 +5513,7 @@ public class ContentsApi {
         }
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -5714,7 +5714,7 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {
@@ -5899,7 +5899,7 @@ public class ContentsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (unpublished != null) {
-            localVarHeaderParams.put("unpublished", localVarApiClient.parameterToString(unpublished));
+            localVarHeaderParams.put("X-Unpublished", localVarApiClient.parameterToString(unpublished));
         }
 
         final String[] localVarAccepts = {

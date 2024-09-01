@@ -2320,11 +2320,11 @@ public class AssetsApi {
         }
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         final String[] localVarAccepts = {
@@ -2580,11 +2580,11 @@ public class AssetsApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         if (noTotal != null) {
-            localVarHeaderParams.put("noTotal", localVarApiClient.parameterToString(noTotal));
+            localVarHeaderParams.put("X-NoTotal", localVarApiClient.parameterToString(noTotal));
         }
 
         if (noSlowTotal != null) {
-            localVarHeaderParams.put("noSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
+            localVarHeaderParams.put("X-NoSlowTotal", localVarApiClient.parameterToString(noSlowTotal));
         }
 
         final String[] localVarAccepts = {

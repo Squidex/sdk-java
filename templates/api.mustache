@@ -184,14 +184,14 @@ public class {{classname}} {
         {{/constantParams}}
         {{#headerParams}}
         if ({{paramName}} != null) {
-            localVarHeaderParams.put("{{baseName}}", localVarApiClient.parameterToString({{paramName}}));
+            localVarHeaderParams.put("{{vendorExtensions.x-header-name}}", localVarApiClient.parameterToString({{paramName}}));
         }
 
         {{/headerParams}}
         {{#constantParams}}
         {{#isHeaderParam}}
         // Set client side default value of Header Param "{{baseName}}".
-        localVarHeaderParams.put("{{baseName}}", {{#_enum}}"{{{.}}}"{{/_enum}});
+        localVarHeaderParams.put("{{vendorExtensions.x-header-name}}", {{#_enum}}"{{{.}}}"{{/_enum}});
 
         {{/isHeaderParam}}
         {{/constantParams}}
