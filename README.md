@@ -1,7 +1,6 @@
 # Squidex Java Library
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.squidex/squidex)](https://central.sonatype.com/artifact/io.squidex/squidex) 
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-SDK%20generated%20by%20Fern-brightgreen)](https://github.com/fern-api/fern)
+[![Maven Central](https://img.shields.io/maven-central/v/io.squidex/squidex)](https://central.sonatype.com/artifact/io.squidex/squidex)
 
 The Squidex Java SDK provides convenient access to the Squidex API from Java. 
 
@@ -48,10 +47,34 @@ RulesDto rules = squidex.rules().getRules();
 System.out.println("Received response from Squidex: " + rules);
 ```
 
-## Staged Builders
+## Staged Builders (v1.X)
 
 The generated builders all follow the staged builder pattern. Read more [here](https://immutables.github.io/immutable.html#staged-builder). 
-Staged builders only allow you to build the object once all required properties have been specified. 
+Staged builders only allow you to build the object once all required properties have been specified.
+
+## Major changes in 2.0
+
+This SDK is mainly based on code generation, based on the OpenAPI specification from the Squidex API.
+
+The initial version was built with fern: https://www.buildwithfern.com/. The main reason was the overall code quality and the support for discriminators. When the 1.0 version was released fern has not defined the pricing yet and unfortunately the current pricing is too expensive.
+
+Therefore the SDK code generation was moved to OpenAPI Generator: (https://openapi-generator.tech/). The goal was to be as close to the previous version as possible without doing too much changes to the code generation templates. It was not possible to provide the same method signatures.
+
+## Custom Templates
+
+### `api.mustache`
+
+* Use `vendorExtensions.x-method-name` for the actual method name.
+* Use `vendorExtensions.f-field-name` for the actual header name.
+
+### `models.mustache`
+
+* Remove all code where properties for the discriminator is generated.
+
+### `JSON.mustache`
+
+* Fix the serialization with `registerTypeSelector` to select the type based on the discriminator mapping.
+* Fix the serialization with `registerPostProcessor` to add the discriminator properties to the generated JSON.
 
 ## Contributing
 

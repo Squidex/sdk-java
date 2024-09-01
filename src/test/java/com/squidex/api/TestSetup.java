@@ -1,7 +1,8 @@
 package com.squidex.api;
 
-import com.squidex.api.core.ApiError;
-import com.squidex.api.resources.apps.requests.CreateAppDto;
+import com.squidex.api.core.ApiException;
+import com.squidex.api.types.CreateAppDto;
+
 import org.junit.jupiter.api.extension.BeforeAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
@@ -11,23 +12,23 @@ public class TestSetup implements BeforeAllCallback {
 
     @Override
     public void beforeAll(ExtensionContext context) throws Exception {
-        ClientProvider client = Utils.getClient();
+        SquidexClient client = Utils.getClient().client();
 
         System.out.println("SETUP");
-        System.out.printf("Using <appName>=<%s>%n", client.client().clientOptions.appName());
-        System.out.printf("Using <clientId>=<%s>%n", client.builder().clientId());
-        System.out.printf("Using <clientSecret>=<%s>%n", client.builder().clientSecret());
-        System.out.printf("Using <environment>=<%s>%n", client.client().clientOptions.environment().getUrl());
+        System.out.printf("Using <appName>=<%s>%n", client.getAppName());
+        System.out.printf("Using <clientId>=<%s>%n", client.getClientId());
+        System.out.printf("Using <clientSecret>=<%s>%n", client.getClientSecret());
+        System.out.printf("Using <baseUrl>=<%s>%n", client.getBaseUrl());
 
         this.waitForServer();
 
         try {
-            client.client().apps().postApp(
-                    CreateAppDto.builder()
-                            .name(client.client().clientOptions.appName())
-                            .build());
-        } catch (ApiError ex) {
-            if (ex.statusCode() == 400) {
+            CreateAppDto app = new CreateAppDto()
+                .name(client.getAppName());
+
+            client.apps().postApp(app).execute();
+        } catch (ApiException ex) {
+            if (ex.getCode() == 400) {
                 System.out.println("App probably already exists.");
                 return;
             } else {

@@ -7,4 +7,3 @@ public interface TokenStore {
 
     void clear();
 }
-

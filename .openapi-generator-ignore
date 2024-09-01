@@ -1,0 +1,22 @@
+# Use this file to prevent files from being overwritten by the generator.
+/local/docs/*.*
+/local/test/*.*
+
+# Whatever this is for
+git_push.sh
+
+# We use github actions
+.github/**/*.*
+.gitignore
+.travis.yml
+
+/api/
+
+pom.xml
+
+openapi.yml
+gradle.properties
+gradlew
+gradlew.bat
+
+README.md

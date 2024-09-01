@@ -20,25 +20,11 @@ jobs:
       - name: Compile
         run: ./gradlew compileJava
 
-  test:
-    needs: [ compile ]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Java
-        id: setup-jre
-        uses: actions/setup-java@v1
-        with:
-          java-version: "11"
-          architecture: x64
-
       - name: Test - Start Compose
-        run: docker-compose up -d
+        run: docker compose up -d
         working-directory: tests
 
-      - name: Test
+      - name: Test - RUN
         run: ./gradlew test
         env:
           CONFIG__WAIT: 60
@@ -54,26 +40,11 @@ jobs:
 
       - name: Test - Cleanup
         if: always()
-        run: docker-compose down
+        run: docker compose down
         working-directory: tests
-  
-  publish:
-    needs: [ compile, test ]
-    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Java
-        id: setup-jre
-        uses: actions/setup-java@v1
-        with:
-          java-version: "11"
-          architecture: x64
 
       - name: Publish to maven
+        if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
         run: |
           ./gradlew publish
         env:

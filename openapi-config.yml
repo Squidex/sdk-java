@@ -1,0 +1,15 @@
+globalProperties:
+  apiDocs: false
+  apiTests: false
+  modelDocs: false
+  modelTests: false
+
+additionalProperties:
+  apiPackage: com.squidex.api.core.api
+  generateBuilders: true
+  groupId: com.squidex.api
+  hideGenerationTimestamp: true
+  invokerPackage: com.squidex.api.core
+  modelPackage: com.squidex.api.types
+  useRuntimeException: true
+  useSingleRequestParameter: true

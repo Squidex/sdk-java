@@ -1,193 +1,192 @@
 package com.squidex.api;
 
-import com.squidex.api.core.ClientOptions;
-import com.squidex.api.core.Suppliers;
-import com.squidex.api.resources.apps.AppsClient;
-import com.squidex.api.resources.assets.AssetsClient;
-import com.squidex.api.resources.backups.BackupsClient;
-import com.squidex.api.resources.comments.CommentsClient;
-import com.squidex.api.resources.contents.ContentsClient;
-import com.squidex.api.resources.diagnostics.DiagnosticsClient;
-import com.squidex.api.resources.eventconsumers.EventConsumersClient;
-import com.squidex.api.resources.history.HistoryClient;
-import com.squidex.api.resources.languages.LanguagesClient;
-import com.squidex.api.resources.news.NewsClient;
-import com.squidex.api.resources.notifications.NotificationsClient;
-import com.squidex.api.resources.ping.PingClient;
-import com.squidex.api.resources.plans.PlansClient;
-import com.squidex.api.resources.rules.RulesClient;
-import com.squidex.api.resources.schemas.SchemasClient;
-import com.squidex.api.resources.search.SearchClient;
-import com.squidex.api.resources.statistics.StatisticsClient;
-import com.squidex.api.resources.teams.TeamsClient;
-import com.squidex.api.resources.templates.TemplatesClient;
-import com.squidex.api.resources.translations.TranslationsClient;
-import com.squidex.api.resources.usermanagement.UserManagementClient;
-import com.squidex.api.resources.users.UsersClient;
+import com.squidex.api.core.ApiClient;
+import com.squidex.api.core.api.AppsApi;
+import com.squidex.api.core.api.AssetsApi;
+import com.squidex.api.core.api.BackupsApi;
+import com.squidex.api.core.api.ContentsApi;
+import com.squidex.api.core.api.DiagnosticsApi;
+import com.squidex.api.core.api.EventConsumersApi;
+import com.squidex.api.core.api.HistoryApi;
+import com.squidex.api.core.api.LanguagesApi;
+import com.squidex.api.core.api.NewsApi;
+import com.squidex.api.core.api.PingApi;
+import com.squidex.api.core.api.PlansApi;
+import com.squidex.api.core.api.RulesApi;
+import com.squidex.api.core.api.SchemasApi;
+import com.squidex.api.core.api.SearchApi;
+import com.squidex.api.core.api.StatisticsApi;
+import com.squidex.api.core.api.TeamsApi;
+import com.squidex.api.core.api.TemplatesApi;
+import com.squidex.api.core.api.TranslationsApi;
+import com.squidex.api.core.api.UserManagementApi;
+import com.squidex.api.core.api.UsersApi;
+
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
 
 public class SquidexClient {
-    protected final ClientOptions clientOptions;
+    private final Supplier<AppsApi> appsApi;
+    private final Supplier<AssetsApi> assetsApi;
+    private final Supplier<BackupsApi> backupsApi;
+    private final Supplier<ContentsApi> contentsApi;
+    private final Supplier<DiagnosticsApi> diagnosticsApi;
+    private final Supplier<EventConsumersApi> eventConsumersApi;
+    private final Supplier<HistoryApi> historyApi;
+    private final Supplier<LanguagesApi> languagesApi;
+    private final Supplier<NewsApi> newsApi;
+    private final Supplier<PingApi> pingApi;
+    private final Supplier<PlansApi> plansApi;
+    private final Supplier<RulesApi> rulesApi;
+    private final Supplier<SchemasApi> schemasApi;
+    private final Supplier<SearchApi> searchApi;
+    private final Supplier<StatisticsApi> statisticsApi;
+    private final Supplier<TeamsApi> teamsApi;
+    private final Supplier<TemplatesApi> templatesApi;
+    private final Supplier<TranslationsApi> translationsApi;
+    private final Supplier<UserManagementApi> userManagementApi;
+    private final Supplier<UsersApi> usersApi;
+    private final String appName;
+    private final String clientId;
+    private final String clientSecret;
+    private final String baseUrl;
 
-    protected final Supplier<UserManagementClient> userManagementClient;
-
-    protected final Supplier<UsersClient> usersClient;
-
-    protected final Supplier<TranslationsClient> translationsClient;
-
-    protected final Supplier<TemplatesClient> templatesClient;
-
-    protected final Supplier<TeamsClient> teamsClient;
-
-    protected final Supplier<StatisticsClient> statisticsClient;
-
-    protected final Supplier<SearchClient> searchClient;
-
-    protected final Supplier<SchemasClient> schemasClient;
-
-    protected final Supplier<RulesClient> rulesClient;
-
-    protected final Supplier<PlansClient> plansClient;
-
-    protected final Supplier<PingClient> pingClient;
-
-    protected final Supplier<NewsClient> newsClient;
-
-    protected final Supplier<LanguagesClient> languagesClient;
-
-    protected final Supplier<HistoryClient> historyClient;
-
-    protected final Supplier<EventConsumersClient> eventConsumersClient;
-
-    protected final Supplier<DiagnosticsClient> diagnosticsClient;
-
-    protected final Supplier<ContentsClient> contentsClient;
-
-    protected final Supplier<CommentsClient> commentsClient;
-
-    protected final Supplier<NotificationsClient> notificationsClient;
-
-    protected final Supplier<BackupsClient> backupsClient;
-
-    protected final Supplier<AssetsClient> assetsClient;
-
-    protected final Supplier<AppsClient> appsClient;
-
-    public SquidexClient(ClientOptions clientOptions) {
-        this.clientOptions = clientOptions;
-        this.userManagementClient = Suppliers.memoize(() -> new UserManagementClient(clientOptions));
-        this.usersClient = Suppliers.memoize(() -> new UsersClient(clientOptions));
-        this.translationsClient = Suppliers.memoize(() -> new TranslationsClient(clientOptions));
-        this.templatesClient = Suppliers.memoize(() -> new TemplatesClient(clientOptions));
-        this.teamsClient = Suppliers.memoize(() -> new TeamsClient(clientOptions));
-        this.statisticsClient = Suppliers.memoize(() -> new StatisticsClient(clientOptions));
-        this.searchClient = Suppliers.memoize(() -> new SearchClient(clientOptions));
-        this.schemasClient = Suppliers.memoize(() -> new SchemasClient(clientOptions));
-        this.rulesClient = Suppliers.memoize(() -> new RulesClient(clientOptions));
-        this.plansClient = Suppliers.memoize(() -> new PlansClient(clientOptions));
-        this.pingClient = Suppliers.memoize(() -> new PingClient(clientOptions));
-        this.newsClient = Suppliers.memoize(() -> new NewsClient(clientOptions));
-        this.languagesClient = Suppliers.memoize(() -> new LanguagesClient(clientOptions));
-        this.historyClient = Suppliers.memoize(() -> new HistoryClient(clientOptions));
-        this.eventConsumersClient = Suppliers.memoize(() -> new EventConsumersClient(clientOptions));
-        this.diagnosticsClient = Suppliers.memoize(() -> new DiagnosticsClient(clientOptions));
-        this.contentsClient = Suppliers.memoize(() -> new ContentsClient(clientOptions));
-        this.commentsClient = Suppliers.memoize(() -> new CommentsClient(clientOptions));
-        this.notificationsClient = Suppliers.memoize(() -> new NotificationsClient(clientOptions));
-        this.backupsClient = Suppliers.memoize(() -> new BackupsClient(clientOptions));
-        this.assetsClient = Suppliers.memoize(() -> new AssetsClient(clientOptions));
-        this.appsClient = Suppliers.memoize(() -> new AppsClient(clientOptions));
+    public SquidexClient(ApiClient apiClient, String appName, String clientId, String clientSecret, String baseUrl) {
+        this.appName = appName;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.baseUrl = baseUrl;
+        this.appsApi = memoize(() -> new AppsApi(apiClient));
+        this.assetsApi = memoize(() -> new AssetsApi(apiClient));
+        this.backupsApi = memoize(() -> new BackupsApi(apiClient));
+        this.contentsApi = memoize(() -> new ContentsApi(apiClient));
+        this.diagnosticsApi = memoize(() -> new DiagnosticsApi(apiClient));
+        this.eventConsumersApi = memoize(() -> new EventConsumersApi(apiClient));
+        this.historyApi = memoize(() -> new HistoryApi(apiClient));
+        this.languagesApi = memoize(() -> new LanguagesApi(apiClient));
+        this.newsApi = memoize(() -> new NewsApi(apiClient));
+        this.pingApi = memoize(() -> new PingApi(apiClient));
+        this.plansApi = memoize(() -> new PlansApi(apiClient));
+        this.rulesApi = memoize(() -> new RulesApi(apiClient));
+        this.schemasApi = memoize(() -> new SchemasApi(apiClient));
+        this.searchApi = memoize(() -> new SearchApi(apiClient));
+        this.statisticsApi = memoize(() -> new StatisticsApi(apiClient));
+        this.teamsApi = memoize(() -> new TeamsApi(apiClient));
+        this.templatesApi = memoize(() -> new TemplatesApi(apiClient));
+        this.translationsApi = memoize(() -> new TranslationsApi(apiClient));
+        this.userManagementApi = memoize(() -> new UserManagementApi(apiClient));
+        this.usersApi = memoize(() -> new UsersApi(apiClient));
     }
 
-    public UserManagementClient userManagement() {
-        return this.userManagementClient.get();
-    }
-
-    public UsersClient users() {
-        return this.usersClient.get();
-    }
-
-    public TranslationsClient translations() {
-        return this.translationsClient.get();
-    }
-
-    public TemplatesClient templates() {
-        return this.templatesClient.get();
-    }
-
-    public TeamsClient teams() {
-        return this.teamsClient.get();
-    }
-
-    public StatisticsClient statistics() {
-        return this.statisticsClient.get();
-    }
-
-    public SearchClient search() {
-        return this.searchClient.get();
-    }
-
-    public SchemasClient schemas() {
-        return this.schemasClient.get();
-    }
-
-    public RulesClient rules() {
-        return this.rulesClient.get();
-    }
-
-    public PlansClient plans() {
-        return this.plansClient.get();
-    }
-
-    public PingClient ping() {
-        return this.pingClient.get();
-    }
-
-    public NewsClient news() {
-        return this.newsClient.get();
-    }
-
-    public LanguagesClient languages() {
-        return this.languagesClient.get();
-    }
-
-    public HistoryClient history() {
-        return this.historyClient.get();
-    }
-
-    public EventConsumersClient eventConsumers() {
-        return this.eventConsumersClient.get();
-    }
-
-    public DiagnosticsClient diagnostics() {
-        return this.diagnosticsClient.get();
-    }
-
-    public ContentsClient contents() {
-        return this.contentsClient.get();
-    }
-
-    public CommentsClient comments() {
-        return this.commentsClient.get();
-    }
-
-    public NotificationsClient notifications() {
-        return this.notificationsClient.get();
-    }
-
-    public BackupsClient backups() {
-        return this.backupsClient.get();
-    }
-
-    public AssetsClient assets() {
-        return this.assetsClient.get();
-    }
-
-    public AppsClient apps() {
-        return this.appsClient.get();
+    static <T> Supplier<T> memoize(Supplier<T> delegate) {
+        AtomicReference<T> value = new AtomicReference<>();
+        return () -> {
+            T val = value.get();
+            if (val == null) {
+                val = value.updateAndGet(cur -> cur == null ? Objects.requireNonNull(delegate.get()) : cur);
+            }
+            return val;
+        };
     }
 
     public static SquidexClientBuilder builder() {
         return new SquidexClientBuilder();
+    }
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public String getClientId() {
+        return clientId;
+    }
+
+    public String getClientSecret() {
+        return clientSecret;
+    }
+
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public UserManagementApi userManagement() {
+        return this.userManagementApi.get();
+    }
+
+    public UsersApi users() {
+        return this.usersApi.get();
+    }
+
+    public TranslationsApi translations() {
+        return this.translationsApi.get();
+    }
+
+    public TemplatesApi templates() {
+        return this.templatesApi.get();
+    }
+
+    public TeamsApi teams() {
+        return this.teamsApi.get();
+    }
+
+    public StatisticsApi statistics() {
+        return this.statisticsApi.get();
+    }
+
+    public SearchApi search() {
+        return this.searchApi.get();
+    }
+
+    public SchemasApi schemas() {
+        return this.schemasApi.get();
+    }
+
+    public RulesApi rules() {
+        return this.rulesApi.get();
+    }
+
+    public PlansApi plans() {
+        return this.plansApi.get();
+    }
+
+    public PingApi ping() {
+        return this.pingApi.get();
+    }
+
+    public NewsApi news() {
+        return this.newsApi.get();
+    }
+
+    public LanguagesApi languages() {
+        return this.languagesApi.get();
+    }
+
+    public HistoryApi history() {
+        return this.historyApi.get();
+    }
+
+    public EventConsumersApi eventConsumers() {
+        return this.eventConsumersApi.get();
+    }
+
+    public DiagnosticsApi diagnostics() {
+        return this.diagnosticsApi.get();
+    }
+
+    public ContentsApi contents() {
+        return this.contentsApi.get();
+    }
+
+    public BackupsApi backups() {
+        return this.backupsApi.get();
+    }
+
+    public AssetsApi assets() {
+        return this.assetsApi.get();
+    }
+
+    public AppsApi apps() {
+        return this.appsApi.get();
     }
 }
