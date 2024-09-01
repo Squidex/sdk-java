@@ -16,6 +16,7 @@ jobs:
         with:
           java-version: "11"
           architecture: x64
+          distribution: oracle
 
       - name: Compile
         run: ./gradlew compileJava
