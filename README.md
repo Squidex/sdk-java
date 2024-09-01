@@ -48,10 +48,26 @@ RulesDto rules = squidex.rules().getRules();
 System.out.println("Received response from Squidex: " + rules);
 ```
 
-## Staged Builders
+## Staged Builders (v1.X)
 
 The generated builders all follow the staged builder pattern. Read more [here](https://immutables.github.io/immutable.html#staged-builder). 
 Staged builders only allow you to build the object once all required properties have been specified. 
+
+## Custom Templates
+
+### `api.mustache`
+
+* Use `vendorExtensions.x-method-name` for the actual method name.
+* Use `vendorExtensions.f-field-name` for the actual header name.
+
+### `models.mustache`
+
+* Remove all code where properties for the discriminator is generated.
+
+### `JSON.mustache`
+
+* Fix the serialization with `registerTypeSelector` to select the type based on the discriminator mapping.
+* Fix the serialization with `registerPostProcessor` to add the discriminator properties to the generated JSON.
 
 ## Contributing
 
