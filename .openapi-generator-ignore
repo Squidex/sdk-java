@@ -18,5 +18,7 @@ openapi.yml
 gradle.properties
 gradlew
 gradlew.bat
+build.gradle
+build.sbt
 
 README.md
