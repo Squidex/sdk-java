@@ -5,7 +5,6 @@ import com.google.gson.Gson;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
-import java.time.Instant;
 import java.util.Objects;
 
 import okhttp3.FormBody;
@@ -18,15 +17,15 @@ import okhttp3.Response;
 
 public final class AuthInterceptor implements Interceptor {
     private final Gson gson = new Gson();
-    private final String baseUrl;
+    private final String url;
     private final String clientId;
     private final String clientSecret;
     private final TokenStore tokenStore;
     private final OkHttpClient httpClient;
 
-    public AuthInterceptor(OkHttpClient httpClient, String baseUrl, String clientId, String clientSecret, TokenStore tokenStore) {
+    public AuthInterceptor(OkHttpClient httpClient, String url, String clientId, String clientSecret, TokenStore tokenStore) {
         this.httpClient = httpClient;
-        this.baseUrl = baseUrl;
+        this.url = url;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.tokenStore = tokenStore;
@@ -72,7 +71,7 @@ public final class AuthInterceptor implements Interceptor {
             .add("scope", "squidex-api")
             .build();
 
-        HttpUrl tokenUrl = Objects.requireNonNull(HttpUrl.parse(baseUrl))
+        HttpUrl tokenUrl = Objects.requireNonNull(HttpUrl.parse(url))
             .newBuilder()
             .addPathSegments("identity-server/connect/token")
             .build();

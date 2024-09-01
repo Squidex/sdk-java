@@ -18,7 +18,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public final class SquidexClientBuilder {
-    private String baseUrl = "https://cloud.squidex.io";
+    private String url = "https://cloud.squidex.io";
     private String clientId;
     private String clientSecret;
     private String appName;
@@ -26,9 +26,13 @@ public final class SquidexClientBuilder {
     private OkHttpClient httpClient;
     private boolean trustAllCerts;
 
-    public SquidexClientBuilder baseUrl(String baseUrl) {
-        this.baseUrl = baseUrl;
+    public SquidexClientBuilder url(String url) {
+        this.url = url;
         return this;
+    }
+
+    public String url() {
+        return this.url;
     }
 
     public SquidexClientBuilder clientId(String clientId) {
@@ -124,7 +128,7 @@ public final class SquidexClientBuilder {
 
         AuthInterceptor interceptor = new AuthInterceptor(
             this.httpClient,
-            this.baseUrl,
+            this.url,
             this.clientId,
             this.clientSecret,
             this.tokenStore);
@@ -148,9 +152,9 @@ public final class SquidexClientBuilder {
             .build();
 
         ApiClient apiClient = new ApiClient(this.httpClient);
-        apiClient.setBasePath(this.baseUrl);
+        apiClient.setBasePath(this.url);
         apiClient.setVerifyingSsl(!this.trustAllCerts);
 
-        return new SquidexClient(apiClient, this.appName, this.clientId, this.clientSecret, this.baseUrl);
+        return new SquidexClient(apiClient, this.appName, this.clientId, this.clientSecret, this.url);
     }
 }

@@ -50,13 +50,13 @@ public class SquidexClient {
     private final String appName;
     private final String clientId;
     private final String clientSecret;
-    private final String baseUrl;
+    private final String url;
 
     public SquidexClient(ApiClient apiClient, String appName, String clientId, String clientSecret, String baseUrl) {
         this.appName = appName;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
-        this.baseUrl = baseUrl;
+        this.url = baseUrl;
         this.appsApi = memoize(() -> new AppsApi(apiClient));
         this.assetsApi = memoize(() -> new AssetsApi(apiClient));
         this.backupsApi = memoize(() -> new BackupsApi(apiClient));
@@ -106,8 +106,8 @@ public class SquidexClient {
         return clientSecret;
     }
 
-    public String getBaseUrl() {
-        return baseUrl;
+    public String getUrl() {
+        return url;
     }
 
     public UserManagementApi userManagement() {

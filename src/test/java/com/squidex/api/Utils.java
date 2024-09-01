@@ -37,7 +37,7 @@ final class Utils {
                 .appName(appName)
                 .clientId(clientId)
                 .clientSecret(clientSecret)
-                .baseUrl(environment);
+                .url(environment);
 
         singleClient = new ClientProvider(builder, builder.build());
 
