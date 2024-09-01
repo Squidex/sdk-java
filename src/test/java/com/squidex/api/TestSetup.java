@@ -18,7 +18,7 @@ public class TestSetup implements BeforeAllCallback {
         System.out.printf("Using <appName>=<%s>%n", client.getAppName());
         System.out.printf("Using <clientId>=<%s>%n", client.getClientId());
         System.out.printf("Using <clientSecret>=<%s>%n", client.getClientSecret());
-        System.out.printf("Using <baseUrl>=<%s>%n", client.getBaseUrl());
+        System.out.printf("Using <baseUrl>=<%s>%n", client.getUrl());
 
         this.waitForServer();
 
