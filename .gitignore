@@ -27,3 +27,6 @@ local.properties
 
 # OpenAPI Generator creates a copy for whatver reason
 /api
+
+# Publish Test with potential secrets
+test-publish.ps1

@@ -1,2 +1,2 @@
-# docker run --rm -v ${PWD}:/local squidex/openapi-generator-cli config-help -g php 
-docker run --rm -v ${PWD}:/local squidex/openapi-generator-cli generate -i /local/openapi.json -g java --template-dir  /local/templates -o /local -c /local/openapi-config.yml
+# docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli config-help -g php 
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i /local/openapi.json -g java --template-dir  /local/templates -o /local -c /local/openapi-config.yml

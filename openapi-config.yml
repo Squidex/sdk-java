@@ -13,3 +13,6 @@ additionalProperties:
   modelPackage: com.squidex.api.types
   useRuntimeException: true
   useSingleRequestParameter: true
+
+reservedWordsMappings:
+  file: file

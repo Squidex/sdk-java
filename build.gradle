@@ -1,14 +1,14 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
 plugins {
     id 'java-library'
     id 'maven-publish'
     id 'com.diffplug.spotless' version '6.11.0'
+    id "com.vanniktech.maven.publish" version "0.29.0"
 }
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://s01.oss.sonatype.org/content/repositories/releases/'
-    }
 }
 
 dependencies {
@@ -31,11 +31,6 @@ spotless {
     }
 }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 javadoc {
     options.tags = ["http.response.details:a:Http Response Details"]
 
@@ -51,23 +46,35 @@ test {
     }
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'io.squidex'
-            artifactId = 'squidex'
-            version = '2.0.0-rc1'
-            from components.java
-        }
+mavenPublishing {
+  publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+
+  coordinates("io.squidex", "squidex", "2.0.0-RC1")
+
+  pom {
+    name = "Squidex SDK"
+    description = "Client Library for the Squidex API"
+    inceptionYear = "2020"
+    url = "https://github.com/squidex/sdk-java"
+    licenses {
+      license {
+        name = "MIT"
+      }
     }
-    repositories {
-        maven {
-            url "$System.env.MAVEN_PUBLISH_REGISTRY_URL"
-            credentials {
-                username "$System.env.MAVEN_USERNAME"
-                password "$System.env.MAVEN_PASSWORD"
-            }
-        }
+    developers {
+      developer {
+        id = "sebastianstehle"
+        name = "Sebastian Stehle"
+        url = "https://github.com/sebastianstehle/"
+      }
     }
+     scm {
+      url = "https://github.com/squidex/squidex/"
+      connection = "scm:git:git://github.com/squidex/squidex.git"
+      developerConnection = "scm:git:ssh://git@github.com/squidex/squidex.git"
+    }
+  }
+
+  signAllPublications()
 }
 
