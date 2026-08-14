@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * FieldRuleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class FieldRuleDto {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
@@ -72,7 +72,7 @@ public class FieldRuleDto {
    * Get action
    * @return action
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldRuleAction getAction() {
     return action;
   }
@@ -89,7 +89,7 @@ public class FieldRuleDto {
    * The field to update.
    * @return field
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getField() {
     return field;
   }
@@ -106,7 +106,7 @@ public class FieldRuleDto {
    * The condition.
    * @return condition
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCondition() {
     return condition;
   }

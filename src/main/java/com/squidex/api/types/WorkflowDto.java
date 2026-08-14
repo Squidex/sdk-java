@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * WorkflowDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class WorkflowDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -94,7 +94,7 @@ public class WorkflowDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -111,7 +111,7 @@ public class WorkflowDto {
    * The workflow id.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -128,7 +128,7 @@ public class WorkflowDto {
    * The name of the workflow.
    * @return name
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -153,7 +153,7 @@ public class WorkflowDto {
    * The workflow steps.
    * @return steps
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, WorkflowStepDto> getSteps() {
     return steps;
   }
@@ -178,7 +178,7 @@ public class WorkflowDto {
    * The schema ids.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }
@@ -195,7 +195,7 @@ public class WorkflowDto {
    * The initial step.
    * @return initial
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getInitial() {
     return initial;
   }

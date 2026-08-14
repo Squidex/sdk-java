@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * ErrorDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ErrorDto {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
@@ -82,7 +82,7 @@ public class ErrorDto {
    * Error message.
    * @return message
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -99,7 +99,7 @@ public class ErrorDto {
    * The error code.
    * @return errorCode
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getErrorCode() {
     return errorCode;
   }
@@ -116,7 +116,7 @@ public class ErrorDto {
    * The optional trace id.
    * @return traceId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTraceId() {
     return traceId;
   }
@@ -133,7 +133,7 @@ public class ErrorDto {
    * Link to the error details.
    * @return type
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -158,7 +158,7 @@ public class ErrorDto {
    * Detailed error messages.
    * @return details
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getDetails() {
     return details;
   }
@@ -175,7 +175,7 @@ public class ErrorDto {
    * Status code of the http response.
    * @return statusCode
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getStatusCode() {
     return statusCode;
   }

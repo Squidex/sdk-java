@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpsertSchemaFieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpsertSchemaFieldDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -87,7 +87,7 @@ public class UpsertSchemaFieldDto {
    * The name of the field. Must be unique within the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -104,7 +104,7 @@ public class UpsertSchemaFieldDto {
    * Defines if the field is hidden.
    * @return isHidden
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsHidden() {
     return isHidden;
   }
@@ -121,7 +121,7 @@ public class UpsertSchemaFieldDto {
    * Defines if the field is locked.
    * @return isLocked
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsLocked() {
     return isLocked;
   }
@@ -138,7 +138,7 @@ public class UpsertSchemaFieldDto {
    * Defines if the field is disabled.
    * @return isDisabled
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsDisabled() {
     return isDisabled;
   }
@@ -155,7 +155,7 @@ public class UpsertSchemaFieldDto {
    * Determines the optional partitioning of the field.
    * @return partitioning
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPartitioning() {
     return partitioning;
   }
@@ -172,7 +172,7 @@ public class UpsertSchemaFieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }
@@ -197,7 +197,7 @@ public class UpsertSchemaFieldDto {
    * The nested fields.
    * @return nested
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<UpsertSchemaNestedFieldDto> getNested() {
     return nested;
   }

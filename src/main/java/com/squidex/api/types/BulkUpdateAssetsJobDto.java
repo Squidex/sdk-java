@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * BulkUpdateAssetsJobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BulkUpdateAssetsJobDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -97,7 +97,7 @@ public class BulkUpdateAssetsJobDto {
    * An optional ID of the asset to update.
    * @return id
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -114,7 +114,7 @@ public class BulkUpdateAssetsJobDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public BulkUpdateAssetType getType() {
     return type;
   }
@@ -131,7 +131,7 @@ public class BulkUpdateAssetsJobDto {
    * The parent folder id.
    * @return parentId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getParentId() {
     return parentId;
   }
@@ -148,7 +148,7 @@ public class BulkUpdateAssetsJobDto {
    * The new name of the asset.
    * @return fileName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFileName() {
     return fileName;
   }
@@ -165,7 +165,7 @@ public class BulkUpdateAssetsJobDto {
    * The new slug of the asset.
    * @return slug
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -182,7 +182,7 @@ public class BulkUpdateAssetsJobDto {
    * True, when the asset is not public.
    * @return isProtected
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsProtected() {
     return isProtected;
   }
@@ -207,7 +207,7 @@ public class BulkUpdateAssetsJobDto {
    * The new asset tags.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
@@ -232,7 +232,7 @@ public class BulkUpdateAssetsJobDto {
    * The asset metadata.
    * @return metadata
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Object> getMetadata() {
     return metadata;
   }
@@ -249,7 +249,7 @@ public class BulkUpdateAssetsJobDto {
    * True to delete the asset permanently.
    * @return permanent
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getPermanent() {
     return permanent;
   }
@@ -266,7 +266,7 @@ public class BulkUpdateAssetsJobDto {
    * The expected version.
    * @return expectedVersion
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Long getExpectedVersion() {
     return expectedVersion;
   }

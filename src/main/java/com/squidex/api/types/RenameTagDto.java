@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * RenameTagDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RenameTagDto {
   public static final String SERIALIZED_NAME_TAG_NAME = "tagName";
   @SerializedName(SERIALIZED_NAME_TAG_NAME)
@@ -64,7 +64,7 @@ public class RenameTagDto {
    * The new name for the tag.
    * @return tagName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTagName() {
     return tagName;
   }

@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetMeta
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetMeta {
   public static final String SERIALIZED_NAME_IS_DUPLICATE = "isDuplicate";
   @SerializedName(SERIALIZED_NAME_IS_DUPLICATE)
@@ -64,7 +64,7 @@ public class AssetMeta {
    * Indicates whether the asset is a duplicate.
    * @return isDuplicate
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIsDuplicate() {
     return isDuplicate;
   }

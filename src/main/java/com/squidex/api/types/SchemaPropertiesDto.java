@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * SchemaPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SchemaPropertiesDto {
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
@@ -91,7 +91,7 @@ public class SchemaPropertiesDto {
    * Optional label for the editor.
    * @return label
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLabel() {
     return label;
   }
@@ -108,7 +108,7 @@ public class SchemaPropertiesDto {
    * Hints to describe the schema.
    * @return hints
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getHints() {
     return hints;
   }
@@ -125,7 +125,7 @@ public class SchemaPropertiesDto {
    * The url to a the sidebar plugin for content lists.
    * @return contentsSidebarUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentsSidebarUrl() {
     return contentsSidebarUrl;
   }
@@ -142,7 +142,7 @@ public class SchemaPropertiesDto {
    * The url to a the sidebar plugin for content items.
    * @return contentSidebarUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentSidebarUrl() {
     return contentSidebarUrl;
   }
@@ -159,7 +159,7 @@ public class SchemaPropertiesDto {
    * The url to the editor plugin.
    * @return contentEditorUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentEditorUrl() {
     return contentEditorUrl;
   }
@@ -176,7 +176,7 @@ public class SchemaPropertiesDto {
    * The url to the editor plugin.
    * @return contentsEditorUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentsEditorUrl() {
     return contentsEditorUrl;
   }
@@ -193,7 +193,7 @@ public class SchemaPropertiesDto {
    * The url to the content list plugin.
    * @return contentsListUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentsListUrl() {
     return contentsListUrl;
   }
@@ -210,7 +210,7 @@ public class SchemaPropertiesDto {
    * True to validate the content items on publish.
    * @return validateOnPublish
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getValidateOnPublish() {
     return validateOnPublish;
   }
@@ -235,7 +235,7 @@ public class SchemaPropertiesDto {
    * Tags for automation processes.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }

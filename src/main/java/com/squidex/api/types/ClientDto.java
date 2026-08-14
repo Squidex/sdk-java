@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * ClientDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ClientDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -97,7 +97,7 @@ public class ClientDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -114,7 +114,7 @@ public class ClientDto {
    * The client id.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -131,7 +131,7 @@ public class ClientDto {
    * The client secret.
    * @return secret
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSecret() {
     return secret;
   }
@@ -148,7 +148,7 @@ public class ClientDto {
    * The client name.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -165,7 +165,7 @@ public class ClientDto {
    * The role of the client.
    * @return role
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRole() {
     return role;
   }
@@ -182,7 +182,7 @@ public class ClientDto {
    * The number of allowed api calls per month for this client.
    * @return apiCallsLimit
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getApiCallsLimit() {
     return apiCallsLimit;
   }
@@ -199,7 +199,7 @@ public class ClientDto {
    * The number of allowed api traffic bytes per month for this client.
    * @return apiTrafficLimit
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getApiTrafficLimit() {
     return apiTrafficLimit;
   }
@@ -216,7 +216,7 @@ public class ClientDto {
    * True to allow anonymous access without an access token for this client.
    * @return allowAnonymous
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getAllowAnonymous() {
     return allowAnonymous;
   }

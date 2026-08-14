@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetFolderDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetFolderDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -87,7 +87,7 @@ public class AssetFolderDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -104,7 +104,7 @@ public class AssetFolderDto {
    * The ID of the asset.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -121,7 +121,7 @@ public class AssetFolderDto {
    * The ID of the parent folder. Empty for files without parent.
    * @return parentId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getParentId() {
     return parentId;
   }
@@ -138,7 +138,7 @@ public class AssetFolderDto {
    * The folder name.
    * @return folderName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFolderName() {
     return folderName;
   }
@@ -155,7 +155,7 @@ public class AssetFolderDto {
    * The version of the asset folder.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }

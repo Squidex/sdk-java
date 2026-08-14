@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * ContentChangedRuleTriggerDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ContentChangedRuleTriggerDto extends RuleTriggerDto {
   public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
   @SerializedName(SERIALIZED_NAME_SCHEMAS)
@@ -83,7 +83,7 @@ public class ContentChangedRuleTriggerDto extends RuleTriggerDto {
    * The schema settings.
    * @return schemas
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<SchemaCondition> getSchemas() {
     return schemas;
   }
@@ -108,7 +108,7 @@ public class ContentChangedRuleTriggerDto extends RuleTriggerDto {
    * The schema references.
    * @return referencedSchemas
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<SchemaCondition> getReferencedSchemas() {
     return referencedSchemas;
   }
@@ -125,7 +125,7 @@ public class ContentChangedRuleTriggerDto extends RuleTriggerDto {
    * Determines whether the trigger should handle all content changes events.
    * @return handleAll
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHandleAll() {
     return handleAll;
   }

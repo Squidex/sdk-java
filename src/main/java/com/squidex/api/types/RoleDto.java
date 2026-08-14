@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * RoleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RoleDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -95,7 +95,7 @@ public class RoleDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -112,7 +112,7 @@ public class RoleDto {
    * The role name.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -129,7 +129,7 @@ public class RoleDto {
    * The number of clients with this role.
    * @return numClients
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getNumClients() {
     return numClients;
   }
@@ -146,7 +146,7 @@ public class RoleDto {
    * The number of contributors with this role.
    * @return numContributors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getNumContributors() {
     return numContributors;
   }
@@ -163,7 +163,7 @@ public class RoleDto {
    * Indicates if the role is an builtin default role.
    * @return isDefaultRole
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsDefaultRole() {
     return isDefaultRole;
   }
@@ -188,7 +188,7 @@ public class RoleDto {
    * Associated list of permissions.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }
@@ -213,7 +213,7 @@ public class RoleDto {
    * Associated list of UI properties.
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getProperties() {
     return properties;
   }

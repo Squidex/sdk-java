@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * NestedFieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class NestedFieldDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -94,7 +94,7 @@ public class NestedFieldDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -111,7 +111,7 @@ public class NestedFieldDto {
    * The ID of the field.
    * @return fieldId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getFieldId() {
     return fieldId;
   }
@@ -128,7 +128,7 @@ public class NestedFieldDto {
    * The name of the field. Must be unique within the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -145,7 +145,7 @@ public class NestedFieldDto {
    * Defines if the field is hidden.
    * @return isHidden
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsHidden() {
     return isHidden;
   }
@@ -162,7 +162,7 @@ public class NestedFieldDto {
    * Defines if the field is locked.
    * @return isLocked
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsLocked() {
     return isLocked;
   }
@@ -179,7 +179,7 @@ public class NestedFieldDto {
    * Defines if the field is disabled.
    * @return isDisabled
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsDisabled() {
     return isDisabled;
   }
@@ -196,7 +196,7 @@ public class NestedFieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }

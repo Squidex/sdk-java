@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateProfileDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateProfileDto {
   public static final String SERIALIZED_NAME_ANSWERS = "answers";
   @SerializedName(SERIALIZED_NAME_ANSWERS)
@@ -75,7 +75,7 @@ public class UpdateProfileDto {
    * The answers from a questionaire.
    * @return answers
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, String> getAnswers() {
     return answers;
   }

@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * BulkUpdateContentsJobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BulkUpdateContentsJobDto {
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
@@ -103,7 +103,7 @@ public class BulkUpdateContentsJobDto {
    * Get query
    * @return query
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public QueryJsonDto getQuery() {
     return query;
   }
@@ -120,7 +120,7 @@ public class BulkUpdateContentsJobDto {
    * An optional ID of the content to update.
    * @return id
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -145,7 +145,7 @@ public class BulkUpdateContentsJobDto {
    * Get data
    * @return data
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Map<String, Object>> getData() {
     return data;
   }
@@ -162,7 +162,7 @@ public class BulkUpdateContentsJobDto {
    * The new status when the type is set to &#39;ChangeStatus&#39; or &#39;Upsert&#39;.
    * @return status
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getStatus() {
     return status;
   }
@@ -179,7 +179,7 @@ public class BulkUpdateContentsJobDto {
    * The due time.
    * @return dueTime
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDueTime() {
     return dueTime;
   }
@@ -196,7 +196,7 @@ public class BulkUpdateContentsJobDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public BulkUpdateContentType getType() {
     return type;
   }
@@ -213,7 +213,7 @@ public class BulkUpdateContentsJobDto {
    * The optional schema id or name.
    * @return schema
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSchema() {
     return schema;
   }
@@ -230,7 +230,7 @@ public class BulkUpdateContentsJobDto {
    * Makes the update as patch.
    * @return patch
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getPatch() {
     return patch;
   }
@@ -247,7 +247,7 @@ public class BulkUpdateContentsJobDto {
    * True to delete the content permanently.
    * @return permanent
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getPermanent() {
     return permanent;
   }
@@ -264,7 +264,7 @@ public class BulkUpdateContentsJobDto {
    * Enrich the data with the default values when updating a content item.
    * @return enrichDefaults
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getEnrichDefaults() {
     return enrichDefaults;
   }
@@ -281,7 +281,7 @@ public class BulkUpdateContentsJobDto {
    * The number of expected items. Set it to a higher number to update multiple items when a query is defined.
    * @return expectedCount
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Long getExpectedCount() {
     return expectedCount;
   }
@@ -298,7 +298,7 @@ public class BulkUpdateContentsJobDto {
    * The expected version.
    * @return expectedVersion
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Long getExpectedVersion() {
     return expectedVersion;
   }

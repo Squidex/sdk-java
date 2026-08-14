@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * AppLanguageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AppLanguageDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -92,7 +92,7 @@ public class AppLanguageDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -109,7 +109,7 @@ public class AppLanguageDto {
    * The iso code of the language.
    * @return iso2Code
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIso2Code() {
     return iso2Code;
   }
@@ -126,7 +126,7 @@ public class AppLanguageDto {
    * The english name of the language.
    * @return englishName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEnglishName() {
     return englishName;
   }
@@ -151,7 +151,7 @@ public class AppLanguageDto {
    * The fallback languages.
    * @return fallback
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFallback() {
     return fallback;
   }
@@ -168,7 +168,7 @@ public class AppLanguageDto {
    * Indicates if the language is the master language.
    * @return isMaster
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsMaster() {
     return isMaster;
   }
@@ -185,7 +185,7 @@ public class AppLanguageDto {
    * Indicates if the language is optional.
    * @return isOptional
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsOptional() {
     return isOptional;
   }

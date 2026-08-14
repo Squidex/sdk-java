@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * PlanDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PlanDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -95,7 +95,7 @@ public class PlanDto {
    * The ID of the plan.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -112,7 +112,7 @@ public class PlanDto {
    * The name of the plan.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -129,7 +129,7 @@ public class PlanDto {
    * The monthly costs of the plan.
    * @return costs
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCosts() {
     return costs;
   }
@@ -146,7 +146,7 @@ public class PlanDto {
    * An optional confirm text for the monthly subscription.
    * @return confirmText
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getConfirmText() {
     return confirmText;
   }
@@ -163,7 +163,7 @@ public class PlanDto {
    * An optional confirm text for the yearly subscription.
    * @return yearlyConfirmText
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getYearlyConfirmText() {
     return yearlyConfirmText;
   }
@@ -180,7 +180,7 @@ public class PlanDto {
    * The yearly costs of the plan.
    * @return yearlyCosts
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getYearlyCosts() {
     return yearlyCosts;
   }
@@ -197,7 +197,7 @@ public class PlanDto {
    * The yearly ID of the plan.
    * @return yearlyId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getYearlyId() {
     return yearlyId;
   }
@@ -214,7 +214,7 @@ public class PlanDto {
    * The maximum number of API traffic.
    * @return maxApiBytes
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMaxApiBytes() {
     return maxApiBytes;
   }
@@ -231,7 +231,7 @@ public class PlanDto {
    * The maximum number of API calls.
    * @return maxApiCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMaxApiCalls() {
     return maxApiCalls;
   }
@@ -248,7 +248,7 @@ public class PlanDto {
    * The maximum allowed asset size.
    * @return maxAssetSize
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMaxAssetSize() {
     return maxAssetSize;
   }
@@ -265,7 +265,7 @@ public class PlanDto {
    * The maximum number of contributors.
    * @return maxContributors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getMaxContributors() {
     return maxContributors;
   }

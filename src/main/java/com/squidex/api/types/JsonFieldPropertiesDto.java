@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * JsonFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class JsonFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_GRAPH_Q_L_SCHEMA = "graphQLSchema";
   @SerializedName(SERIALIZED_NAME_GRAPH_Q_L_SCHEMA)
@@ -68,7 +68,7 @@ public class JsonFieldPropertiesDto extends FieldPropertiesDto {
    * The GraphQL schema.
    * @return graphQLSchema
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getGraphQLSchema() {
     return graphQLSchema;
   }

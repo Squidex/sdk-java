@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * ScheduleJobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ScheduleJobDto {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -77,7 +77,7 @@ public class ScheduleJobDto {
    * The ID of the schedule job.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -94,7 +94,7 @@ public class ScheduleJobDto {
    * The new status.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -111,7 +111,7 @@ public class ScheduleJobDto {
    * The target date and time when the content should be scheduled.
    * @return dueTime
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDueTime() {
     return dueTime;
   }
@@ -128,7 +128,7 @@ public class ScheduleJobDto {
    * The color of the scheduled status.
    * @return color
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getColor() {
     return color;
   }
@@ -145,7 +145,7 @@ public class ScheduleJobDto {
    * The user who schedule the content.
    * @return scheduledBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getScheduledBy() {
     return scheduledBy;
   }

@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * QueryDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class QueryDto {
   public static final String SERIALIZED_NAME_IDS = "ids";
   @SerializedName(SERIALIZED_NAME_IDS)
@@ -84,7 +84,7 @@ public class QueryDto {
    * The optional list of ids to query.
    * @return ids
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getIds() {
     return ids;
   }
@@ -101,7 +101,7 @@ public class QueryDto {
    * The optional odata query.
    * @return oData
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getoData() {
     return oData;
   }
@@ -118,7 +118,7 @@ public class QueryDto {
    * The optional json query.
    * @return q
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getQ() {
     return q;
   }
@@ -135,7 +135,7 @@ public class QueryDto {
    * The parent id (for assets).
    * @return parentId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getParentId() {
     return parentId;
   }

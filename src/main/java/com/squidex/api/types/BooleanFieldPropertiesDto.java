@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * BooleanFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BooleanFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -88,7 +88,7 @@ public class BooleanFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Boolean> getDefaultValues() {
     return defaultValues;
   }
@@ -105,7 +105,7 @@ public class BooleanFieldPropertiesDto extends FieldPropertiesDto {
    * The default value for the field value.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDefaultValue() {
     return defaultValue;
   }
@@ -122,7 +122,7 @@ public class BooleanFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates that the inline editor is enabled for this field.
    * @return inlineEditable
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getInlineEditable() {
     return inlineEditable;
   }
@@ -139,7 +139,7 @@ public class BooleanFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public BooleanFieldEditor getEditor() {
     return editor;
   }

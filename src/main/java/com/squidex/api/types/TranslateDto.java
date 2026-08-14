@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * TranslateDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TranslateDto {
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
@@ -70,7 +70,7 @@ public class TranslateDto {
    * The text to translate.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }
@@ -87,7 +87,7 @@ public class TranslateDto {
    * The target language.
    * @return targetLanguage
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTargetLanguage() {
     return targetLanguage;
   }
@@ -104,7 +104,7 @@ public class TranslateDto {
    * The optional source language.
    * @return sourceLanguage
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSourceLanguage() {
     return sourceLanguage;
   }

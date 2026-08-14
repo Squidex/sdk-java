@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateAssetScriptsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateAssetScriptsDto {
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
@@ -83,7 +83,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed for each asset when querying assets.
    * @return query
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQuery() {
     return query;
   }
@@ -100,7 +100,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed for all assets when querying assets.
    * @return queryPre
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQueryPre() {
     return queryPre;
   }
@@ -117,7 +117,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed when creating an asset.
    * @return create
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCreate() {
     return create;
   }
@@ -134,7 +134,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed when updating a content.
    * @return update
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUpdate() {
     return update;
   }
@@ -151,7 +151,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed when annotating a content.
    * @return annotate
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getAnnotate() {
     return annotate;
   }
@@ -168,7 +168,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed when moving a content.
    * @return move
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMove() {
     return move;
   }
@@ -185,7 +185,7 @@ public class UpdateAssetScriptsDto {
    * The script that is executed when deleting a content.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }

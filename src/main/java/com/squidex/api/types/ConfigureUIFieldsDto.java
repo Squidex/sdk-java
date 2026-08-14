@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * ConfigureUIFieldsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ConfigureUIFieldsDto {
   public static final String SERIALIZED_NAME_FIELDS_IN_LISTS = "fieldsInLists";
   @SerializedName(SERIALIZED_NAME_FIELDS_IN_LISTS)
@@ -78,7 +78,7 @@ public class ConfigureUIFieldsDto {
    * The name of fields that are used in content lists.
    * @return fieldsInLists
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInLists() {
     return fieldsInLists;
   }
@@ -103,7 +103,7 @@ public class ConfigureUIFieldsDto {
    * The name of fields that are used in content references.
    * @return fieldsInReferences
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInReferences() {
     return fieldsInReferences;
   }

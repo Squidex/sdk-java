@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * CreateAppDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CreateAppDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -68,7 +68,7 @@ public class CreateAppDto {
    * The name of the app.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -85,7 +85,7 @@ public class CreateAppDto {
    * Initialize the app with the inbuilt template.
    * @return template
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTemplate() {
     return template;
   }

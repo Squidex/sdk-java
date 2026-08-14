@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * ChangeStatusDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ChangeStatusDto {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -72,7 +72,7 @@ public class ChangeStatusDto {
    * The new status.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -89,7 +89,7 @@ public class ChangeStatusDto {
    * The due time.
    * @return dueTime
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDueTime() {
     return dueTime;
   }
@@ -106,7 +106,7 @@ public class ChangeStatusDto {
    * True to check referrers of this content.
    * @return checkReferrers
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getCheckReferrers() {
     return checkReferrers;
   }

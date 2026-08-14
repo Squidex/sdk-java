@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * TypesenseRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TypesenseRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -79,7 +79,7 @@ public class TypesenseRuleActionDto extends RuleActionDto {
    * The url to the instance or cluster.
    * @return host
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getHost() {
     return host;
   }
@@ -96,7 +96,7 @@ public class TypesenseRuleActionDto extends RuleActionDto {
    * The name of the index.
    * @return indexName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIndexName() {
     return indexName;
   }
@@ -113,7 +113,7 @@ public class TypesenseRuleActionDto extends RuleActionDto {
    * The api key.
    * @return apiKey
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getApiKey() {
     return apiKey;
   }
@@ -130,7 +130,7 @@ public class TypesenseRuleActionDto extends RuleActionDto {
    * The optional custom document.
    * @return document
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDocument() {
     return document;
   }
@@ -147,7 +147,7 @@ public class TypesenseRuleActionDto extends RuleActionDto {
    * The condition when to delete the document.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }

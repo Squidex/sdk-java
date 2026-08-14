@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * ContributorsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ContributorsDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -88,7 +88,7 @@ public class ContributorsDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -113,7 +113,7 @@ public class ContributorsDto {
    * The contributors.
    * @return items
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ContributorDto> getItems() {
     return items;
   }
@@ -130,7 +130,7 @@ public class ContributorsDto {
    * The maximum number of allowed contributors.
    * @return maxContributors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMaxContributors() {
     return maxContributors;
   }
@@ -147,7 +147,7 @@ public class ContributorsDto {
    * Get meta
    * @return meta
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ContributorsMetadata getMeta() {
     return meta;
   }

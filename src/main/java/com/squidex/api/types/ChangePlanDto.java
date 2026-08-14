@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * ChangePlanDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ChangePlanDto {
   public static final String SERIALIZED_NAME_PLAN_ID = "planId";
   @SerializedName(SERIALIZED_NAME_PLAN_ID)
@@ -64,7 +64,7 @@ public class ChangePlanDto {
    * The new plan id.
    * @return planId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPlanId() {
     return planId;
   }

@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * ComponentFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ComponentFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_SCHEMA_IDS = "schemaIds";
   @SerializedName(SERIALIZED_NAME_SCHEMA_IDS)
@@ -76,7 +76,7 @@ public class ComponentFieldPropertiesDto extends FieldPropertiesDto {
    * The ID of the embedded schemas.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }

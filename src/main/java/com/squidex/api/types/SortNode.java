@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * SortNode
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SortNode {
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -68,7 +68,7 @@ public class SortNode {
    * Get path
    * @return path
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPath() {
     return path;
   }
@@ -85,7 +85,7 @@ public class SortNode {
    * Get order
    * @return order
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public SortOrder getOrder() {
     return order;
   }

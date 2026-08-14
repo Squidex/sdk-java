@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * ContributorDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ContributorDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -88,7 +88,7 @@ public class ContributorDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -105,7 +105,7 @@ public class ContributorDto {
    * The ID of the user that contributes to the app.
    * @return contributorId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getContributorId() {
     return contributorId;
   }
@@ -122,7 +122,7 @@ public class ContributorDto {
    * The display name.
    * @return contributorName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getContributorName() {
     return contributorName;
   }
@@ -139,7 +139,7 @@ public class ContributorDto {
    * The email address.
    * @return contributorEmail
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getContributorEmail() {
     return contributorEmail;
   }
@@ -156,7 +156,7 @@ public class ContributorDto {
    * The role of the contributor.
    * @return role
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRole() {
     return role;
   }

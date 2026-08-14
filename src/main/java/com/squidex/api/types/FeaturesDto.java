@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * FeaturesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class FeaturesDto {
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
@@ -78,7 +78,7 @@ public class FeaturesDto {
    * The latest features.
    * @return features
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<FeatureDto> getFeatures() {
     return features;
   }
@@ -95,7 +95,7 @@ public class FeaturesDto {
    * The recent version.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getVersion() {
     return version;
   }

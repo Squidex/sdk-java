@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * SchemaScriptsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SchemaScriptsDto {
   public static final String SERIALIZED_NAME_QUERY = "query";
   @SerializedName(SERIALIZED_NAME_QUERY)
@@ -80,7 +80,7 @@ public class SchemaScriptsDto {
    * The script that is executed for each content when querying contents.
    * @return query
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQuery() {
     return query;
   }
@@ -97,7 +97,7 @@ public class SchemaScriptsDto {
    * The script that is executed for all contents when querying contents.
    * @return queryPre
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQueryPre() {
     return queryPre;
   }
@@ -114,7 +114,7 @@ public class SchemaScriptsDto {
    * The script that is executed when creating a content.
    * @return create
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCreate() {
     return create;
   }
@@ -131,7 +131,7 @@ public class SchemaScriptsDto {
    * The script that is executed when updating a content.
    * @return update
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUpdate() {
     return update;
   }
@@ -148,7 +148,7 @@ public class SchemaScriptsDto {
    * The script that is executed when deleting a content.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }
@@ -165,7 +165,7 @@ public class SchemaScriptsDto {
    * The script that is executed when change a content status.
    * @return change
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getChange() {
     return change;
   }

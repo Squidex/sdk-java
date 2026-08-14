@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * ScriptRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ScriptRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_SCRIPT = "script";
   @SerializedName(SERIALIZED_NAME_SCRIPT)
@@ -65,7 +65,7 @@ public class ScriptRuleActionDto extends RuleActionDto {
    * The script to render.
    * @return script
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getScript() {
     return script;
   }

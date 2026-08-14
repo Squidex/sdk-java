@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * SearchResultDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SearchResultDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -86,7 +86,7 @@ public class SearchResultDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -103,7 +103,7 @@ public class SearchResultDto {
    * The name of the search result.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -120,7 +120,7 @@ public class SearchResultDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public SearchResultType getType() {
     return type;
   }
@@ -137,7 +137,7 @@ public class SearchResultDto {
    * An optional label.
    * @return label
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLabel() {
     return label;
   }

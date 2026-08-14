@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * ReorderFieldsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ReorderFieldsDto {
   public static final String SERIALIZED_NAME_FIELD_IDS = "fieldIds";
   @SerializedName(SERIALIZED_NAME_FIELD_IDS)
@@ -74,7 +74,7 @@ public class ReorderFieldsDto {
    * The field ids in the target order.
    * @return fieldIds
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Long> getFieldIds() {
     return fieldIds;
   }

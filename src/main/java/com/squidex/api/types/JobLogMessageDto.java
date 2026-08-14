@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * JobLogMessageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class JobLogMessageDto {
   public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
   @SerializedName(SERIALIZED_NAME_TIMESTAMP)
@@ -68,7 +68,7 @@ public class JobLogMessageDto {
    * The timestamp.
    * @return timestamp
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
@@ -85,7 +85,7 @@ public class JobLogMessageDto {
    * The log message.
    * @return message
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }

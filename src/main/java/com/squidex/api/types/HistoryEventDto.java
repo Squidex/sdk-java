@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * HistoryEventDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class HistoryEventDto {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
@@ -80,7 +80,7 @@ public class HistoryEventDto {
    * The message for the event.
    * @return message
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -97,7 +97,7 @@ public class HistoryEventDto {
    * The type of the original event.
    * @return eventType
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventType() {
     return eventType;
   }
@@ -114,7 +114,7 @@ public class HistoryEventDto {
    * The user who called the action.
    * @return actor
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getActor() {
     return actor;
   }
@@ -131,7 +131,7 @@ public class HistoryEventDto {
    * Gets a unique id for the event.
    * @return eventId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -148,7 +148,7 @@ public class HistoryEventDto {
    * The time when the event happened.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -165,7 +165,7 @@ public class HistoryEventDto {
    * The version identifier.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }

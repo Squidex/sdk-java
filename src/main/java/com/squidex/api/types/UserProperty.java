@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * UserProperty
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UserProperty {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -67,7 +67,7 @@ public class UserProperty {
    * Get name
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -84,7 +84,7 @@ public class UserProperty {
    * Get value
    * @return value
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getValue() {
     return value;
   }

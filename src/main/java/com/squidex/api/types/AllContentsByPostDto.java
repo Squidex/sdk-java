@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * AllContentsByPostDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AllContentsByPostDto {
   public static final String SERIALIZED_NAME_IDS = "ids";
   @SerializedName(SERIALIZED_NAME_IDS)
@@ -94,7 +94,7 @@ public class AllContentsByPostDto {
    * The list of ids to query.
    * @return ids
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getIds() {
     return ids;
   }
@@ -111,7 +111,7 @@ public class AllContentsByPostDto {
    * The start of the schedule.
    * @return scheduledFrom
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getScheduledFrom() {
     return scheduledFrom;
   }
@@ -128,7 +128,7 @@ public class AllContentsByPostDto {
    * The end of the schedule.
    * @return scheduledTo
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getScheduledTo() {
     return scheduledTo;
   }
@@ -145,7 +145,7 @@ public class AllContentsByPostDto {
    * The ID of the referencing content item.
    * @return referencing
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getReferencing() {
     return referencing;
   }
@@ -162,7 +162,7 @@ public class AllContentsByPostDto {
    * The ID of the reference content item.
    * @return references
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getReferences() {
     return references;
   }
@@ -179,7 +179,7 @@ public class AllContentsByPostDto {
    * The optional odata query.
    * @return oData
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getoData() {
     return oData;
   }
@@ -196,7 +196,7 @@ public class AllContentsByPostDto {
    * The optional json query.
    * @return q
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getQ() {
     return q;
   }

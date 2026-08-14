@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * MediumRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class MediumRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "accessToken";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
@@ -84,7 +84,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * The self issued access token.
    * @return accessToken
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAccessToken() {
     return accessToken;
   }
@@ -101,7 +101,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * The title, used for the url.
    * @return title
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }
@@ -118,7 +118,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * The content, either html or markdown.
    * @return content
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getContent() {
     return content;
   }
@@ -135,7 +135,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * The original home of this content, if it was originally published elsewhere.
    * @return canonicalUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCanonicalUrl() {
     return canonicalUrl;
   }
@@ -152,7 +152,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * The optional comma separated list of tags.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTags() {
     return tags;
   }
@@ -169,7 +169,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * Optional publication id.
    * @return publicationId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPublicationId() {
     return publicationId;
   }
@@ -186,7 +186,7 @@ public class MediumRuleActionDto extends RuleActionDto {
    * Indicates whether the content is markdown or html.
    * @return isHtml
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsHtml() {
     return isHtml;
   }

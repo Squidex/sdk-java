@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * RestoreJobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RestoreJobDto {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -82,7 +82,7 @@ public class RestoreJobDto {
    * The uri to load from.
    * @return url
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getUrl() {
     return url;
   }
@@ -107,7 +107,7 @@ public class RestoreJobDto {
    * The status log.
    * @return log
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getLog() {
     return log;
   }
@@ -124,7 +124,7 @@ public class RestoreJobDto {
    * The time when the job has been started.
    * @return started
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getStarted() {
     return started;
   }
@@ -141,7 +141,7 @@ public class RestoreJobDto {
    * The time when the job has been stopped.
    * @return stopped
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getStopped() {
     return stopped;
   }
@@ -158,7 +158,7 @@ public class RestoreJobDto {
    * Get status
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public JobStatus getStatus() {
     return status;
   }

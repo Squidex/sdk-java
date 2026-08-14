@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * LogDownloadDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class LogDownloadDto {
   public static final String SERIALIZED_NAME_DOWNLOAD_URL = "downloadUrl";
   @SerializedName(SERIALIZED_NAME_DOWNLOAD_URL)
@@ -65,7 +65,7 @@ public class LogDownloadDto {
    * The url to download the log.
    * @return downloadUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDownloadUrl() {
     return downloadUrl;
   }

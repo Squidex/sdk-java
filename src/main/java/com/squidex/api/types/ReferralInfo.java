@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * ReferralInfo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ReferralInfo {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
@@ -70,7 +70,7 @@ public class ReferralInfo {
    * Get code
    * @return code
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCode() {
     return code;
   }
@@ -87,7 +87,7 @@ public class ReferralInfo {
    * Get earned
    * @return earned
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEarned() {
     return earned;
   }
@@ -104,7 +104,7 @@ public class ReferralInfo {
    * Get condition
    * @return condition
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCondition() {
     return condition;
   }

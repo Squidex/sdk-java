@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * SlackRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SlackRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_WEBHOOK_URL = "webhookUrl";
   @SerializedName(SERIALIZED_NAME_WEBHOOK_URL)
@@ -69,7 +69,7 @@ public class SlackRuleActionDto extends RuleActionDto {
    * The slack webhook url.
    * @return webhookUrl
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getWebhookUrl() {
     return webhookUrl;
   }
@@ -86,7 +86,7 @@ public class SlackRuleActionDto extends RuleActionDto {
    * The text that is sent as message to slack.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }

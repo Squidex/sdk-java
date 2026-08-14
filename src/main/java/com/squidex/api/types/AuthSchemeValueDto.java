@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * AuthSchemeValueDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AuthSchemeValueDto {
   public static final String SERIALIZED_NAME_SCHEME = "scheme";
   @SerializedName(SERIALIZED_NAME_SCHEME)
@@ -65,7 +65,7 @@ public class AuthSchemeValueDto {
    * Get scheme
    * @return scheme
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public AuthSchemeDto getScheme() {
     return scheme;
   }

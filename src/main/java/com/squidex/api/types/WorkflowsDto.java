@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * WorkflowsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class WorkflowsDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -84,7 +84,7 @@ public class WorkflowsDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -109,7 +109,7 @@ public class WorkflowsDto {
    * The workflow.
    * @return items
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<WorkflowDto> getItems() {
     return items;
   }
@@ -134,7 +134,7 @@ public class WorkflowsDto {
    * The errros that should be fixed.
    * @return errors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getErrors() {
     return errors;
   }

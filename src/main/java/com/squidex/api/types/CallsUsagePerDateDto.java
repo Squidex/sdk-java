@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * CallsUsagePerDateDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CallsUsagePerDateDto {
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
@@ -74,7 +74,7 @@ public class CallsUsagePerDateDto {
    * The date when the usage was tracked.
    * @return date
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public LocalDate getDate() {
     return date;
   }
@@ -91,7 +91,7 @@ public class CallsUsagePerDateDto {
    * The total number of API calls.
    * @return totalCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalCalls() {
     return totalCalls;
   }
@@ -108,7 +108,7 @@ public class CallsUsagePerDateDto {
    * The total number of bytes transferred.
    * @return totalBytes
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalBytes() {
     return totalBytes;
   }
@@ -125,7 +125,7 @@ public class CallsUsagePerDateDto {
    * The average duration in milliseconds.
    * @return averageElapsedMs
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Double getAverageElapsedMs() {
     return averageElapsedMs;
   }

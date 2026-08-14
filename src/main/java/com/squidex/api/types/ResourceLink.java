@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * ResourceLink
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ResourceLink {
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
@@ -71,7 +71,7 @@ public class ResourceLink {
    * The link url.
    * @return href
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getHref() {
     return href;
   }
@@ -88,7 +88,7 @@ public class ResourceLink {
    * The link method.
    * @return method
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMethod() {
     return method;
   }
@@ -105,7 +105,7 @@ public class ResourceLink {
    * Additional data about the link.
    * @return metadata
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMetadata() {
     return metadata;
   }

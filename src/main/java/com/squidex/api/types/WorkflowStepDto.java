@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * WorkflowStepDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class WorkflowStepDto {
   public static final String SERIALIZED_NAME_TRANSITIONS = "transitions";
   @SerializedName(SERIALIZED_NAME_TRANSITIONS)
@@ -93,7 +93,7 @@ public class WorkflowStepDto {
    * The transitions.
    * @return transitions
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, WorkflowTransitionDto> getTransitions() {
     return transitions;
   }
@@ -110,7 +110,7 @@ public class WorkflowStepDto {
    * The optional color.
    * @return color
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getColor() {
     return color;
   }
@@ -127,7 +127,7 @@ public class WorkflowStepDto {
    * True if the content should be validated when moving to this step.
    * @return validate
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getValidate() {
     return validate;
   }
@@ -144,7 +144,7 @@ public class WorkflowStepDto {
    * Indicates if updates should not be allowed.
    * @return noUpdate
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getNoUpdate() {
     return noUpdate;
   }
@@ -161,7 +161,7 @@ public class WorkflowStepDto {
    * Optional expression that must evaluate to true when you want to prevent updates.
    * @return noUpdateExpression
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getNoUpdateExpression() {
     return noUpdateExpression;
   }
@@ -186,7 +186,7 @@ public class WorkflowStepDto {
    * Optional list of roles to restrict the updates for users with these roles.
    * @return noUpdateRoles
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getNoUpdateRoles() {
     return noUpdateRoles;
   }

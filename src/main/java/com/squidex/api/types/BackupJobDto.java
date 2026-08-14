@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * BackupJobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BackupJobDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -96,7 +96,7 @@ public class BackupJobDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -113,7 +113,7 @@ public class BackupJobDto {
    * The ID of the backup job.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -130,7 +130,7 @@ public class BackupJobDto {
    * The time when the job has been started.
    * @return started
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getStarted() {
     return started;
   }
@@ -147,7 +147,7 @@ public class BackupJobDto {
    * The time when the job has been stopped.
    * @return stopped
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getStopped() {
     return stopped;
   }
@@ -164,7 +164,7 @@ public class BackupJobDto {
    * The number of handled events.
    * @return handledEvents
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getHandledEvents() {
     return handledEvents;
   }
@@ -181,7 +181,7 @@ public class BackupJobDto {
    * The number of handled assets.
    * @return handledAssets
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getHandledAssets() {
     return handledAssets;
   }
@@ -198,7 +198,7 @@ public class BackupJobDto {
    * Get status
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public JobStatus getStatus() {
     return status;
   }

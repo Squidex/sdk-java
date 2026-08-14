@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateFieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateFieldDto {
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
@@ -65,7 +65,7 @@ public class UpdateFieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }

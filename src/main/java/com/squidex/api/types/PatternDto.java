@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * PatternDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PatternDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -71,7 +71,7 @@ public class PatternDto {
    * The name of the suggestion.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -88,7 +88,7 @@ public class PatternDto {
    * The regex pattern.
    * @return regex
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getRegex() {
     return regex;
   }
@@ -105,7 +105,7 @@ public class PatternDto {
    * The regex message.
    * @return message
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMessage() {
     return message;
   }

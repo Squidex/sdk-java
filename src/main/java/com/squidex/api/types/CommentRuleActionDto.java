@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * CommentRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CommentRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
@@ -69,7 +69,7 @@ public class CommentRuleActionDto extends RuleActionDto {
    * The comment text.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }
@@ -86,7 +86,7 @@ public class CommentRuleActionDto extends RuleActionDto {
    * An optional client name.
    * @return client
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getClient() {
     return client;
   }

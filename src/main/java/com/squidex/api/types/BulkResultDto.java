@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * BulkResultDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BulkResultDto {
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
@@ -76,7 +76,7 @@ public class BulkResultDto {
    * Get error
    * @return error
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ErrorDto getError() {
     return error;
   }
@@ -93,7 +93,7 @@ public class BulkResultDto {
    * The index of the bulk job where the result belongs to. The order can change.
    * @return jobIndex
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getJobIndex() {
     return jobIndex;
   }
@@ -110,7 +110,7 @@ public class BulkResultDto {
    * The ID of the entity that has been handled successfully or not.
    * @return id
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -130,7 +130,7 @@ public class BulkResultDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContentId() {
     return contentId;
   }

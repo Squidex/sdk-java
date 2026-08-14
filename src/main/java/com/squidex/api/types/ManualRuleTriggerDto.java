@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * ManualRuleTriggerDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ManualRuleTriggerDto extends RuleTriggerDto {
   public ManualRuleTriggerDto() {
   }

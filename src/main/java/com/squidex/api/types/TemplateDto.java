@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * TemplateDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TemplateDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -87,7 +87,7 @@ public class TemplateDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -104,7 +104,7 @@ public class TemplateDto {
    * The name of the template.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -121,7 +121,7 @@ public class TemplateDto {
    * The title of the template.
    * @return title
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }
@@ -138,7 +138,7 @@ public class TemplateDto {
    * The description of the template.
    * @return description
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDescription() {
     return description;
   }
@@ -155,7 +155,7 @@ public class TemplateDto {
    * True, if the template is a starter.
    * @return isStarter
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsStarter() {
     return isStarter;
   }

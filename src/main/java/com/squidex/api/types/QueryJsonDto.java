@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * QueryJsonDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class QueryJsonDto {
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
@@ -86,7 +86,7 @@ public class QueryJsonDto {
    * Get filter
    * @return filter
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getFilter() {
     return filter;
   }
@@ -103,7 +103,7 @@ public class QueryJsonDto {
    * Get fullText
    * @return fullText
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFullText() {
     return fullText;
   }
@@ -120,7 +120,7 @@ public class QueryJsonDto {
    * Get skip
    * @return skip
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getSkip() {
     return skip;
   }
@@ -137,7 +137,7 @@ public class QueryJsonDto {
    * Get take
    * @return take
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTake() {
     return take;
   }
@@ -154,7 +154,7 @@ public class QueryJsonDto {
    * Get random
    * @return random
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getRandom() {
     return random;
   }
@@ -171,7 +171,7 @@ public class QueryJsonDto {
    * Get top
    * @return top
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTop() {
     return top;
   }
@@ -196,7 +196,7 @@ public class QueryJsonDto {
    * Get sort
    * @return sort
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<SortNode> getSort() {
     return sort;
   }

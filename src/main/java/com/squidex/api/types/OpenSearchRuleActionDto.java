@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * OpenSearchRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class OpenSearchRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_HOST = "host";
   @SerializedName(SERIALIZED_NAME_HOST)
@@ -82,7 +82,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The url to the instance or cluster.
    * @return host
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getHost() {
     return host;
   }
@@ -99,7 +99,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The name of the index.
    * @return indexName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIndexName() {
     return indexName;
   }
@@ -116,7 +116,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The optional username.
    * @return username
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUsername() {
     return username;
   }
@@ -133,7 +133,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The optional password.
    * @return password
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPassword() {
     return password;
   }
@@ -150,7 +150,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The optional custom document.
    * @return document
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDocument() {
     return document;
   }
@@ -167,7 +167,7 @@ public class OpenSearchRuleActionDto extends RuleActionDto {
    * The condition when to delete the document.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }

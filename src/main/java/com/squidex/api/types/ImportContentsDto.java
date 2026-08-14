@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * ImportContentsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ImportContentsDto {
   public static final String SERIALIZED_NAME_DATAS = "datas";
   @SerializedName(SERIALIZED_NAME_DATAS)
@@ -85,7 +85,7 @@ public class ImportContentsDto {
    * The data to import.
    * @return datas
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Map<String, Map<String, Object>>> getDatas() {
     return datas;
   }
@@ -105,7 +105,7 @@ public class ImportContentsDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getPublish() {
     return publish;
   }
@@ -123,7 +123,7 @@ public class ImportContentsDto {
    * True to turn off scripting for faster inserts. Default: true.
    * @return doNotScript
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDoNotScript() {
     return doNotScript;
   }
@@ -140,7 +140,7 @@ public class ImportContentsDto {
    * True to turn off costly validation: Unique checks, asset checks and reference checks. Default: true.
    * @return optimizeValidation
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getOptimizeValidation() {
     return optimizeValidation;
   }

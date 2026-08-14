@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * RuleElementPropertyDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RuleElementPropertyDto {
   public static final String SERIALIZED_NAME_EDITOR = "editor";
   @SerializedName(SERIALIZED_NAME_EDITOR)
@@ -86,7 +86,7 @@ public class RuleElementPropertyDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleFieldEditor getEditor() {
     return editor;
   }
@@ -103,7 +103,7 @@ public class RuleElementPropertyDto {
    * The name of the editor.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -120,7 +120,7 @@ public class RuleElementPropertyDto {
    * The label to use.
    * @return display
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplay() {
     return display;
   }
@@ -145,7 +145,7 @@ public class RuleElementPropertyDto {
    * The options, if the editor is a dropdown.
    * @return options
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getOptions() {
     return options;
   }
@@ -162,7 +162,7 @@ public class RuleElementPropertyDto {
    * The optional description.
    * @return description
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDescription() {
     return description;
   }
@@ -179,7 +179,7 @@ public class RuleElementPropertyDto {
    * Indicates if the property is formattable.
    * @return isFormattable
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsFormattable() {
     return isFormattable;
   }
@@ -196,7 +196,7 @@ public class RuleElementPropertyDto {
    * Indicates if the property is required.
    * @return isRequired
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsRequired() {
     return isRequired;
   }
