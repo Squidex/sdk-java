@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * AlgoliaRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AlgoliaRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_APP_ID = "appId";
   @SerializedName(SERIALIZED_NAME_APP_ID)
@@ -78,7 +78,7 @@ public class AlgoliaRuleActionDto extends RuleActionDto {
    * The application ID.
    * @return appId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAppId() {
     return appId;
   }
@@ -95,7 +95,7 @@ public class AlgoliaRuleActionDto extends RuleActionDto {
    * The API key to grant access to Squidex.
    * @return apiKey
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getApiKey() {
     return apiKey;
   }
@@ -112,7 +112,7 @@ public class AlgoliaRuleActionDto extends RuleActionDto {
    * The name of the index.
    * @return indexName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIndexName() {
     return indexName;
   }
@@ -129,7 +129,7 @@ public class AlgoliaRuleActionDto extends RuleActionDto {
    * The optional custom document.
    * @return document
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDocument() {
     return document;
   }
@@ -146,7 +146,7 @@ public class AlgoliaRuleActionDto extends RuleActionDto {
    * The condition when to delete the entry.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }

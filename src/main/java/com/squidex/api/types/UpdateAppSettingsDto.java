@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateAppSettingsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateAppSettingsDto {
   public static final String SERIALIZED_NAME_PATTERNS = "patterns";
   @SerializedName(SERIALIZED_NAME_PATTERNS)
@@ -85,7 +85,7 @@ public class UpdateAppSettingsDto {
    * The configured app patterns.
    * @return patterns
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<PatternDto> getPatterns() {
     return patterns;
   }
@@ -110,7 +110,7 @@ public class UpdateAppSettingsDto {
    * The configured UI editors.
    * @return editors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<EditorDto> getEditors() {
     return editors;
   }
@@ -127,7 +127,7 @@ public class UpdateAppSettingsDto {
    * Hide the scheduler for content items.
    * @return hideScheduler
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getHideScheduler() {
     return hideScheduler;
   }
@@ -144,7 +144,7 @@ public class UpdateAppSettingsDto {
    * Hide the datetime mode button.
    * @return hideDateTimeModeButton
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getHideDateTimeModeButton() {
     return hideDateTimeModeButton;
   }

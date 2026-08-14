@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * TagsFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TagsFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -97,7 +97,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, List<String>> getDefaultValues() {
     return defaultValues;
   }
@@ -122,7 +122,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * The default value.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getDefaultValue() {
     return defaultValue;
   }
@@ -139,7 +139,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed items for the field value.
    * @return minItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinItems() {
     return minItems;
   }
@@ -156,7 +156,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed items for the field value.
    * @return maxItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxItems() {
     return maxItems;
   }
@@ -181,7 +181,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed values for the field value.
    * @return allowedValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getAllowedValues() {
     return allowedValues;
   }
@@ -198,7 +198,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates whether GraphQL Enum should be created.
    * @return createEnum
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getCreateEnum() {
     return createEnum;
   }
@@ -215,7 +215,7 @@ public class TagsFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public TagsFieldEditor getEditor() {
     return editor;
   }

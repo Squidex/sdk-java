@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * StorageUsagePerDateDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class StorageUsagePerDateDto {
   public static final String SERIALIZED_NAME_DATE = "date";
   @SerializedName(SERIALIZED_NAME_DATE)
@@ -71,7 +71,7 @@ public class StorageUsagePerDateDto {
    * The date when the usage was tracked.
    * @return date
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public LocalDate getDate() {
     return date;
   }
@@ -88,7 +88,7 @@ public class StorageUsagePerDateDto {
    * The number of assets.
    * @return totalCount
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalCount() {
     return totalCount;
   }
@@ -105,7 +105,7 @@ public class StorageUsagePerDateDto {
    * The size in bytes.
    * @return totalSize
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalSize() {
     return totalSize;
   }

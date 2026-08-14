@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * AnnotateAssetDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AnnotateAssetDto {
   public static final String SERIALIZED_NAME_FILE_NAME = "fileName";
   @SerializedName(SERIALIZED_NAME_FILE_NAME)
@@ -81,7 +81,7 @@ public class AnnotateAssetDto {
    * The new name of the asset.
    * @return fileName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFileName() {
     return fileName;
   }
@@ -98,7 +98,7 @@ public class AnnotateAssetDto {
    * The new slug of the asset.
    * @return slug
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -115,7 +115,7 @@ public class AnnotateAssetDto {
    * True, when the asset is not public.
    * @return isProtected
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsProtected() {
     return isProtected;
   }
@@ -140,7 +140,7 @@ public class AnnotateAssetDto {
    * The new asset tags.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
@@ -165,7 +165,7 @@ public class AnnotateAssetDto {
    * The asset metadata.
    * @return metadata
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Object> getMetadata() {
     return metadata;
   }

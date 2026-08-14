@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * SimulatedRuleEventDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SimulatedRuleEventDto {
   public static final String SERIALIZED_NAME_EVENT_ID = "eventId";
   @SerializedName(SERIALIZED_NAME_EVENT_ID)
@@ -92,7 +92,7 @@ public class SimulatedRuleEventDto {
    * The unique event id.
    * @return eventId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -109,7 +109,7 @@ public class SimulatedRuleEventDto {
    * The the unique id of the simulated event.
    * @return uniqueId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUniqueId() {
     return uniqueId;
   }
@@ -126,7 +126,7 @@ public class SimulatedRuleEventDto {
    * The name of the event.
    * @return eventName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventName() {
     return eventName;
   }
@@ -143,7 +143,7 @@ public class SimulatedRuleEventDto {
    * The source event.
    * @return event
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getEvent() {
     return event;
   }
@@ -160,7 +160,7 @@ public class SimulatedRuleEventDto {
    * The enriched event.
    * @return enrichedEvent
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getEnrichedEvent() {
     return enrichedEvent;
   }
@@ -177,7 +177,7 @@ public class SimulatedRuleEventDto {
    * The data for the action.
    * @return actionName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getActionName() {
     return actionName;
   }
@@ -194,7 +194,7 @@ public class SimulatedRuleEventDto {
    * The name of the action.
    * @return actionData
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getActionData() {
     return actionData;
   }
@@ -211,7 +211,7 @@ public class SimulatedRuleEventDto {
    * The name of the event.
    * @return error
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getError() {
     return error;
   }
@@ -236,7 +236,7 @@ public class SimulatedRuleEventDto {
    * The reason why the event has been skipped.
    * @return skipReasons
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<SkipReason> getSkipReasons() {
     return skipReasons;
   }

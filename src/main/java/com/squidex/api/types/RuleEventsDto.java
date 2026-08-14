@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * RuleEventsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RuleEventsDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -84,7 +84,7 @@ public class RuleEventsDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -101,7 +101,7 @@ public class RuleEventsDto {
    * The total number of rule events.
    * @return total
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotal() {
     return total;
   }
@@ -126,7 +126,7 @@ public class RuleEventsDto {
    * The rule events.
    * @return items
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RuleEventDto> getItems() {
     return items;
   }

@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateUserDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateUserDto {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -76,7 +76,7 @@ public class UpdateUserDto {
    * The email of the user. Unique value.
    * @return email
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -93,7 +93,7 @@ public class UpdateUserDto {
    * The display name (usually first name and last name) of the user.
    * @return displayName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -110,7 +110,7 @@ public class UpdateUserDto {
    * The password of the user.
    * @return password
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPassword() {
     return password;
   }
@@ -135,7 +135,7 @@ public class UpdateUserDto {
    * Additional permissions for the user.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }

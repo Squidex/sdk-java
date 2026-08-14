@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * NotificationRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class NotificationRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
@@ -75,7 +75,7 @@ public class NotificationRuleActionDto extends RuleActionDto {
    * The user id or email.
    * @return user
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUser() {
     return user;
   }
@@ -92,7 +92,7 @@ public class NotificationRuleActionDto extends RuleActionDto {
    * The text to send.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }
@@ -109,7 +109,7 @@ public class NotificationRuleActionDto extends RuleActionDto {
    * The optional url to attach to the notification.
    * @return url
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -126,7 +126,7 @@ public class NotificationRuleActionDto extends RuleActionDto {
    * An optional client name.
    * @return client
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getClient() {
     return client;
   }

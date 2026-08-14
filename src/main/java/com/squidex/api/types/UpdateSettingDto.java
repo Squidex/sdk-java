@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateSettingDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateSettingDto {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -64,7 +64,7 @@ public class UpdateSettingDto {
    * The value for the setting.
    * @return value
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getValue() {
     return value;
   }

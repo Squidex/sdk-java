@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * ContributorsMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ContributorsMetadata {
   public static final String SERIALIZED_NAME_IS_INVITED = "isInvited";
   @SerializedName(SERIALIZED_NAME_IS_INVITED)
@@ -64,7 +64,7 @@ public class ContributorsMetadata {
    * Indicates whether the user has been invited.
    * @return isInvited
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIsInvited() {
     return isInvited;
   }

@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * RuleElementDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RuleElementDto {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -86,7 +86,7 @@ public class RuleElementDto {
    * Describes the action or trigger type.
    * @return description
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDescription() {
     return description;
   }
@@ -103,7 +103,7 @@ public class RuleElementDto {
    * The label for the action or trigger type.
    * @return display
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplay() {
     return display;
   }
@@ -120,7 +120,7 @@ public class RuleElementDto {
    * Optional title.
    * @return title
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTitle() {
     return title;
   }
@@ -137,7 +137,7 @@ public class RuleElementDto {
    * The color for the icon.
    * @return iconColor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getIconColor() {
     return iconColor;
   }
@@ -154,7 +154,7 @@ public class RuleElementDto {
    * The image for the icon.
    * @return iconImage
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getIconImage() {
     return iconImage;
   }
@@ -171,7 +171,7 @@ public class RuleElementDto {
    * The optional link to the product that is integrated.
    * @return readMore
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getReadMore() {
     return readMore;
   }
@@ -196,7 +196,7 @@ public class RuleElementDto {
    * The properties.
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RuleElementPropertyDto> getProperties() {
     return properties;
   }

@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * AzureQueueRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AzureQueueRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_CONNECTION_STRING = "connectionString";
   @SerializedName(SERIALIZED_NAME_CONNECTION_STRING)
@@ -72,7 +72,7 @@ public class AzureQueueRuleActionDto extends RuleActionDto {
    * The connection string to the storage account.
    * @return connectionString
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getConnectionString() {
     return connectionString;
   }
@@ -89,7 +89,7 @@ public class AzureQueueRuleActionDto extends RuleActionDto {
    * The name of the queue.
    * @return queue
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getQueue() {
     return queue;
   }
@@ -106,7 +106,7 @@ public class AzureQueueRuleActionDto extends RuleActionDto {
    * Leave it empty to use the full event as body.
    * @return payload
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPayload() {
     return payload;
   }

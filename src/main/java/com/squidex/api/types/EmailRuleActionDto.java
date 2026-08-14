@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * EmailRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class EmailRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_SERVER_HOST = "serverHost";
   @SerializedName(SERIALIZED_NAME_SERVER_HOST)
@@ -86,7 +86,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The IP address or host to the SMTP server.
    * @return serverHost
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getServerHost() {
     return serverHost;
   }
@@ -103,7 +103,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The port to the SMTP server.
    * @return serverPort
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getServerPort() {
     return serverPort;
   }
@@ -120,7 +120,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The username for the SMTP server.
    * @return serverUsername
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getServerUsername() {
     return serverUsername;
   }
@@ -137,7 +137,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The password for the SMTP server.
    * @return serverPassword
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getServerPassword() {
     return serverPassword;
   }
@@ -154,7 +154,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The email sending address.
    * @return messageFrom
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessageFrom() {
     return messageFrom;
   }
@@ -171,7 +171,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The email message will be sent to.
    * @return messageTo
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessageTo() {
     return messageTo;
   }
@@ -188,7 +188,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The subject line for this email message.
    * @return messageSubject
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessageSubject() {
     return messageSubject;
   }
@@ -205,7 +205,7 @@ public class EmailRuleActionDto extends RuleActionDto {
    * The message body.
    * @return messageBody
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessageBody() {
     return messageBody;
   }

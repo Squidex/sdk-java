@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateClientDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateClientDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -77,7 +77,7 @@ public class UpdateClientDto {
    * The new display name of the client.
    * @return name
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -94,7 +94,7 @@ public class UpdateClientDto {
    * The role of the client.
    * @return role
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRole() {
     return role;
   }
@@ -111,7 +111,7 @@ public class UpdateClientDto {
    * True to allow anonymous access without an access token for this client.
    * @return allowAnonymous
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getAllowAnonymous() {
     return allowAnonymous;
   }
@@ -128,7 +128,7 @@ public class UpdateClientDto {
    * The number of allowed api calls per month for this client.
    * @return apiCallsLimit
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Long getApiCallsLimit() {
     return apiCallsLimit;
   }
@@ -145,7 +145,7 @@ public class UpdateClientDto {
    * The number of allowed api traffic bytes per month for this client.
    * @return apiTrafficLimit
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Long getApiTrafficLimit() {
     return apiTrafficLimit;
   }

@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * ComponentsFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_MIN_ITEMS = "minItems";
   @SerializedName(SERIALIZED_NAME_MIN_ITEMS)
@@ -81,7 +81,7 @@ public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed items for the field value.
    * @return minItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinItems() {
     return minItems;
   }
@@ -98,7 +98,7 @@ public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed items for the field value.
    * @return maxItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxItems() {
     return maxItems;
   }
@@ -115,7 +115,7 @@ public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
    * Get calculatedDefaultValue
    * @return calculatedDefaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ArrayCalculatedDefaultValue getCalculatedDefaultValue() {
     return calculatedDefaultValue;
   }
@@ -140,7 +140,7 @@ public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
    * The ID of the embedded schemas.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }
@@ -165,7 +165,7 @@ public class ComponentsFieldPropertiesDto extends FieldPropertiesDto {
    * The fields that must be unique.
    * @return uniqueFields
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getUniqueFields() {
     return uniqueFields;
   }

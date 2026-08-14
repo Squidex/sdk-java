@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * RulesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RulesDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -85,7 +85,7 @@ public class RulesDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -110,7 +110,7 @@ public class RulesDto {
    * The rules.
    * @return items
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RuleDto> getItems() {
     return items;
   }
@@ -127,7 +127,7 @@ public class RulesDto {
    * The ID of the rule that is currently rerunning.
    * @return runningRuleId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRunningRuleId() {
     return runningRuleId;
   }

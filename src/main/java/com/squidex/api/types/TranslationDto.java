@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * TranslationDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TranslationDto {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
@@ -72,7 +72,7 @@ public class TranslationDto {
    * Get status
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public TranslationStatus getStatus() {
     return status;
   }
@@ -89,7 +89,7 @@ public class TranslationDto {
    * Get result
    * @return result
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public TranslationStatus getResult() {
     return result;
   }
@@ -106,7 +106,7 @@ public class TranslationDto {
    * The translated text.
    * @return text
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getText() {
     return text;
   }

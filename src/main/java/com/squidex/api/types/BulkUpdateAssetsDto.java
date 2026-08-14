@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * BulkUpdateAssetsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BulkUpdateAssetsDto {
   public static final String SERIALIZED_NAME_JOBS = "jobs";
   @SerializedName(SERIALIZED_NAME_JOBS)
@@ -85,7 +85,7 @@ public class BulkUpdateAssetsDto {
    * The contents to update or insert.
    * @return jobs
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<BulkUpdateAssetsJobDto> getJobs() {
     return jobs;
   }
@@ -102,7 +102,7 @@ public class BulkUpdateAssetsDto {
    * True to check referrers of deleted assets.
    * @return checkReferrers
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getCheckReferrers() {
     return checkReferrers;
   }
@@ -119,7 +119,7 @@ public class BulkUpdateAssetsDto {
    * True to turn off costly validation: Folder checks. Default: true.
    * @return optimizeValidation
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getOptimizeValidation() {
     return optimizeValidation;
   }
@@ -136,7 +136,7 @@ public class BulkUpdateAssetsDto {
    * True to turn off scripting for faster inserts. Default: true.
    * @return doNotScript
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDoNotScript() {
     return doNotScript;
   }

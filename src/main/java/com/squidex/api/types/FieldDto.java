@@ -56,7 +56,7 @@ import com.squidex.api.core.JSON;
 /**
  * FieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class FieldDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -104,7 +104,7 @@ public class FieldDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -121,7 +121,7 @@ public class FieldDto {
    * The ID of the field.
    * @return fieldId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getFieldId() {
     return fieldId;
   }
@@ -138,7 +138,7 @@ public class FieldDto {
    * The name of the field. Must be unique within the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -155,7 +155,7 @@ public class FieldDto {
    * Defines if the field is hidden.
    * @return isHidden
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsHidden() {
     return isHidden;
   }
@@ -172,7 +172,7 @@ public class FieldDto {
    * Defines if the field is locked.
    * @return isLocked
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsLocked() {
     return isLocked;
   }
@@ -189,7 +189,7 @@ public class FieldDto {
    * Defines if the field is disabled.
    * @return isDisabled
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsDisabled() {
     return isDisabled;
   }
@@ -206,7 +206,7 @@ public class FieldDto {
    * Defines the partitioning of the field.
    * @return partitioning
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPartitioning() {
     return partitioning;
   }
@@ -223,7 +223,7 @@ public class FieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }
@@ -248,7 +248,7 @@ public class FieldDto {
    * The nested fields.
    * @return nested
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<NestedFieldDto> getNested() {
     return nested;
   }

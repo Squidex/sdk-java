@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * AddLanguageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AddLanguageDto {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -64,7 +64,7 @@ public class AddLanguageDto {
    * The language to add.
    * @return language
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLanguage() {
     return language;
   }

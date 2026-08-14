@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateWorkflowDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateWorkflowDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -79,7 +79,7 @@ public class UpdateWorkflowDto {
    * The name of the workflow.
    * @return name
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -104,7 +104,7 @@ public class UpdateWorkflowDto {
    * The workflow steps.
    * @return steps
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, WorkflowStepDto> getSteps() {
     return steps;
   }
@@ -129,7 +129,7 @@ public class UpdateWorkflowDto {
    * The schema ids.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }
@@ -146,7 +146,7 @@ public class UpdateWorkflowDto {
    * The initial step.
    * @return initial
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getInitial() {
     return initial;
   }

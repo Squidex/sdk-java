@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * SchemaCondition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SchemaCondition {
   public static final String SERIALIZED_NAME_SCHEMA_ID = "schemaId";
   @SerializedName(SERIALIZED_NAME_SCHEMA_ID)
@@ -68,7 +68,7 @@ public class SchemaCondition {
    * Get schemaId
    * @return schemaId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSchemaId() {
     return schemaId;
   }
@@ -85,7 +85,7 @@ public class SchemaCondition {
    * Get condition
    * @return condition
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCondition() {
     return condition;
   }

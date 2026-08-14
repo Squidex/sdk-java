@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * RuleEventDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RuleEventDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -106,7 +106,7 @@ public class RuleEventDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -123,7 +123,7 @@ public class RuleEventDto {
    * The ID of the event.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -140,7 +140,7 @@ public class RuleEventDto {
    * The time when the event has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -157,7 +157,7 @@ public class RuleEventDto {
    * The description.
    * @return description
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDescription() {
     return description;
   }
@@ -174,7 +174,7 @@ public class RuleEventDto {
    * The name of the event.
    * @return eventName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventName() {
     return eventName;
   }
@@ -191,7 +191,7 @@ public class RuleEventDto {
    * The last dump.
    * @return lastDump
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLastDump() {
     return lastDump;
   }
@@ -208,7 +208,7 @@ public class RuleEventDto {
    * The number of calls.
    * @return numCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getNumCalls() {
     return numCalls;
   }
@@ -225,7 +225,7 @@ public class RuleEventDto {
    * The next attempt.
    * @return nextAttempt
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getNextAttempt() {
     return nextAttempt;
   }
@@ -242,7 +242,7 @@ public class RuleEventDto {
    * Get result
    * @return result
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleResult getResult() {
     return result;
   }
@@ -259,7 +259,7 @@ public class RuleEventDto {
    * Get jobResult
    * @return jobResult
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleJobResult getJobResult() {
     return jobResult;
   }

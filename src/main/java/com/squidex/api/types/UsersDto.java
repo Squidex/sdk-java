@@ -54,7 +54,7 @@ import com.squidex.api.core.JSON;
 /**
  * UsersDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UsersDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -84,7 +84,7 @@ public class UsersDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -101,7 +101,7 @@ public class UsersDto {
    * The total number of users.
    * @return total
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotal() {
     return total;
   }
@@ -126,7 +126,7 @@ public class UsersDto {
    * The users.
    * @return items
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<UserDto> getItems() {
     return items;
   }

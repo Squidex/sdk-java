@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * AuthSchemeDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AuthSchemeDto {
   public static final String SERIALIZED_NAME_DOMAIN = "domain";
   @SerializedName(SERIALIZED_NAME_DOMAIN)
@@ -80,7 +80,7 @@ public class AuthSchemeDto {
    * The domain name of your user accounts.
    * @return domain
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDomain() {
     return domain;
   }
@@ -97,7 +97,7 @@ public class AuthSchemeDto {
    * The display name for buttons.
    * @return displayName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -114,7 +114,7 @@ public class AuthSchemeDto {
    * The client ID.
    * @return clientId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getClientId() {
     return clientId;
   }
@@ -131,7 +131,7 @@ public class AuthSchemeDto {
    * The client secret.
    * @return clientSecret
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getClientSecret() {
     return clientSecret;
   }
@@ -148,7 +148,7 @@ public class AuthSchemeDto {
    * The authority URL.
    * @return authority
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAuthority() {
     return authority;
   }
@@ -165,7 +165,7 @@ public class AuthSchemeDto {
    * The URL to redirect after a signout.
    * @return signoutRedirectUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSignoutRedirectUrl() {
     return signoutRedirectUrl;
   }

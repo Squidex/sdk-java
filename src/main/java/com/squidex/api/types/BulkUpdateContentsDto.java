@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * BulkUpdateContentsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class BulkUpdateContentsDto {
   public static final String SERIALIZED_NAME_JOBS = "jobs";
   @SerializedName(SERIALIZED_NAME_JOBS)
@@ -97,7 +97,7 @@ public class BulkUpdateContentsDto {
    * The contents to update or insert.
    * @return jobs
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<BulkUpdateContentsJobDto> getJobs() {
     return jobs;
   }
@@ -117,7 +117,7 @@ public class BulkUpdateContentsDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getPublish() {
     return publish;
   }
@@ -135,7 +135,7 @@ public class BulkUpdateContentsDto {
    * True to turn off scripting for faster inserts. Default: true.
    * @return doNotScript
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDoNotScript() {
     return doNotScript;
   }
@@ -152,7 +152,7 @@ public class BulkUpdateContentsDto {
    * True, to also enrich required fields. Default: false.             
    * @return enrichRequiredFields
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getEnrichRequiredFields() {
     return enrichRequiredFields;
   }
@@ -169,7 +169,7 @@ public class BulkUpdateContentsDto {
    * True to turn off validation for faster inserts. Default: false.
    * @return doNotValidate
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDoNotValidate() {
     return doNotValidate;
   }
@@ -186,7 +186,7 @@ public class BulkUpdateContentsDto {
    * True to turn off validation of workflow rules. Default: false.
    * @return doNotValidateWorkflow
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDoNotValidateWorkflow() {
     return doNotValidateWorkflow;
   }
@@ -203,7 +203,7 @@ public class BulkUpdateContentsDto {
    * True to check referrers of deleted contents.
    * @return checkReferrers
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getCheckReferrers() {
     return checkReferrers;
   }
@@ -220,7 +220,7 @@ public class BulkUpdateContentsDto {
    * True to turn off costly validation: Unique checks, asset checks and reference checks. Default: true.
    * @return optimizeValidation
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getOptimizeValidation() {
     return optimizeValidation;
   }

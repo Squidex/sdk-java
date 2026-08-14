@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * UserDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UserDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -92,7 +92,7 @@ public class UserDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -109,7 +109,7 @@ public class UserDto {
    * The ID of the user.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -126,7 +126,7 @@ public class UserDto {
    * The email of the user. Unique value.
    * @return email
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -143,7 +143,7 @@ public class UserDto {
    * The display name (usually first name and last name) of the user.
    * @return displayName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -160,7 +160,7 @@ public class UserDto {
    * Determines if the user is locked.
    * @return isLocked
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsLocked() {
     return isLocked;
   }
@@ -185,7 +185,7 @@ public class UserDto {
    * Additional permissions for the user.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }

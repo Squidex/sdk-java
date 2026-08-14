@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateRuleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateRuleDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -76,7 +76,7 @@ public class UpdateRuleDto {
    * Optional rule name.
    * @return name
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -93,7 +93,7 @@ public class UpdateRuleDto {
    * Get trigger
    * @return trigger
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RuleTriggerDto getTrigger() {
     return trigger;
   }
@@ -110,7 +110,7 @@ public class UpdateRuleDto {
    * Get action
    * @return action
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RuleActionDto getAction() {
     return action;
   }
@@ -127,7 +127,7 @@ public class UpdateRuleDto {
    * Enable or disable the rule.
    * @return isEnabled
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsEnabled() {
     return isEnabled;
   }

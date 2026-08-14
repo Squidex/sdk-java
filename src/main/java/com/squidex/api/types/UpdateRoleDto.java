@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateRoleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateRoleDto {
   public static final String SERIALIZED_NAME_PERMISSIONS = "permissions";
   @SerializedName(SERIALIZED_NAME_PERMISSIONS)
@@ -79,7 +79,7 @@ public class UpdateRoleDto {
    * Associated list of permissions.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }
@@ -104,7 +104,7 @@ public class UpdateRoleDto {
    * Associated list of UI properties.
    * @return properties
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Object> getProperties() {
     return properties;
   }

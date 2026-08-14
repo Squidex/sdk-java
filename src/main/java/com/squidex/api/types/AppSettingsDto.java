@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * AppSettingsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AppSettingsDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -94,7 +94,7 @@ public class AppSettingsDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -119,7 +119,7 @@ public class AppSettingsDto {
    * The configured app patterns.
    * @return patterns
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<PatternDto> getPatterns() {
     return patterns;
   }
@@ -144,7 +144,7 @@ public class AppSettingsDto {
    * The configured UI editors.
    * @return editors
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<EditorDto> getEditors() {
     return editors;
   }
@@ -161,7 +161,7 @@ public class AppSettingsDto {
    * Hide the scheduler for content items.
    * @return hideScheduler
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHideScheduler() {
     return hideScheduler;
   }
@@ -178,7 +178,7 @@ public class AppSettingsDto {
    * Hide the datetime mode button.
    * @return hideDateTimeModeButton
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHideDateTimeModeButton() {
     return hideDateTimeModeButton;
   }
@@ -195,7 +195,7 @@ public class AppSettingsDto {
    * The version of the app.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }

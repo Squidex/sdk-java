@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * CallsUsageDtoDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CallsUsageDtoDto {
   public static final String SERIALIZED_NAME_TOTAL_CALLS = "totalCalls";
   @SerializedName(SERIALIZED_NAME_TOTAL_CALLS)
@@ -92,7 +92,7 @@ public class CallsUsageDtoDto {
    * The total number of API calls.
    * @return totalCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalCalls() {
     return totalCalls;
   }
@@ -109,7 +109,7 @@ public class CallsUsageDtoDto {
    * The total number of bytes transferred.
    * @return totalBytes
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getTotalBytes() {
     return totalBytes;
   }
@@ -126,7 +126,7 @@ public class CallsUsageDtoDto {
    * The total number of API calls this month.
    * @return monthCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMonthCalls() {
     return monthCalls;
   }
@@ -143,7 +143,7 @@ public class CallsUsageDtoDto {
    * The total number of bytes transferred this month.
    * @return monthBytes
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMonthBytes() {
     return monthBytes;
   }
@@ -160,7 +160,7 @@ public class CallsUsageDtoDto {
    * The amount of calls that will block the app.
    * @return blockingApiCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getBlockingApiCalls() {
     return blockingApiCalls;
   }
@@ -177,7 +177,7 @@ public class CallsUsageDtoDto {
    * The included API traffic.
    * @return allowedBytes
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getAllowedBytes() {
     return allowedBytes;
   }
@@ -194,7 +194,7 @@ public class CallsUsageDtoDto {
    * The included API calls.
    * @return allowedCalls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getAllowedCalls() {
     return allowedCalls;
   }
@@ -211,7 +211,7 @@ public class CallsUsageDtoDto {
    * The average duration in milliseconds.
    * @return averageElapsedMs
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Double getAverageElapsedMs() {
     return averageElapsedMs;
   }
@@ -236,7 +236,7 @@ public class CallsUsageDtoDto {
    * The statistics by date and group.
    * @return details
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, List<CallsUsagePerDateDto>> getDetails() {
     return details;
   }

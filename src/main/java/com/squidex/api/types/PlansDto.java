@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * PlansDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PlansDto {
   public static final String SERIALIZED_NAME_PLANS = "plans";
   @SerializedName(SERIALIZED_NAME_PLANS)
@@ -94,7 +94,7 @@ public class PlansDto {
    * The available plans.
    * @return plans
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<PlanDto> getPlans() {
     return plans;
   }
@@ -111,7 +111,7 @@ public class PlansDto {
    * The current plan id.
    * @return currentPlanId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCurrentPlanId() {
     return currentPlanId;
   }
@@ -128,7 +128,7 @@ public class PlansDto {
    * The plan owner.
    * @return planOwner
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlanOwner() {
     return planOwner;
   }
@@ -145,7 +145,7 @@ public class PlansDto {
    * The link to the management portal.
    * @return portalLink
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public URI getPortalLink() {
     return portalLink;
   }
@@ -162,7 +162,7 @@ public class PlansDto {
    * Get referral
    * @return referral
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ReferralInfo getReferral() {
     return referral;
   }
@@ -179,7 +179,7 @@ public class PlansDto {
    * Get locked
    * @return locked
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public PlansLockedReason getLocked() {
     return locked;
   }

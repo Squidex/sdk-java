@@ -57,7 +57,7 @@ import com.squidex.api.core.JSON;
 /**
  * ContentDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ContentDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -138,7 +138,7 @@ public class ContentDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -155,7 +155,7 @@ public class ContentDto {
    * The if of the content item.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -172,7 +172,7 @@ public class ContentDto {
    * The user that has created the content item.
    * @return createdBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCreatedBy() {
     return createdBy;
   }
@@ -189,7 +189,7 @@ public class ContentDto {
    * The user that has updated the content item.
    * @return lastModifiedBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -206,7 +206,7 @@ public class ContentDto {
    * The data of the content item.
    * @return data
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getData() {
     return data;
   }
@@ -231,7 +231,7 @@ public class ContentDto {
    * Get referenceData
    * @return referenceData
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Map<String, Object>> getReferenceData() {
     return referenceData;
   }
@@ -248,7 +248,7 @@ public class ContentDto {
    * The date and time when the content item has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -265,7 +265,7 @@ public class ContentDto {
    * The date and time when the content item has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -282,7 +282,7 @@ public class ContentDto {
    * The status of the content.
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -299,7 +299,7 @@ public class ContentDto {
    * The new status of the content.
    * @return newStatus
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getNewStatus() {
     return newStatus;
   }
@@ -316,7 +316,7 @@ public class ContentDto {
    * The color of the status.
    * @return statusColor
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatusColor() {
     return statusColor;
   }
@@ -333,7 +333,7 @@ public class ContentDto {
    * The color of the new status.
    * @return newStatusColor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getNewStatusColor() {
     return newStatusColor;
   }
@@ -350,7 +350,7 @@ public class ContentDto {
    * The UI token.
    * @return editToken
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getEditToken() {
     return editToken;
   }
@@ -367,7 +367,7 @@ public class ContentDto {
    * Get scheduleJob
    * @return scheduleJob
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ScheduleJobDto getScheduleJob() {
     return scheduleJob;
   }
@@ -384,7 +384,7 @@ public class ContentDto {
    * The ID of the schema.
    * @return schemaId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSchemaId() {
     return schemaId;
   }
@@ -401,7 +401,7 @@ public class ContentDto {
    * The name of the schema.
    * @return schemaName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSchemaName() {
     return schemaName;
   }
@@ -418,7 +418,7 @@ public class ContentDto {
    * The display name of the schema.
    * @return schemaDisplayName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSchemaDisplayName() {
     return schemaDisplayName;
   }
@@ -443,7 +443,7 @@ public class ContentDto {
    * The reference fields.
    * @return referenceFields
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<FieldDto> getReferenceFields() {
     return referenceFields;
   }
@@ -460,7 +460,7 @@ public class ContentDto {
    * Indicates whether the content is deleted.
    * @return isDeleted
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsDeleted() {
     return isDeleted;
   }
@@ -477,7 +477,7 @@ public class ContentDto {
    * The version of the content.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }

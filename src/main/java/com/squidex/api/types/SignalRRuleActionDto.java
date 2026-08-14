@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * SignalRRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SignalRRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_CONNECTION_STRING = "connectionString";
   @SerializedName(SERIALIZED_NAME_CONNECTION_STRING)
@@ -82,7 +82,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * The connection string to the Azure SignalR.
    * @return connectionString
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getConnectionString() {
     return connectionString;
   }
@@ -99,7 +99,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * The name of the hub.
    * @return hubName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getHubName() {
     return hubName;
   }
@@ -116,7 +116,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * Get action
    * @return action
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ActionTypeEnum getAction() {
     return action;
   }
@@ -133,7 +133,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * Set the Name of the hub method received by the customer.
    * @return methodName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMethodName() {
     return methodName;
   }
@@ -150,7 +150,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * Define target users or groups by id or name. One item per line. Not needed for Broadcast action.
    * @return target
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTarget() {
     return target;
   }
@@ -167,7 +167,7 @@ public class SignalRRuleActionDto extends RuleActionDto {
    * Leave it empty to use the full event as body.
    * @return payload
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPayload() {
     return payload;
   }

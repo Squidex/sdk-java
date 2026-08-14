@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * WorkflowTransitionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class WorkflowTransitionDto {
   public static final String SERIALIZED_NAME_EXPRESSION = "expression";
   @SerializedName(SERIALIZED_NAME_EXPRESSION)
@@ -70,7 +70,7 @@ public class WorkflowTransitionDto {
    * The optional expression.
    * @return expression
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getExpression() {
     return expression;
   }
@@ -95,7 +95,7 @@ public class WorkflowTransitionDto {
    * The optional restricted role.
    * @return roles
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getRoles() {
     return roles;
   }

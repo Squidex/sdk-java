@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * AddFieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AddFieldDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -72,7 +72,7 @@ public class AddFieldDto {
    * The name of the field. Must be unique within the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -89,7 +89,7 @@ public class AddFieldDto {
    * Determines the optional partitioning of the field.
    * @return partitioning
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPartitioning() {
     return partitioning;
   }
@@ -106,7 +106,7 @@ public class AddFieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }

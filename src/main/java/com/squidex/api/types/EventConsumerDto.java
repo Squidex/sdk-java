@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * EventConsumerDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class EventConsumerDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -94,7 +94,7 @@ public class EventConsumerDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -111,7 +111,7 @@ public class EventConsumerDto {
    * Indicates if the event consumer has been started.
    * @return isStopped
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsStopped() {
     return isStopped;
   }
@@ -128,7 +128,7 @@ public class EventConsumerDto {
    * Indicates if the event consumer is resetting at the moment.
    * @return isResetting
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsResetting() {
     return isResetting;
   }
@@ -145,7 +145,7 @@ public class EventConsumerDto {
    * The number of handled events.
    * @return count
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getCount() {
     return count;
   }
@@ -162,7 +162,7 @@ public class EventConsumerDto {
    * The name of the event consumer.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -179,7 +179,7 @@ public class EventConsumerDto {
    * The error details if the event consumer has been stopped after a failure.
    * @return error
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getError() {
     return error;
   }
@@ -196,7 +196,7 @@ public class EventConsumerDto {
    * The position within the vent stream.
    * @return position
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPosition() {
     return position;
   }

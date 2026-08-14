@@ -58,7 +58,7 @@ import com.squidex.api.core.JSON;
 /**
  * CreateSchemaDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CreateSchemaDto {
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
@@ -108,7 +108,7 @@ public class CreateSchemaDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public SchemaPropertiesDto getProperties() {
     return properties;
   }
@@ -125,7 +125,7 @@ public class CreateSchemaDto {
    * Get scripts
    * @return scripts
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public SchemaScriptsDto getScripts() {
     return scripts;
   }
@@ -150,7 +150,7 @@ public class CreateSchemaDto {
    * The names of the fields that should be used in references.
    * @return fieldsInReferences
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInReferences() {
     return fieldsInReferences;
   }
@@ -175,7 +175,7 @@ public class CreateSchemaDto {
    * The names of the fields that should be shown in lists, including meta fields.
    * @return fieldsInLists
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInLists() {
     return fieldsInLists;
   }
@@ -200,7 +200,7 @@ public class CreateSchemaDto {
    * Optional fields.
    * @return fields
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<UpsertSchemaFieldDto> getFields() {
     return fields;
   }
@@ -225,7 +225,7 @@ public class CreateSchemaDto {
    * The optional preview urls.
    * @return previewUrls
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, String> getPreviewUrls() {
     return previewUrls;
   }
@@ -250,7 +250,7 @@ public class CreateSchemaDto {
    * The optional field Rules.
    * @return fieldRules
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<FieldRuleDto> getFieldRules() {
     return fieldRules;
   }
@@ -267,7 +267,7 @@ public class CreateSchemaDto {
    * The category.
    * @return category
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCategory() {
     return category;
   }
@@ -284,7 +284,7 @@ public class CreateSchemaDto {
    * Set it to true to autopublish the schema.
    * @return isPublished
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsPublished() {
     return isPublished;
   }
@@ -301,7 +301,7 @@ public class CreateSchemaDto {
    * The name of the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -318,7 +318,7 @@ public class CreateSchemaDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public SchemaType getType() {
     return type;
   }
@@ -338,7 +338,7 @@ public class CreateSchemaDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsSingleton() {
     return isSingleton;
   }

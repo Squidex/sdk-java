@@ -60,7 +60,7 @@ import com.squidex.api.core.JSON;
 /**
  * SchemaDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class SchemaDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -139,7 +139,7 @@ public class SchemaDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -156,7 +156,7 @@ public class SchemaDto {
    * The ID of the schema.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -173,7 +173,7 @@ public class SchemaDto {
    * The user that has created the schema.
    * @return createdBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCreatedBy() {
     return createdBy;
   }
@@ -190,7 +190,7 @@ public class SchemaDto {
    * The user that has updated the schema.
    * @return lastModifiedBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -207,7 +207,7 @@ public class SchemaDto {
    * The name of the schema. Unique within the app.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -224,7 +224,7 @@ public class SchemaDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public SchemaType getType() {
     return type;
   }
@@ -241,7 +241,7 @@ public class SchemaDto {
    * The name of the category.
    * @return category
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCategory() {
     return category;
   }
@@ -258,7 +258,7 @@ public class SchemaDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public SchemaPropertiesDto getProperties() {
     return properties;
   }
@@ -278,7 +278,7 @@ public class SchemaDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsSingleton() {
     return isSingleton;
   }
@@ -296,7 +296,7 @@ public class SchemaDto {
    * Indicates if the schema is published.
    * @return isPublished
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsPublished() {
     return isPublished;
   }
@@ -313,7 +313,7 @@ public class SchemaDto {
    * The date and time when the schema has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -330,7 +330,7 @@ public class SchemaDto {
    * The date and time when the schema has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -347,7 +347,7 @@ public class SchemaDto {
    * The version of the schema.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }
@@ -364,7 +364,7 @@ public class SchemaDto {
    * Get scripts
    * @return scripts
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public SchemaScriptsDto getScripts() {
     return scripts;
   }
@@ -389,7 +389,7 @@ public class SchemaDto {
    * The preview Urls.
    * @return previewUrls
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, String> getPreviewUrls() {
     return previewUrls;
   }
@@ -414,7 +414,7 @@ public class SchemaDto {
    * The name of fields that are used in content lists.
    * @return fieldsInLists
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFieldsInLists() {
     return fieldsInLists;
   }
@@ -439,7 +439,7 @@ public class SchemaDto {
    * The name of fields that are used in content references.
    * @return fieldsInReferences
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFieldsInReferences() {
     return fieldsInReferences;
   }
@@ -464,7 +464,7 @@ public class SchemaDto {
    * The field rules.
    * @return fieldRules
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<FieldRuleDto> getFieldRules() {
     return fieldRules;
   }
@@ -489,7 +489,7 @@ public class SchemaDto {
    * The list of fields.
    * @return fields
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<FieldDto> getFields() {
     return fields;
   }

@@ -57,7 +57,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpsertSchemaDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpsertSchemaDto {
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
@@ -97,7 +97,7 @@ public class UpsertSchemaDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public SchemaPropertiesDto getProperties() {
     return properties;
   }
@@ -114,7 +114,7 @@ public class UpsertSchemaDto {
    * Get scripts
    * @return scripts
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public SchemaScriptsDto getScripts() {
     return scripts;
   }
@@ -139,7 +139,7 @@ public class UpsertSchemaDto {
    * The names of the fields that should be used in references.
    * @return fieldsInReferences
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInReferences() {
     return fieldsInReferences;
   }
@@ -164,7 +164,7 @@ public class UpsertSchemaDto {
    * The names of the fields that should be shown in lists, including meta fields.
    * @return fieldsInLists
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFieldsInLists() {
     return fieldsInLists;
   }
@@ -189,7 +189,7 @@ public class UpsertSchemaDto {
    * Optional fields.
    * @return fields
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<UpsertSchemaFieldDto> getFields() {
     return fields;
   }
@@ -214,7 +214,7 @@ public class UpsertSchemaDto {
    * The optional preview urls.
    * @return previewUrls
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, String> getPreviewUrls() {
     return previewUrls;
   }
@@ -239,7 +239,7 @@ public class UpsertSchemaDto {
    * The optional field Rules.
    * @return fieldRules
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<FieldRuleDto> getFieldRules() {
     return fieldRules;
   }
@@ -256,7 +256,7 @@ public class UpsertSchemaDto {
    * The category.
    * @return category
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCategory() {
     return category;
   }
@@ -273,7 +273,7 @@ public class UpsertSchemaDto {
    * Set it to true to autopublish the schema.
    * @return isPublished
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsPublished() {
     return isPublished;
   }

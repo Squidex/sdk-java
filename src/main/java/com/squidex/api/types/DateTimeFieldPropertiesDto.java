@@ -57,7 +57,7 @@ import com.squidex.api.core.JSON;
 /**
  * DateTimeFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -99,7 +99,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, OffsetDateTime> getDefaultValues() {
     return defaultValues;
   }
@@ -116,7 +116,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * The default value for the field value.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDefaultValue() {
     return defaultValue;
   }
@@ -133,7 +133,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed value for the field value.
    * @return maxValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getMaxValue() {
     return maxValue;
   }
@@ -150,7 +150,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed value for the field value.
    * @return minValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getMinValue() {
     return minValue;
   }
@@ -167,7 +167,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * The format pattern when displayed in the UI.
    * @return format
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFormat() {
     return format;
   }
@@ -184,7 +184,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public DateTimeFieldEditor getEditor() {
     return editor;
   }
@@ -201,7 +201,7 @@ public class DateTimeFieldPropertiesDto extends FieldPropertiesDto {
    * Get calculatedDefaultValue
    * @return calculatedDefaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public DateTimeCalculatedDefaultValue getCalculatedDefaultValue() {
     return calculatedDefaultValue;
   }

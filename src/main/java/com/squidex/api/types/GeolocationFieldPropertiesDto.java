@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * GeolocationFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class GeolocationFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_EDITOR = "editor";
   @SerializedName(SERIALIZED_NAME_EDITOR)
@@ -69,7 +69,7 @@ public class GeolocationFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public GeolocationFieldEditor getEditor() {
     return editor;
   }

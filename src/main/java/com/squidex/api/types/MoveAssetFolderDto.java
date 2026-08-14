@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * MoveAssetFolderDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class MoveAssetFolderDto {
   public static final String SERIALIZED_NAME_PARENT_ID = "parentId";
   @SerializedName(SERIALIZED_NAME_PARENT_ID)
@@ -64,7 +64,7 @@ public class MoveAssetFolderDto {
    * The parent folder id.
    * @return parentId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getParentId() {
     return parentId;
   }

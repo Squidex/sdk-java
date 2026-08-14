@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * WebhookRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class WebhookRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -83,7 +83,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * The url to the webhook.
    * @return url
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getUrl() {
     return url;
   }
@@ -100,7 +100,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * Get method
    * @return method
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public WebhookMethod getMethod() {
     return method;
   }
@@ -117,7 +117,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * Leave it empty to use the full event as body.
    * @return payload
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPayload() {
     return payload;
   }
@@ -134,7 +134,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * The mime type of the payload.
    * @return payloadType
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPayloadType() {
     return payloadType;
   }
@@ -151,7 +151,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * The message headers in the format &#39;[Key]&#x3D;[Value]&#39;, one entry per line.
    * @return headers
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getHeaders() {
     return headers;
   }
@@ -168,7 +168,7 @@ public class WebhookRuleActionDto extends RuleActionDto {
    * The shared secret that is used to calculate the payload signature.
    * @return sharedSecret
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSharedSecret() {
     return sharedSecret;
   }

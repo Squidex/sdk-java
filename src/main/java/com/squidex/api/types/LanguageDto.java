@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * LanguageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class LanguageDto {
   public static final String SERIALIZED_NAME_ISO2_CODE = "iso2Code";
   @SerializedName(SERIALIZED_NAME_ISO2_CODE)
@@ -70,7 +70,7 @@ public class LanguageDto {
    * The iso code of the language.
    * @return iso2Code
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIso2Code() {
     return iso2Code;
   }
@@ -87,7 +87,7 @@ public class LanguageDto {
    * The english name of the language.
    * @return englishName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEnglishName() {
     return englishName;
   }
@@ -104,7 +104,7 @@ public class LanguageDto {
    * The native name of the language.
    * @return nativeName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getNativeName() {
     return nativeName;
   }

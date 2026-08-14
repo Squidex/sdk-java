@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * PlanChangedDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PlanChangedDto {
   public static final String SERIALIZED_NAME_REDIRECT_URI = "redirectUri";
   @SerializedName(SERIALIZED_NAME_REDIRECT_URI)
@@ -65,7 +65,7 @@ public class PlanChangedDto {
    * Optional redirect uri.
    * @return redirectUri
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRedirectUri() {
     return redirectUri;
   }

@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * FastlyRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class FastlyRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_API_KEY = "apiKey";
   @SerializedName(SERIALIZED_NAME_API_KEY)
@@ -68,7 +68,7 @@ public class FastlyRuleActionDto extends RuleActionDto {
    * The API key to grant access to Squidex.
    * @return apiKey
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getApiKey() {
     return apiKey;
   }
@@ -85,7 +85,7 @@ public class FastlyRuleActionDto extends RuleActionDto {
    * The ID of the fastly service.
    * @return serviceId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getServiceId() {
     return serviceId;
   }

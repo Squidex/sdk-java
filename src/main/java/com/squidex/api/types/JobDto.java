@@ -57,7 +57,7 @@ import com.squidex.api.core.JSON;
 /**
  * JobDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class JobDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -108,7 +108,7 @@ public class JobDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -125,7 +125,7 @@ public class JobDto {
    * The ID of the job.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -142,7 +142,7 @@ public class JobDto {
    * The time when the job has been started.
    * @return started
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getStarted() {
     return started;
   }
@@ -159,7 +159,7 @@ public class JobDto {
    * The time when the job has been stopped.
    * @return stopped
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getStopped() {
     return stopped;
   }
@@ -176,7 +176,7 @@ public class JobDto {
    * Get status
    * @return status
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public JobStatus getStatus() {
     return status;
   }
@@ -193,7 +193,7 @@ public class JobDto {
    * The name of the task.
    * @return taskName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTaskName() {
     return taskName;
   }
@@ -210,7 +210,7 @@ public class JobDto {
    * The description of the job.
    * @return description
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDescription() {
     return description;
   }
@@ -235,7 +235,7 @@ public class JobDto {
    * The arguments for the job.
    * @return taskArguments
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, String> getTaskArguments() {
     return taskArguments;
   }
@@ -260,7 +260,7 @@ public class JobDto {
    * The list of log items.
    * @return log
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<JobLogMessageDto> getLog() {
     return log;
   }
@@ -277,7 +277,7 @@ public class JobDto {
    * Indicates whether the job can be downloaded.
    * @return canDownload
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getCanDownload() {
     return canDownload;
   }

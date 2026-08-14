@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * CreateRuleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CreateRuleDto {
   public static final String SERIALIZED_NAME_TRIGGER = "trigger";
   @SerializedName(SERIALIZED_NAME_TRIGGER)
@@ -69,7 +69,7 @@ public class CreateRuleDto {
    * Get trigger
    * @return trigger
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleTriggerDto getTrigger() {
     return trigger;
   }
@@ -86,7 +86,7 @@ public class CreateRuleDto {
    * Get action
    * @return action
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleActionDto getAction() {
     return action;
   }

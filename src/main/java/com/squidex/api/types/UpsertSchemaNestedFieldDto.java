@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpsertSchemaNestedFieldDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpsertSchemaNestedFieldDto {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -77,7 +77,7 @@ public class UpsertSchemaNestedFieldDto {
    * The name of the field. Must be unique within the schema.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -94,7 +94,7 @@ public class UpsertSchemaNestedFieldDto {
    * Defines if the field is hidden.
    * @return isHidden
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsHidden() {
     return isHidden;
   }
@@ -111,7 +111,7 @@ public class UpsertSchemaNestedFieldDto {
    * Defines if the field is locked.
    * @return isLocked
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsLocked() {
     return isLocked;
   }
@@ -128,7 +128,7 @@ public class UpsertSchemaNestedFieldDto {
    * Defines if the field is disabled.
    * @return isDisabled
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsDisabled() {
     return isDisabled;
   }
@@ -145,7 +145,7 @@ public class UpsertSchemaNestedFieldDto {
    * Get properties
    * @return properties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public FieldPropertiesDto getProperties() {
     return properties;
   }

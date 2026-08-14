@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * NumberFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class NumberFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -100,7 +100,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Double> getDefaultValues() {
     return defaultValues;
   }
@@ -117,7 +117,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * The default value for the field value.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Double getDefaultValue() {
     return defaultValue;
   }
@@ -134,7 +134,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed value for the field value.
    * @return maxValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Double getMaxValue() {
     return maxValue;
   }
@@ -151,7 +151,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed value for the field value.
    * @return minValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Double getMinValue() {
     return minValue;
   }
@@ -176,7 +176,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed values for the field value.
    * @return allowedValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<Double> getAllowedValues() {
     return allowedValues;
   }
@@ -193,7 +193,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates if the field value must be unique. Ignored for nested fields and localized fields.
    * @return isUnique
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsUnique() {
     return isUnique;
   }
@@ -210,7 +210,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates that the inline editor is enabled for this field.
    * @return inlineEditable
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getInlineEditable() {
     return inlineEditable;
   }
@@ -227,7 +227,7 @@ public class NumberFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public NumberFieldEditor getEditor() {
     return editor;
   }

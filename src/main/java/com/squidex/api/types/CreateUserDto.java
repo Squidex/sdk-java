@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * CreateUserDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CreateUserDto {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
@@ -75,7 +75,7 @@ public class CreateUserDto {
    * The email of the user. Unique value.
    * @return email
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -92,7 +92,7 @@ public class CreateUserDto {
    * The display name (usually first name and last name) of the user.
    * @return displayName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -109,7 +109,7 @@ public class CreateUserDto {
    * The password of the user.
    * @return password
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPassword() {
     return password;
   }
@@ -134,7 +134,7 @@ public class CreateUserDto {
    * Additional permissions for the user.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }

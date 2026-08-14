@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetScriptsDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetScriptsDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -100,7 +100,7 @@ public class AssetScriptsDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -117,7 +117,7 @@ public class AssetScriptsDto {
    * The script that is executed for each asset when querying assets.
    * @return query
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQuery() {
     return query;
   }
@@ -134,7 +134,7 @@ public class AssetScriptsDto {
    * The script that is executed for all assets when querying assets.
    * @return queryPre
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQueryPre() {
     return queryPre;
   }
@@ -151,7 +151,7 @@ public class AssetScriptsDto {
    * The script that is executed when creating an asset.
    * @return create
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCreate() {
     return create;
   }
@@ -168,7 +168,7 @@ public class AssetScriptsDto {
    * The script that is executed when updating a content.
    * @return update
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUpdate() {
     return update;
   }
@@ -185,7 +185,7 @@ public class AssetScriptsDto {
    * The script that is executed when annotating a content.
    * @return annotate
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getAnnotate() {
     return annotate;
   }
@@ -202,7 +202,7 @@ public class AssetScriptsDto {
    * The script that is executed when moving a content.
    * @return move
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMove() {
     return move;
   }
@@ -219,7 +219,7 @@ public class AssetScriptsDto {
    * The script that is executed when deleting a content.
    * @return delete
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDelete() {
     return delete;
   }
@@ -236,7 +236,7 @@ public class AssetScriptsDto {
    * The version of the app.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }

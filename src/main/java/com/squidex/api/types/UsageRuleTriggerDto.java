@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * UsageRuleTriggerDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UsageRuleTriggerDto extends RuleTriggerDto {
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
@@ -69,7 +69,7 @@ public class UsageRuleTriggerDto extends RuleTriggerDto {
    * The number of monthly api calls.
    * @return limit
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getLimit() {
     return limit;
   }
@@ -88,7 +88,7 @@ public class UsageRuleTriggerDto extends RuleTriggerDto {
    * maximum: 30
    * @return numDays
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getNumDays() {
     return numDays;
   }

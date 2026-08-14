@@ -56,7 +56,7 @@ import com.squidex.api.core.JSON;
 /**
  * StringFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class StringFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -137,7 +137,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, String> getDefaultValues() {
     return defaultValues;
   }
@@ -154,7 +154,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The default value for the field value.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDefaultValue() {
     return defaultValue;
   }
@@ -171,7 +171,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The pattern to enforce a specific format for the field value.
    * @return pattern
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPattern() {
     return pattern;
   }
@@ -188,7 +188,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The validation message for the pattern.
    * @return patternMessage
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPatternMessage() {
     return patternMessage;
   }
@@ -205,7 +205,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The initial id to the folder when the control supports file uploads.
    * @return folderId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFolderId() {
     return folderId;
   }
@@ -222,7 +222,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed length for the field value.
    * @return minLength
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinLength() {
     return minLength;
   }
@@ -239,7 +239,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed length for the field value.
    * @return maxLength
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -256,7 +256,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed of normal characters for the field value.
    * @return minCharacters
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinCharacters() {
     return minCharacters;
   }
@@ -273,7 +273,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed of normal characters for the field value.
    * @return maxCharacters
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxCharacters() {
     return maxCharacters;
   }
@@ -290,7 +290,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed number of words for the field value.
    * @return minWords
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinWords() {
     return minWords;
   }
@@ -307,7 +307,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed number of words for the field value.
    * @return maxWords
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxWords() {
     return maxWords;
   }
@@ -332,7 +332,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The class names for the editor.
    * @return classNames
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getClassNames() {
     return classNames;
   }
@@ -357,7 +357,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed values for the field value.
    * @return allowedValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getAllowedValues() {
     return allowedValues;
   }
@@ -382,7 +382,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed schema ids that can be embedded.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }
@@ -399,7 +399,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates if the field value must be unique. Ignored for nested fields and localized fields.
    * @return isUnique
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsUnique() {
     return isUnique;
   }
@@ -416,7 +416,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates that other content items or references are embedded.
    * @return isEmbeddable
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsEmbeddable() {
     return isEmbeddable;
   }
@@ -433,7 +433,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates that the inline editor is enabled for this field.
    * @return inlineEditable
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getInlineEditable() {
     return inlineEditable;
   }
@@ -450,7 +450,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Indicates whether GraphQL Enum should be created.
    * @return createEnum
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getCreateEnum() {
     return createEnum;
   }
@@ -467,7 +467,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Get contentType
    * @return contentType
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public StringContentType getContentType() {
     return contentType;
   }
@@ -484,7 +484,7 @@ public class StringFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public StringFieldEditor getEditor() {
     return editor;
   }

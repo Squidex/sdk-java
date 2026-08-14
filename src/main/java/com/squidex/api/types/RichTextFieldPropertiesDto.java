@@ -52,7 +52,7 @@ import com.squidex.api.core.JSON;
 /**
  * RichTextFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_FOLDER_ID = "folderId";
   @SerializedName(SERIALIZED_NAME_FOLDER_ID)
@@ -92,7 +92,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The initial id to the folder when the control supports file uploads.
    * @return folderId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFolderId() {
     return folderId;
   }
@@ -109,7 +109,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed length for the field value.
    * @return minLength
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinLength() {
     return minLength;
   }
@@ -126,7 +126,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed length for the field value.
    * @return maxLength
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -143,7 +143,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed of normal characters for the field value.
    * @return minCharacters
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinCharacters() {
     return minCharacters;
   }
@@ -160,7 +160,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed of normal characters for the field value.
    * @return maxCharacters
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxCharacters() {
     return maxCharacters;
   }
@@ -177,7 +177,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed number of words for the field value.
    * @return minWords
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinWords() {
     return minWords;
   }
@@ -194,7 +194,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed number of words for the field value.
    * @return maxWords
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxWords() {
     return maxWords;
   }
@@ -219,7 +219,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The class names for the editor.
    * @return classNames
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getClassNames() {
     return classNames;
   }
@@ -244,7 +244,7 @@ public class RichTextFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed schema ids that can be embedded.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }

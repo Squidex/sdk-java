@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * CreateContentRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CreateContentRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -74,7 +74,7 @@ public class CreateContentRuleActionDto extends RuleActionDto {
    * The content data.
    * @return data
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getData() {
     return data;
   }
@@ -91,7 +91,7 @@ public class CreateContentRuleActionDto extends RuleActionDto {
    * The name of the schema.
    * @return schema
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSchema() {
     return schema;
   }
@@ -108,7 +108,7 @@ public class CreateContentRuleActionDto extends RuleActionDto {
    * An optional client name.
    * @return client
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getClient() {
     return client;
   }
@@ -125,7 +125,7 @@ public class CreateContentRuleActionDto extends RuleActionDto {
    * Publish the content.
    * @return publish
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getPublish() {
     return publish;
   }

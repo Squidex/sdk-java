@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * CurrentStorageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class CurrentStorageDto {
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
@@ -67,7 +67,7 @@ public class CurrentStorageDto {
    * The size in bytes.
    * @return size
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getSize() {
     return size;
   }
@@ -84,7 +84,7 @@ public class CurrentStorageDto {
    * The maximum allowed asset size.
    * @return maxAllowed
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMaxAllowed() {
     return maxAllowed;
   }

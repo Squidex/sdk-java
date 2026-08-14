@@ -57,7 +57,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -156,7 +156,7 @@ public class AssetDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -173,7 +173,7 @@ public class AssetDto {
    * The ID of the asset.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -190,7 +190,7 @@ public class AssetDto {
    * The ID of the parent folder. Empty for files without parent.
    * @return parentId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getParentId() {
     return parentId;
   }
@@ -207,7 +207,7 @@ public class AssetDto {
    * The file name.
    * @return fileName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFileName() {
     return fileName;
   }
@@ -224,7 +224,7 @@ public class AssetDto {
    * The file hash.
    * @return fileHash
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFileHash() {
     return fileHash;
   }
@@ -241,7 +241,7 @@ public class AssetDto {
    * True, when the asset is not public.
    * @return isProtected
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsProtected() {
     return isProtected;
   }
@@ -258,7 +258,7 @@ public class AssetDto {
    * The slug.
    * @return slug
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -275,7 +275,7 @@ public class AssetDto {
    * The mime type.
    * @return mimeType
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMimeType() {
     return mimeType;
   }
@@ -292,7 +292,7 @@ public class AssetDto {
    * The file type.
    * @return fileType
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFileType() {
     return fileType;
   }
@@ -309,7 +309,7 @@ public class AssetDto {
    * The formatted text representation of the metadata.
    * @return metadataText
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMetadataText() {
     return metadataText;
   }
@@ -326,7 +326,7 @@ public class AssetDto {
    * The UI token.
    * @return editToken
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getEditToken() {
     return editToken;
   }
@@ -351,7 +351,7 @@ public class AssetDto {
    * The asset metadata.
    * @return metadata
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getMetadata() {
     return metadata;
   }
@@ -376,7 +376,7 @@ public class AssetDto {
    * The asset tags.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }
@@ -393,7 +393,7 @@ public class AssetDto {
    * The size of the file in bytes.
    * @return fileSize
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getFileSize() {
     return fileSize;
   }
@@ -410,7 +410,7 @@ public class AssetDto {
    * The version of the file.
    * @return fileVersion
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getFileVersion() {
     return fileVersion;
   }
@@ -427,7 +427,7 @@ public class AssetDto {
    * Get type
    * @return type
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public AssetType getType() {
     return type;
   }
@@ -444,7 +444,7 @@ public class AssetDto {
    * The user that has created the schema.
    * @return createdBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCreatedBy() {
     return createdBy;
   }
@@ -461,7 +461,7 @@ public class AssetDto {
    * The user that has updated the asset.
    * @return lastModifiedBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -478,7 +478,7 @@ public class AssetDto {
    * The date and time when the asset has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -495,7 +495,7 @@ public class AssetDto {
    * The date and time when the asset has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -512,7 +512,7 @@ public class AssetDto {
    * The version of the asset.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }
@@ -529,7 +529,7 @@ public class AssetDto {
    * Get meta
    * @return meta
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public AssetMeta getMeta() {
     return meta;
   }
@@ -549,7 +549,7 @@ public class AssetDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsImage() {
     return isImage;
   }
@@ -570,7 +570,7 @@ public class AssetDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getPixelWidth() {
     return pixelWidth;
   }
@@ -591,7 +591,7 @@ public class AssetDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getPixelHeight() {
     return pixelHeight;
   }

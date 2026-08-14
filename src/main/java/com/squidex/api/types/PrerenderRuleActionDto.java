@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * PrerenderRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class PrerenderRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_TOKEN = "token";
   @SerializedName(SERIALIZED_NAME_TOKEN)
@@ -68,7 +68,7 @@ public class PrerenderRuleActionDto extends RuleActionDto {
    * The prerender token from your account.
    * @return token
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getToken() {
     return token;
   }
@@ -85,7 +85,7 @@ public class PrerenderRuleActionDto extends RuleActionDto {
    * The url to recache.
    * @return url
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUrl() {
     return url;
   }

@@ -50,7 +50,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetChangedRuleTriggerDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetChangedRuleTriggerDto extends RuleTriggerDto {
   public static final String SERIALIZED_NAME_CONDITION = "condition";
   @SerializedName(SERIALIZED_NAME_CONDITION)
@@ -66,7 +66,7 @@ public class AssetChangedRuleTriggerDto extends RuleTriggerDto {
    * Javascript condition when to trigger.
    * @return condition
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCondition() {
     return condition;
   }

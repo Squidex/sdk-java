@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * TransferToTeamDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TransferToTeamDto {
   public static final String SERIALIZED_NAME_TEAM_ID = "teamId";
   @SerializedName(SERIALIZED_NAME_TEAM_ID)
@@ -65,7 +65,7 @@ public class TransferToTeamDto {
    * The ID of the team.
    * @return teamId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTeamId() {
     return teamId;
   }

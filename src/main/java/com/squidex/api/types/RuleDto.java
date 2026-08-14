@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * RuleDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RuleDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -119,7 +119,7 @@ public class RuleDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -136,7 +136,7 @@ public class RuleDto {
    * The ID of the rule.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -153,7 +153,7 @@ public class RuleDto {
    * The user that has created the rule.
    * @return createdBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCreatedBy() {
     return createdBy;
   }
@@ -170,7 +170,7 @@ public class RuleDto {
    * The user that has updated the rule.
    * @return lastModifiedBy
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLastModifiedBy() {
     return lastModifiedBy;
   }
@@ -187,7 +187,7 @@ public class RuleDto {
    * The date and time when the rule has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -204,7 +204,7 @@ public class RuleDto {
    * The date and time when the rule has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -221,7 +221,7 @@ public class RuleDto {
    * The version of the rule.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }
@@ -238,7 +238,7 @@ public class RuleDto {
    * Determines if the rule is enabled.
    * @return isEnabled
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsEnabled() {
     return isEnabled;
   }
@@ -255,7 +255,7 @@ public class RuleDto {
    * Optional rule name.
    * @return name
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -272,7 +272,7 @@ public class RuleDto {
    * Get trigger
    * @return trigger
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleTriggerDto getTrigger() {
     return trigger;
   }
@@ -289,7 +289,7 @@ public class RuleDto {
    * Get action
    * @return action
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RuleActionDto getAction() {
     return action;
   }
@@ -306,7 +306,7 @@ public class RuleDto {
    * The number of completed executions.
    * @return numSucceeded
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getNumSucceeded() {
     return numSucceeded;
   }
@@ -323,7 +323,7 @@ public class RuleDto {
    * The number of failed executions.
    * @return numFailed
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getNumFailed() {
     return numFailed;
   }
@@ -343,7 +343,7 @@ public class RuleDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getLastExecuted() {
     return lastExecuted;
   }

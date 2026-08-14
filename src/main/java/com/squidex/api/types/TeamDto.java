@@ -53,7 +53,7 @@ import com.squidex.api.core.JSON;
 /**
  * TeamDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TeamDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -95,7 +95,7 @@ public class TeamDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -112,7 +112,7 @@ public class TeamDto {
    * The ID of the team.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -129,7 +129,7 @@ public class TeamDto {
    * The name of the team.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -146,7 +146,7 @@ public class TeamDto {
    * The version of the team.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }
@@ -163,7 +163,7 @@ public class TeamDto {
    * The timestamp when the team has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -180,7 +180,7 @@ public class TeamDto {
    * The timestamp when the team has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -197,7 +197,7 @@ public class TeamDto {
    * The role name of the user.
    * @return roleName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRoleName() {
     return roleName;
   }

@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * DiscourseRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class DiscourseRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -85,7 +85,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The url to the discourse server.
    * @return url
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public URI getUrl() {
     return url;
   }
@@ -102,7 +102,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The api key to authenticate to your discourse server.
    * @return apiKey
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getApiKey() {
     return apiKey;
   }
@@ -119,7 +119,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The api username to authenticate to your discourse server.
    * @return apiUsername
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getApiUsername() {
     return apiUsername;
   }
@@ -136,7 +136,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The text as markdown.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }
@@ -153,7 +153,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The optional title when creating new topics.
    * @return title
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTitle() {
     return title;
   }
@@ -170,7 +170,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The optional topic id.
    * @return topic
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getTopic() {
     return topic;
   }
@@ -187,7 +187,7 @@ public class DiscourseRuleActionDto extends RuleActionDto {
    * The optional category id.
    * @return category
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getCategory() {
     return category;
   }

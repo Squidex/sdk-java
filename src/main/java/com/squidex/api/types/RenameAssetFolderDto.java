@@ -48,7 +48,7 @@ import com.squidex.api.core.JSON;
 /**
  * RenameAssetFolderDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class RenameAssetFolderDto {
   public static final String SERIALIZED_NAME_FOLDER_NAME = "folderName";
   @SerializedName(SERIALIZED_NAME_FOLDER_NAME)
@@ -64,7 +64,7 @@ public class RenameAssetFolderDto {
    * The name of the folder.
    * @return folderName
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFolderName() {
     return folderName;
   }

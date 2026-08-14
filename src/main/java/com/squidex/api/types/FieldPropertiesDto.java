@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * FieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class FieldPropertiesDto {
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
@@ -88,7 +88,7 @@ public class FieldPropertiesDto {
    * Optional label for the editor.
    * @return label
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLabel() {
     return label;
   }
@@ -105,7 +105,7 @@ public class FieldPropertiesDto {
    * Hints to describe the field.
    * @return hints
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getHints() {
     return hints;
   }
@@ -122,7 +122,7 @@ public class FieldPropertiesDto {
    * Placeholder to show when no value has been entered.
    * @return placeholder
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlaceholder() {
     return placeholder;
   }
@@ -139,7 +139,7 @@ public class FieldPropertiesDto {
    * Indicates if the field is required.
    * @return isRequired
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsRequired() {
     return isRequired;
   }
@@ -156,7 +156,7 @@ public class FieldPropertiesDto {
    * Indicates if the field is required when publishing.
    * @return isRequiredOnPublish
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsRequiredOnPublish() {
     return isRequiredOnPublish;
   }
@@ -173,7 +173,7 @@ public class FieldPropertiesDto {
    * Indicates if the field should be rendered with half width only.
    * @return isHalfWidth
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsHalfWidth() {
     return isHalfWidth;
   }
@@ -190,7 +190,7 @@ public class FieldPropertiesDto {
    * Optional url to the editor.
    * @return editorUrl
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getEditorUrl() {
     return editorUrl;
   }
@@ -215,7 +215,7 @@ public class FieldPropertiesDto {
    * Tags for automation processes.
    * @return tags
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getTags() {
     return tags;
   }

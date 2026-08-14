@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * ReferencesFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_DEFAULT_VALUES = "defaultValues";
   @SerializedName(SERIALIZED_NAME_DEFAULT_VALUES)
@@ -106,7 +106,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, List<String>> getDefaultValues() {
     return defaultValues;
   }
@@ -131,7 +131,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * The default value as a list of content ids.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getDefaultValue() {
     return defaultValue;
   }
@@ -148,7 +148,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed items for the field value.
    * @return minItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinItems() {
     return minItems;
   }
@@ -165,7 +165,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed items for the field value.
    * @return maxItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxItems() {
     return maxItems;
   }
@@ -182,7 +182,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * True, if duplicate values are allowed.
    * @return allowDuplicates
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getAllowDuplicates() {
     return allowDuplicates;
   }
@@ -199,7 +199,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * True to resolve references in the content list.
    * @return resolveReference
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getResolveReference() {
     return resolveReference;
   }
@@ -216,7 +216,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * True when all references must be published.
    * @return mustBePublished
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getMustBePublished() {
     return mustBePublished;
   }
@@ -233,7 +233,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * The initial query that is applied in the UI.
    * @return query
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getQuery() {
     return query;
   }
@@ -250,7 +250,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * Get editor
    * @return editor
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ReferencesFieldEditor getEditor() {
     return editor;
   }
@@ -275,7 +275,7 @@ public class ReferencesFieldPropertiesDto extends FieldPropertiesDto {
    * The ID of the referenced schemas.
    * @return schemaIds
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getSchemaIds() {
     return schemaIds;
   }

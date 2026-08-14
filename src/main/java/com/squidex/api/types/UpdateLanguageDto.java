@@ -51,7 +51,7 @@ import com.squidex.api.core.JSON;
 /**
  * UpdateLanguageDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class UpdateLanguageDto {
   public static final String SERIALIZED_NAME_IS_MASTER = "isMaster";
   @SerializedName(SERIALIZED_NAME_IS_MASTER)
@@ -73,7 +73,7 @@ public class UpdateLanguageDto {
    * Set the value to true to make the language the master.
    * @return isMaster
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsMaster() {
     return isMaster;
   }
@@ -90,7 +90,7 @@ public class UpdateLanguageDto {
    * Set the value to true to make the language optional.
    * @return isOptional
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsOptional() {
     return isOptional;
   }
@@ -115,7 +115,7 @@ public class UpdateLanguageDto {
    * Optional fallback languages.
    * @return fallback
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getFallback() {
     return fallback;
   }

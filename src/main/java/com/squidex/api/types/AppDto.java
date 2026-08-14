@@ -55,7 +55,7 @@ import com.squidex.api.core.JSON;
 /**
  * AppDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AppDto {
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -119,7 +119,7 @@ public class AppDto {
    * The links.
    * @return links
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, ResourceLink> getLinks() {
     return links;
   }
@@ -136,7 +136,7 @@ public class AppDto {
    * The ID of the app.
    * @return id
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -153,7 +153,7 @@ public class AppDto {
    * The name of the app.
    * @return name
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -170,7 +170,7 @@ public class AppDto {
    * The optional label of the app.
    * @return label
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLabel() {
     return label;
   }
@@ -187,7 +187,7 @@ public class AppDto {
    * The optional description of the app.
    * @return description
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDescription() {
     return description;
   }
@@ -204,7 +204,7 @@ public class AppDto {
    * The version of the app.
    * @return version
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getVersion() {
     return version;
   }
@@ -221,7 +221,7 @@ public class AppDto {
    * The timestamp when the app has been created.
    * @return created
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getCreated() {
     return created;
   }
@@ -238,7 +238,7 @@ public class AppDto {
    * The timestamp when the app has been modified last.
    * @return lastModified
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastModified() {
     return lastModified;
   }
@@ -255,7 +255,7 @@ public class AppDto {
    * The ID of the team.
    * @return teamId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTeamId() {
     return teamId;
   }
@@ -280,7 +280,7 @@ public class AppDto {
    * The permission level of the user.
    * @return permissions
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPermissions() {
     return permissions;
   }
@@ -300,7 +300,7 @@ public class AppDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getCanAccessApi() {
     return canAccessApi;
   }
@@ -318,7 +318,7 @@ public class AppDto {
    * Indicates if the user can access at least one content.
    * @return canAccessContent
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getCanAccessContent() {
     return canAccessContent;
   }
@@ -335,7 +335,7 @@ public class AppDto {
    * The role name of the user.
    * @return roleName
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRoleName() {
     return roleName;
   }
@@ -360,7 +360,7 @@ public class AppDto {
    * The properties from the role.
    * @return roleProperties
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getRoleProperties() {
     return roleProperties;
   }

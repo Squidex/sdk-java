@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssignContributorDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssignContributorDto {
   public static final String SERIALIZED_NAME_CONTRIBUTOR_ID = "contributorId";
   @SerializedName(SERIALIZED_NAME_CONTRIBUTOR_ID)
@@ -71,7 +71,7 @@ public class AssignContributorDto {
    * The id or email of the user to add to the app.
    * @return contributorId
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getContributorId() {
     return contributorId;
   }
@@ -88,7 +88,7 @@ public class AssignContributorDto {
    * The role of the contributor.
    * @return role
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRole() {
     return role;
   }
@@ -105,7 +105,7 @@ public class AssignContributorDto {
    * Set to true to invite the user if he does not exist.
    * @return invite
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getInvite() {
     return invite;
   }

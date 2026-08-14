@@ -56,7 +56,7 @@ import com.squidex.api.core.JSON;
 /**
  * AssetsFieldPropertiesDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
   public static final String SERIALIZED_NAME_PREVIEW_MODE = "previewMode";
   @SerializedName(SERIALIZED_NAME_PREVIEW_MODE)
@@ -134,7 +134,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * Get previewMode
    * @return previewMode
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public AssetPreviewMode getPreviewMode() {
     return previewMode;
   }
@@ -159,7 +159,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * Get defaultValues
    * @return defaultValues
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, List<String>> getDefaultValues() {
     return defaultValues;
   }
@@ -184,7 +184,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The default value as a list of asset ids.
    * @return defaultValue
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getDefaultValue() {
     return defaultValue;
   }
@@ -201,7 +201,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The initial id to the folder.
    * @return folderId
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFolderId() {
     return folderId;
   }
@@ -218,7 +218,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The preview format.
    * @return previewFormat
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPreviewFormat() {
     return previewFormat;
   }
@@ -235,7 +235,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum allowed items for the field value.
    * @return minItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinItems() {
     return minItems;
   }
@@ -252,7 +252,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum allowed items for the field value.
    * @return maxItems
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxItems() {
     return maxItems;
   }
@@ -269,7 +269,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum file size in bytes.
    * @return minSize
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinSize() {
     return minSize;
   }
@@ -286,7 +286,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum file size in bytes.
    * @return maxSize
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxSize() {
     return maxSize;
   }
@@ -303,7 +303,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum image width in pixels.
    * @return minWidth
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinWidth() {
     return minWidth;
   }
@@ -320,7 +320,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum image width in pixels.
    * @return maxWidth
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxWidth() {
     return maxWidth;
   }
@@ -337,7 +337,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The minimum image height in pixels.
    * @return minHeight
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMinHeight() {
     return minHeight;
   }
@@ -354,7 +354,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The maximum image height in pixels.
    * @return maxHeight
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxHeight() {
     return maxHeight;
   }
@@ -371,7 +371,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The image aspect width in pixels.
    * @return aspectWidth
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getAspectWidth() {
     return aspectWidth;
   }
@@ -388,7 +388,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The image aspect height in pixels.
    * @return aspectHeight
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getAspectHeight() {
     return aspectHeight;
   }
@@ -405,7 +405,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * Get expectedType
    * @return expectedType
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public AssetType getExpectedType() {
     return expectedType;
   }
@@ -422,7 +422,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * True to resolve first asset in the content list.
    * @return resolveFirst
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getResolveFirst() {
     return resolveFirst;
   }
@@ -442,7 +442,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getMustBeImage() {
     return mustBeImage;
   }
@@ -463,7 +463,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * @deprecated
    */
   @Deprecated
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getResolveImage() {
     return resolveImage;
   }
@@ -489,7 +489,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * The allowed file extensions.
    * @return allowedExtensions
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<String> getAllowedExtensions() {
     return allowedExtensions;
   }
@@ -506,7 +506,7 @@ public class AssetsFieldPropertiesDto extends FieldPropertiesDto {
    * True, if duplicate values are allowed.
    * @return allowDuplicates
    */
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getAllowDuplicates() {
     return allowDuplicates;
   }

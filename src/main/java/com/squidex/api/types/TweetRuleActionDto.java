@@ -49,7 +49,7 @@ import com.squidex.api.core.JSON;
 /**
  * TweetRuleActionDto
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.9.0-SNAPSHOT")
 public class TweetRuleActionDto extends RuleActionDto {
   public static final String SERIALIZED_NAME_ACCESS_TOKEN = "accessToken";
   @SerializedName(SERIALIZED_NAME_ACCESS_TOKEN)
@@ -71,7 +71,7 @@ public class TweetRuleActionDto extends RuleActionDto {
    *  The generated access token.
    * @return accessToken
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAccessToken() {
     return accessToken;
   }
@@ -88,7 +88,7 @@ public class TweetRuleActionDto extends RuleActionDto {
    *  The generated access secret.
    * @return accessSecret
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAccessSecret() {
     return accessSecret;
   }
@@ -105,7 +105,7 @@ public class TweetRuleActionDto extends RuleActionDto {
    * The text that is sent as tweet to twitter.
    * @return text
    */
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getText() {
     return text;
   }
